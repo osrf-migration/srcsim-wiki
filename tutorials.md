@@ -1,4 +1,4 @@
-# Tutorials for Gazebo Environment for the Space Robotics Challenge
+# Tutorials for Gazebo environment for the Space Robotics Challenge
 
 SRCSIM is the software used by teams participating in the Space Robotics
 Challenge competition hosted by the Space Technology Mission Directorate (STMD)
