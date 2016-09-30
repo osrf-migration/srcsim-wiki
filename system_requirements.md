@@ -1,0 +1,10 @@
+# System requirements for running SRCSIM #
+
+In order to run SRCSIM we recommend your computer has:
+
+- Modern multi-core CPU, e.g. Intel Core i5
+- 8 Gb of RAM
+- Discrete Graphics Card, e.g. Nvidia GTX 650
+- Ubuntu Desktop 14.04 Trusty (64-bit)
+- Gazebo 7
+- ROS Indigo
