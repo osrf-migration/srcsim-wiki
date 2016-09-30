@@ -1,4 +1,4 @@
-# Setting Up a System to Run SRCSIM #
+# Setting up a system to run SRCSIM #
 
 This tutorial will walk you through the setup required to make a computer ready to run SRCSIM.
 In order to run SRCSIM your computer will need a discrete graphics card and will need to be running Ubuntu Desktop 14.04 Trusty.
