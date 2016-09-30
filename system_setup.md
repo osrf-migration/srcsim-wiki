@@ -74,7 +74,7 @@ sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net --recv-key 0xB01FA
 ### Installing ROS Desktop ###
 
 ROS has a few "variants" which contain commonly used components, e.g. "Robot" is a small set of things that you'd run on a deployed robot, "Desktop" is a superset of "Robot" that also contains tools you might use on a workstation, and "Desktop-Full" additionally has perception algorithms and simulators.
-Normally ROS Indigo uses Gazebo2, but since GEAR uses Gazebo7 you will need to avoid installing "Desktop-Full" and instead install the "Desktop" set of packages and then manually install the Gazebo7 version of the Gazebo-ROS compatibility packages afterwards.
+Normally ROS Indigo uses Gazebo2, but since SRCSIM uses Gazebo7 you will need to avoid installing "Desktop-Full" and instead install the "Desktop" set of packages and then manually install the Gazebo7 version of the Gazebo-ROS compatibility packages afterwards.
 
 First update `apt-get`'s database since you added the ROS repositories to the list of sources:
 
