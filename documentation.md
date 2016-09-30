@@ -8,4 +8,4 @@ and NASA.
 1. [Competition Specifications](https://bitbucket.org/osrf/srcsim/wiki/competition_specifications)
     * The specifications of the Space Robotics Challenge.
 1. [System Requirements](https://bitbucket.org/osrf/srcsim/wiki/system_requirements)
-    * The system requirements for GEAR.
+    * The system requirements for SRCSIM.
