@@ -1,6 +1,6 @@
-# System requirements for running SRCSIM #
+# System requirements for running SRCSim #
 
-In order to run SRCSIM we recommend your computer has:
+In order to run SRCSim we recommend your computer has:
 
 - Modern multi-core CPU, e.g. Intel Core i5
 - 8 Gb of RAM
