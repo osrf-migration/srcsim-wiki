@@ -4,7 +4,7 @@ Competitors in the Space Robotics Challenge are expected to write a [ROS](ros.or
 
 Not listed on this page are standard ROS topics, such as `/tf`, which are not unique to the Space Robotics Challenge. If this is confusing, then a good place to start are the [ROS tutorials](http://wiki.ros.org/ROS/Tutorials).
 
-## ROS Topics
+## ROS Services
 
 ## ROS Topics
 
