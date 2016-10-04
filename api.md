@@ -1,7 +1,7 @@
-* `/ihmc_ros/localization/pelvis_odom_pose_correction`
-* `/ihmc_ros/localization/pelvis_pose_correction`
-* `/ihmc_ros/valkyrie/control/abort_walking`
-* `/ihmc_ros/valkyrie/control/arm_desired_joint_accelerations`
+* `/ihmc_ros/localization/pelvis_odom_pose_correction` : 
+* `/ihmc_ros/localization/pelvis_pose_correction` :
+* `/ihmc_ros/valkyrie/control/abort_walking` : 
+* `/ihmc_ros/valkyrie/control/arm_desired_joint_accelerations` :
 * `/ihmc_ros/valkyrie/control/arm_trajectory`
 * `/ihmc_ros/valkyrie/control/chest_trajectory`
 * `/ihmc_ros/valkyrie/control/end_effector_load_bearing`
