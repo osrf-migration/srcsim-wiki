@@ -10,5 +10,6 @@ We recommend following the tutorials in numerical order. At the end of these tut
     * A guide for configuring your personal PC and installing software for the challenge.
 
 1. Qualifications
+    * Descriptions of the qualification tasks, how to solve the problems, and submit your solutions.
     1. Qualification task 1
     1. Qualification task 2
