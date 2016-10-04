@@ -1,3 +1,11 @@
+# SRC API
+
+Competitors in the Space Robotics Challenge are expected to write a [ROS](ros.org) program to solve the challenge tasks. This page details information about the various ROS methods that a competitors may use to collect state information (eg. sensor data, joint states) and send control commands (e.g. foot placement).
+
+Not listed on this page are standard ROS topics, such as `/tf`, which are not unique to the Space Robotics Challenge. If this is confusing, then a good place to start are the [ROS tutorials](http://wiki.ros.org/ROS/Tutorials).
+
+## ROS Topics
+
 ## ROS Topics
 
 The format of each item in the following list is `topic name` : `message type`.
