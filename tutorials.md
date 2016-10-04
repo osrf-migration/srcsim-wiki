@@ -8,3 +8,7 @@ We recommend following the tutorials in numerical order. At the end of these tut
 
 1. [System Setup](https://bitbucket.org/osrf/srcsim/wiki/system_setup)
     * A guide for configuring your personal PC and installing software for the challenge.
+
+1. Qualifications
+    1. Qualification task 1
+    1. Qualification task 2
