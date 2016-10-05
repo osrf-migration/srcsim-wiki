@@ -6,6 +6,8 @@ You must walk close to the red button, press it, and cross the doorway once the 
 
 There is a line in front of the initial position of R5. When you cross this starting line your task will start. At one meter after the doorway there is a second line. Crossing this finish line will finish the task.
 
+# 2D image processing
+
 # Walking
 
 # Arm control
