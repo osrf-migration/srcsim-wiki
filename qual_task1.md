@@ -76,6 +76,20 @@ void imageCallback(const sensor_msgs::ImageConstPtr &_msg)
 
 ```
 
+## Depth data
+
+The previous step acquired the location of a red LED in 2D image space. Ultimately we need a 3D pose, which requires depth information. We can use either the stereo cameras on R5 or the spinning LIDAR to access depth information. This example will make use stereo camera data.
+
+First, subscribe to the stereo camera data on the `/multisense_sl/camera/points` topic.
+
+```
+void stereoCallback(const sensor_msgs::PointCloud2ConstPtr &_msg)
+{
+}
+
+ros::Subscriber stereoSub = nodeHandle.subscribe("/multisense_sl/camera/points", 1000, stereoCallback);
+```
+
 ## Computing LED location in head frame
 
 The location of each LED must be reported in R5's head frame. In the previous section, you wrote code to find an LED in a camera image. This is a 2D location that can be mapped to a 3D location if we know the pose of the camera.
