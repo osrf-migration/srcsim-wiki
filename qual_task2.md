@@ -8,7 +8,11 @@ There is a line in front of the initial position of R5. When you cross this star
 
 # 2D image processing
 
+Please, refer to the [qualification 1 documentation](https://bitbucket.org/osrf/srcsim/wiki/qual_task1) for a description of how to process your camera images.
+
 # Walking
+
+
 
 # Arm control
 
