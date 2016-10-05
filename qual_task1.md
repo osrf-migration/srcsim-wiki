@@ -87,11 +87,43 @@ void stereoCallback(const sensor_msgs::PointCloud2ConstPtr &_msg)
 {
 }
 
-ros::Subscriber stereoSub = nodeHandle.subscribe("/multisense_sl/camera/points", 1000, stereoCallback);
+ros::Subscriber stereoSub = nodeHandle.subscribe("/multisense/organized_image_points2", 1000, stereoCallback);
 ```
 
-## Computing LED location in head frame
+We can look up depth information using the `_msg.data` array inside the `stereoCallback` function. We are making an assumption that depth data exists for every pixel location.
 
-The location of each LED must be reported in R5's head frame. In the previous section, you wrote code to find an LED in a camera image. This is a 2D location that can be mapped to a 3D location if we know the pose of the camera.
+```
+void stereoCallback(const sensor_msgs::PointCloud2ConstPtr &_msg)
+{
+  int ledXPixelLocation = 100;
+  int leftYPixelLocation = 200;
 
-We will use [TF](http://wiki.ros.org/tf/Tutorials) to perform the mapping from 2D image location to 3D.location.
+  pcl::PointCloud<pcl::PointXYZ> cloud;
+
+  pcl::fromROSMsg(*_msg, cloud);
+  pcl::PointXYZ pt = cloud.at(ledYPixelLocation, ledXPixelLocation);
+
+  std::cout << "The 3D location of LED[" << ledXPixelLocation << " " << ledYPixelLocation << "] is "
+    << pt.x << " " << pt.y << " " << pt.z << std::endl;
+}
+
+```
+
+## Reporting LED location
+
+This qualification task requires us to upload a file that contains the 3D locations of each LED. The file to upload is generated for us based on data published to the `/src/qual1/led` topic. This topic expects a ROS `geometry_msgs/Vector3` message.
+
+We will now create an appropriate message from the 3D location data, and publish this message on the `/src/qual1/led` topic.
+
+
+```
+ros::Publisher pub = nodeHandle.Advertise<geometry_msgs::Vector3>("/src/qual1/led");
+
+msg.x = pt.x;
+msg.y = pt.y;
+msg.z = pt.z;
+
+pub.Publish(msg);
+```
+
+## Upload your log file
