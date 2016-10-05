@@ -1,6 +1,6 @@
 # Overview
 
-SRC qualification 2 is a locomotion basic manipulation task. The qualification loads with R5 standing in front of a doorway with a closed door and a red button. 
+SRC qualification 2 is a locomotion and basic manipulation task. The qualification loads with R5 standing in front of a doorway with a closed door and a red button. 
 
 You must walk next to the red button, press it, and cross the doorway once the door opens. Score is based on your ability to press the button and walking through the doorway, where R5 must walk one meter beyond the door without falling, as well as the time required to complete the task.
 
