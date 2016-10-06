@@ -37,7 +37,7 @@ You need to add the parameter `extra_gazebo_args:="-r"` to roslaunch for enablin
 roslaunch srcsim qual2.launch extra_gazebo_args:="-r" init:="true"
 ```
 
-A log file is written under ~/.gazebo/log/<timestamp>/gzserver/state.log . You can verify that your log file has been properly generating by loading it into Gazebo:
+A log file is written at ~/.gazebo/log/<timestamp>/gzserver/state.log . You can verify that your log file has been properly generating by loading it into Gazebo:
 
 
 ```
