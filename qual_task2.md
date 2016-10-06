@@ -28,3 +28,20 @@ The robot should start walking a few steps.
 
 # Upload your log file
 
+You need to add the parameter `extra_gazebo_args:="-r"` to roslaunch for enabling Gazebo logging. When you're ready to start your SRC task with logging enable, type:
+
+
+```
+#!c++
+
+roslaunch srcsim qual2.launch extra_gazebo_args:="-r" init:="true"
+```
+
+A log file is written under ~/.gazebo/log/<timestamp>/gzserver/state.log . You can verify that your log file has been properly generating by loading it into Gazebo:
+
+
+```
+#!c++
+
+gazebo -p ~/.gazebo/log/<timestamp>/gzserver/state.log
+```
