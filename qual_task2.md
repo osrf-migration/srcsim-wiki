@@ -53,7 +53,7 @@ The size of a log file can be really big depending on the complexity of the worl
 ```
 #!c++
 
-gz log -e -f state.log --filter *.pose/*.pose -z 10 > task_2.log
+gz log -e -f state.log --filter *.pose/*.pose -z 10 > qual_2.log
 ```
 
 And then, compress your file:
@@ -61,7 +61,7 @@ And then, compress your file:
 ```
 #!c++
 
-gzip -c task_2.log > task_2.log.gz
+gzip -c qual_2.log > qual_2.log.gz
 ```
 
-Always save the original log and submit the filtered log (`task_2.log.gz`).
+Always save the original log and submit the filtered log (`qual_2.log.gz`).
