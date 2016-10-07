@@ -46,3 +46,22 @@ gazebo -p ~/.gazebo/log/<timestamp>/gzserver/state.log
 ```
 
 It's highly recommended to playback your log files before submission.
+
+The size of a log file can be really big depending on the complexity of the world. For submission, we'll reduce the size of the log file by sampling at lower rate and filtering some of the information. Run the following command inside the folder where your log file was created. 
+
+
+```
+#!c++
+
+gz log -e -f state.log --filter *.pose/*.pose -z 10 > filtered_state.log
+```
+
+And then, compress your file:
+
+```
+#!c++
+
+gzip -c filtered_state.log > filtered_state.log.gz
+```
+
+Always save the original log and submit the filtered log.
