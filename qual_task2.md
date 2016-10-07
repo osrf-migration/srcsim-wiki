@@ -64,4 +64,4 @@ And then, compress your file:
 gzip -c filtered_state.log > filtered_state.log.gz
 ```
 
-Always save the original log and submit the filtered log.
+Always save the original log and submit the filtered log (filtered_state.log.gz).
