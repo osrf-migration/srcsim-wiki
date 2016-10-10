@@ -1,70 +1,30 @@
 # Overview
 
-SRC qualification 1 is an image processing task. The qualification loads with R5 standing in front of a console. Located on the console are a number of LEDs and screens, all of which are black. The large screen in the center of the console transitions from yellow to blue. This transition marks the start of the task.
+SRC qualification 1 is an image processing task. The qualification loads with R5 standing in front of a console. Located on the console are a number of LEDs and screens, all of which are black. 
 
-One at a time, LEDs will turn on (red) then off after the center screen's transition from blue to white. An LED will stay on for five seconds. During this time, you must report the center location of the LED relative to R5's head frame. Score is based on the accuracy of the reported locations.
+The task is started when an empty message is sent to the `/srcsim/qual1/start` topic. At this point the large screen in the center of the console will turn yellow then blue. This transition signals that the task is starting.
+
+One at a time, LEDs will turn on (red) then off. An LED will stay on for five seconds. During this time, you must report the center location of the LED relative to R5's head frame. Score is based on the accuracy of the reported locations.
 
 Yellow Console | Blue Console | Red LED
 ---------------|--------------|--------
 ![srcsim_qual1_console_yellow.jpg](https://bitbucket.org/repo/xEbAAe/images/4007635085-srcsim_qual1_console_yellow.jpg) | ![srcsim_qual1_console_blue.jpg](https://bitbucket.org/repo/xEbAAe/images/4006639120-srcsim_qual1_console_blue.jpg) | ![srcsim_qual1_console_red.jpg](https://bitbucket.org/repo/xEbAAe/images/1513381160-srcsim_qual1_console_red.jpg)
 
-The end of the task is marked by the center screen transitioning from white to blue to black. At this point, no more LEDs will turn on, and it is safe to quite Gazebo and submit your results.
+The end of the task is marked by the center screen transitioning from blue to yellow to black. At this point, no more LEDs will turn on, and it is safe to quite Gazebo and submit your results.
 
 ## 2D Image Processing
 
-The first step is to find a red LED in a camera image. Camera data is available on the `/TBD` ROS topic. Subscribe to this topic by registering a callback. The callback will receive camera image data when the data is available. Refer to the [ROS Publisher Subscriber Tutorial](http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber%28c%2B%2B%29) for more details on nodes, publishers, and subscribers.
+Camera data is available on the `/TBD` ROS topic. Subscribe to this topic by registering a callback. The callback will receive camera image data when the data is available. Refer to the [ROS Publisher Subscriber Tutorial](http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber%28c%2B%2B%29) for more details on nodes, publishers, and subscribers.
 
 Make use of any image processing library, such as [OpenCV](http://opencv.org), to determine if an LED is on and where in the image the LED is located.
 
 ## Depth data
 
-The previous step acquired the location of a red LED in 2D image space. Ultimately we need a 3D pose, which requires depth information. We can use either the stereo cameras on R5 or the spinning LIDAR to access depth information. This example will make use stereo camera data.
-
-First, subscribe to the stereo camera data on the `/multisense_sl/camera/points` topic.
-
-```
-void stereoCallback(const sensor_msgs::PointCloud2ConstPtr &_msg)
-{
-}
-
-ros::Subscriber stereoSub = nodeHandle.subscribe("/multisense/organized_image_points2", 1000, stereoCallback);
-```
-
-We can look up depth information using the `_msg.data` array inside the `stereoCallback` function. We are making an assumption that depth data exists for every pixel location.
-
-```
-void stereoCallback(const sensor_msgs::PointCloud2ConstPtr &_msg)
-{
-  int ledXPixelLocation = 100;
-  int leftYPixelLocation = 200;
-
-  pcl::PointCloud<pcl::PointXYZ> cloud;
-
-  pcl::fromROSMsg(*_msg, cloud);
-  pcl::PointXYZ pt = cloud.at(ledYPixelLocation, ledXPixelLocation);
-
-  std::cout << "The 3D location of LED[" << ledXPixelLocation << " " << ledYPixelLocation << "] is "
-    << pt.x << " " << pt.y << " " << pt.z << std::endl;
-}
-
-```
+R5 comes equipped with a stereo camera and a spinning hokuyo laser. Make use of these sensors to determine where an LED is located.
 
 ## Reporting LED location
 
-This qualification task requires us to upload a file that contains the 3D locations of each LED. The file to upload is generated for us based on data published to the `/src/qual1/led` topic. This topic expects a ROS `geometry_msgs/Vector3` message.
-
-We will now create an appropriate message from the 3D location data, and publish this message on the `/src/qual1/led` topic.
-
-
-```
-ros::Publisher pub = nodeHandle.Advertise<geometry_msgs::Vector3>("/src/qual1/led");
-
-msg.x = pt.x;
-msg.y = pt.y;
-msg.z = pt.z;
-
-pub.Publish(msg);
-```
+Send the location of each LED to the `/srcsim/qual1/light` topic. This topic expects a [geometry_msgs/Vector3](http://docs.ros.org/api/geometry_msgs/html/msg/Vector3.html) message. Your answer will appear in a log file that you must submit in order to complete the qualification tasks.
 
 ## Upload your log file
 
