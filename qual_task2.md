@@ -6,6 +6,11 @@ You must walk close to the red button, press it, and cross the doorway once the 
 
 There is a line in front of the initial position of R5. When you cross this starting line your task will start. At one meter after the doorway there is a second line. Crossing this finish line will finish the task.
 
+Start line | Finish line 
+-----------|------------
+![SRC_qual2_start.jpg](https://bitbucket.org/repo/xEbAAe/images/761926837-SRC_qual2_start.jpg) | ![SRC_qual2_finish.jpg](https://bitbucket.org/repo/xEbAAe/images/3413243251-SRC_qual2_finish.jpg)
+
+
 # 2D image processing
 
 Please, refer to the [qualification 1 documentation](https://bitbucket.org/osrf/srcsim/wiki/qual_task1) for a description of how to process your camera images.
