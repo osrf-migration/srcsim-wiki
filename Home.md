@@ -1,7 +1,7 @@
-# Gazebo environment for the Space Robotics Challenge (SRCSim)
+# Gazebo environment for the Space Robotics Challenge
 
 SRCSim is the software used by teams participating in the Space Robotics
-Challenge competition hosted by the Space Technology Mission Directorate (STMD)
+Challenge (SRC) hosted by the Space Technology Mission Directorate (STMD)
 and NASA.
 
 ## [Documentation](https://bitbucket.org/osrf/srcsim/wiki/documentation)
