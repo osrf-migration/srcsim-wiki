@@ -24,7 +24,7 @@ The format of each item in the following list is `topic name` : `message type`.
 * `/ihmc_ros/valkyrie/control/hand_trajectory` : [ihmc_msgs/HandTrajectoryRosMessage](https://stash.ihmc.us/projects/ROS/repos/ihmc-ros-core/browse/ihmc_msgs/msg/FootstepDataListRosMessage.msg)
 * `/ihmc_ros/valkyrie/control/head_trajectory` : [ihmc_msgs/HeadTrajectoryRosMessage](https://stash.ihmc.us/projects/ROS/repos/ihmc-ros-core/browse/ihmc_msgs/msg/HeadTrajectoryRosMessage.msg)
 * `/ihmc_ros/valkyrie/control/high_level_state` : [ihmc_msgs/HighLevelStateRosMessage](https://stash.ihmc.us/projects/ROS/repos/ihmc-ros-core/browse/ihmc_msgs/msg/HighLevelStateRosMessage.msg)
-* `/ihmc_ros/valkyrie/control/low_level_control_mode` : ihmc_valkyrie_ros/ValkyrieLowLevelControlModeRosMessage
+* `/ihmc_ros/valkyrie/control/low_level_control_mode` : [ihmc_valkyrie_ros/ValkyrieLowLevelControlModeRosMessage](https://github.com/ihmcrobotics/ihmc_valkyrie_ros/blob/develop/msg/ValkyrieLowLevelControlModeRosMessage.msg)
 * `/ihmc_ros/valkyrie/control/neck_desired_acceleration` : [ihmc_msgs/NeckDesiredAccelerationsRosMessage](https://stash.ihmc.us/projects/ROS/repos/ihmc-ros-core/browse/ihmc_msgs/msg/NeckDesiredAccelerationsRosMessage.msg)
 * `/ihmc_ros/valkyrie/control/neck_trajectory` : [ihmc_msgs/NeckTrajectoryRosMessage](https://stash.ihmc.us/projects/ROS/repos/ihmc-ros-core/browse/ihmc_msgs/msg/NeckTrajectoryRosMessage.msg)
 * `/ihmc_ros/valkyrie/control/pause_walking` : [ihmc_msgs/PauseWalkingRosMessage](https://stash.ihmc.us/projects/ROS/repos/ihmc-ros-core/browse/ihmc_msgs/msg/PauseWalkingRosMessage.msg)
