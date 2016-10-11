@@ -14,23 +14,29 @@ The end of the task is marked by the center screen transitioning from blue to ye
 
 ## Quickstart
 
+1. Prefetch simulation models
+
+    ```
+    wget -O /tmp/control.tar.gz http://models.gazebosim.org/control_console/model.tar.gz && tar xvf /tmp/control.tar.gz -C ~/.gazebo/models
+    ```
+
 1. Run the qualification task
 
     ```
     roslaunch srcsim qual1.launch extra_gazebo_args:="-r" init:="true"
     ```
 
-2. Test out signaling the start of the task
+1. Test out signaling the start of the task
 
     ```
     rostopic echo /srcsim/qual1/start std_msgs/Empty
     ```
 
-3. Write a program to solve the task
+1. Write a program to solve the task
 
-4. Rerun the qualification task and run your solution.
+1. Rerun the qualification task and run your solution.
 
-5. Submit the two log files described in the **Upload your log files** section below.
+1. Submit the two log files described in the **Upload your log files** section below.
 
 ## 2D Image Processing
 
