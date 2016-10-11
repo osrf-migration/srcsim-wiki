@@ -18,6 +18,17 @@ Start line | Finish line
     ```
     wget -O /tmp/doorway.tar.gz http://models.gazebosim.org/src_doorway/model.tar.gz && tar xvf /tmp/doorway.tar.gz -C ~/.gazebo/models
     ```
+1. Run qual task 2 simulation
+
+    ```
+    roslaunch srcsim qual2.launch extra_gazebo_args:="-r" init:="true"
+    ```
+
+1. Write your solution
+
+1. Rerun the qual 2 task along with your solution.
+
+1. Submit your log file as detailed in section **Upload your log file** below
 
 # 2D image processing
 
