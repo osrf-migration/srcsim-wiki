@@ -54,7 +54,7 @@ Send the location of each LED to the `/srcsim/qual1/light` topic. This topic exp
 
 ## Upload your log files
 
-A submission for qual task 1 requires to files. The first is a text file that contains information about the LEDs and your reported LED locations. The second file contains simulation state information.
+A submission for qual task 1 requires two files. The first is a text file that contains information about the LEDs and your reported LED locations. The second file contains simulation state information.
 
 #### 1. LED answer log file
 
