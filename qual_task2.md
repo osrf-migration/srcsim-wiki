@@ -11,6 +11,14 @@ Start line | Finish line
 ![SRC_qual2_start.jpg](https://bitbucket.org/repo/xEbAAe/images/761926837-SRC_qual2_start.jpg) | ![SRC_qual2_finish.jpg](https://bitbucket.org/repo/xEbAAe/images/3413243251-SRC_qual2_finish.jpg)
 
 
+# Quick Start
+
+1. Prefetch simulation models
+
+```
+wget -O /tmp/doorway.tar.gz http://models.gazebosim.org/src_doorway/model.tar.gz && tar xvf /tmp/doorway.tar.gz -C ~/.gazebo/models
+```
+
 # 2D image processing
 
 Please, refer to the [qualification 1 documentation](https://bitbucket.org/osrf/srcsim/wiki/qual_task1) for a description of how to process your camera images.
