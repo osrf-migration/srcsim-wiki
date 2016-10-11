@@ -15,9 +15,9 @@ Start line | Finish line
 
 1. Prefetch simulation models
 
-```
-wget -O /tmp/doorway.tar.gz http://models.gazebosim.org/src_doorway/model.tar.gz && tar xvf /tmp/doorway.tar.gz -C ~/.gazebo/models
-```
+    ```
+    wget -O /tmp/doorway.tar.gz http://models.gazebosim.org/src_doorway/model.tar.gz && tar xvf /tmp/doorway.tar.gz -C ~/.gazebo/models
+    ```
 
 # 2D image processing
 
