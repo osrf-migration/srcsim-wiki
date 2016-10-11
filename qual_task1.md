@@ -26,7 +26,15 @@ R5 comes equipped with a stereo camera and a spinning hokuyo laser. Make use of 
 
 Send the location of each LED to the `/srcsim/qual1/light` topic. This topic expects a [geometry_msgs/Vector3](http://docs.ros.org/api/geometry_msgs/html/msg/Vector3.html) message. Your answer will appear in a log file that you must submit in order to complete the qualification tasks.
 
-## Upload your log file
+## Upload your log files
+
+This task requires two log files. The first is a text file that contains information about the LEDs and your answers. The second file contains simulation state information.
+
+### LED answer log file
+
+A new file in your home directory appears with the name `src_qual1_<timestamp>.log` after each time qual task 1 is run. Make sure you submit the correct `src_qual1_<timestamp>.log` file along with your simulation state log file.
+
+### Simulation state log file
 
 You need to add the parameter `extra_gazebo_args:="-r"` to roslaunch for enabling Gazebo logging. When you're ready to start your SRC task with logging enable, type:
 
