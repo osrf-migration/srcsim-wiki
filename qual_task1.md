@@ -29,7 +29,7 @@ The end of the task is marked by the center screen transitioning from blue to ye
 1. Test out signaling the start of the task
 
     ```
-    rostopic echo /srcsim/qual1/start std_msgs/Empty
+    rostopic pub /srcsim/qual1/start std_msgs/Empty
     ```
 
 1. Write a program to solve the task
