@@ -30,11 +30,11 @@ Send the location of each LED to the `/srcsim/qual1/light` topic. This topic exp
 
 This task requires two log files. The first is a text file that contains information about the LEDs and your answers. The second file contains simulation state information.
 
-### 1. LED answer log file
+#### 1. LED answer log file
 
 A new file in your home directory appears with the name `src_qual1_<timestamp>.log` after each time qual task 1 is run. Make sure you submit the correct `src_qual1_<timestamp>.log` file along with your simulation state log file.
 
-### 2. Simulation state log file
+#### 2. Simulation state log file
 
 You need to add the parameter `extra_gazebo_args:="-r"` to roslaunch for enabling Gazebo logging. When you're ready to start your SRC task with logging enable, type:
 
