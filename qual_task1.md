@@ -6,9 +6,7 @@ The task is started when an empty message is sent to the `/srcsim/qual1/start` t
 
 One at a time, LEDs will turn on then off. An LED will stay on between 5 and 20 seconds. The color of the LED will be either red, green, or blue. During this time, you must report the color and center location of the LED relative to R5's head frame. Score is based on the accuracy of the reported locations.
 
-White Console | Blue Console | Red LED
----------------|--------------|--------
-![srcsim_qual1_console_yellow.jpg](https://bitbucket.org/repo/xEbAAe/images/4007635085-srcsim_qual1_console_yellow.jpg) | ![srcsim_qual1_console_blue.jpg](https://bitbucket.org/repo/xEbAAe/images/4006639120-srcsim_qual1_console_blue.jpg) | ![srcsim_qual1_console_red.jpg](https://bitbucket.org/repo/xEbAAe/images/1513381160-srcsim_qual1_console_red.jpg)
+![4007635085-srcsim_qual1_console_yellow.jpg](https://bitbucket.org/repo/xEbAAe/images/3389508772-4007635085-srcsim_qual1_console_yellow.jpg)
 
 The end of the task is marked by the center screen transitioning from white to black. At this point, no more LEDs will turn on, and it is safe to quite Gazebo and submit your results.
 
