@@ -106,6 +106,13 @@ sudo apt-get install ros-indigo-gazebo7-ros-pkgs
 
 Not available yet.
 
+First add the SRCSim packages repository to apt-get's list of sources:
+sudo sh -c '
+  echo "deb http://52.53.157.231/src trusty main" \
+    > /etc/apt/sources.list.d/srcsim.list'
+Then add the key SRCSim uses to sign the packages:
+wget -O - http://52.53.157.231/src/src.key | sudo apt-key add -
+
 ## Alternative: Building the SRCSIM packages from Source ##
 
 This strategy is only recommended for a few cases:
