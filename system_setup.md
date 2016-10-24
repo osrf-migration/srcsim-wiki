@@ -94,61 +94,36 @@ This strategy is only recommended for a few cases:
 - You want to test a change you're going to propose to the SRCSIM source code.
 - There are no SRCSIM binaries available for your system.
 
-### Setting Up a Catkin Workspace ###
+1. Set up a Catkin Workspace
 
-Since the SRCSIM packages are [catkin](http://wiki.ros.org/catkin) packages, we'll start by setting up a [catkin workspace](http://www.ros.org/reps/rep-0128.html).
-First create a folder for the workspace, something like this:
-
-```
+    ```
 mkdir -p ~/srcsim_ws/src
 cd ~/srcsim_ws
-```
+    ```
 
-The `src` folder will contain the source code you want to build.
+1. Get the SRC Sim source code from bitbucket.
 
-### Getting the Source Code ###
-
-Next you will need to get the SRCSIM source code.
-You can either "clone" the source using `mercurial` or you can extract an archive of the source that you downloaded from BitBucket.
-To clone the source:
-
-```
+    ```
 cd ~/srcsim_ws/src
 hg clone https://bitbucket.org/osrf/srcsim
-```
+    ```
 
-If you would prefer to download the source as an archive:
+1. Before starting the build, you need to source the ROS `setup.bash` file:
 
-```
-cd ~/srcsim_ws/src
-wget https://bitbucket.org/osrf/srcsim/get/default.zip
-unzip default.zip
-rm default.zip
-```
-
-### Building the SRCSIM Packages ###
-
-Before starting the build, you need to source the ROS `setup.bash` file:
-
-```
+    ```
 source /opt/ros/indigo/setup.bash
-```
+    ```
 
-This sets up your shell to build on top of ROS.
-There is also a `setup.zsh` if you are using that shell.
+1. Start the build using the catkin build tool
 
-Next start the build using the `catkin` build tool called `catkin_make`:
-
-```
+    ```
 cd ~/srcsim_ws
 catkin_make install
-```
+    ```
 
-This will build the SRCSIM packages and install them to a local folder, in this case `~/srcsim_ws/install` next to the `src` folder.
+1. Source the installed setup bash file before building your competition solution and running srcsim
 
-This folder will also have a `setup.bash` file in it that you can source before building your competition packages:
-
-``` 
+    ``` 
 source ~/srcsim_ws/install/setup.bash
 
-```
+    ```
