@@ -123,7 +123,6 @@ catkin_make install
 
 1. Source the installed setup bash file before building your competition solution and running srcsim
 
-    ``` 
+      ``` 
 source ~/srcsim_ws/install/setup.bash
-
     ```
