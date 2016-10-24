@@ -1,124 +1,93 @@
 # Setting up a system to run SRCSIM #
 
-This tutorial will walk you through the setup required to make a computer ready to run SRCSIM.
-In order to run SRCSIM your computer will need a discrete graphics card and will need to be running Ubuntu Desktop 14.04 Trusty.
-It is possible to run on a different OS and OS version, but it is not recommended.
-For more information about recommended and minimum requirements see the [System Requirements](https://bitbucket.org/osrf/srcsim/wiki/system_requirements) page.
+This tutorial will walk you through the setup required to make a computer ready to run SRCSIM. For more information about recommended and minimum requirements see the [System Requirements](https://bitbucket.org/osrf/srcsim/wiki/system_requirements) page.
 
-## Installing Gazebo7 ##
-
-SRCSIM requires Gazebo7 to be installed, for which instructions can be found here:
-
-http://gazebosim.org/tutorials?tut=install_ubuntu&cat=install#Alternativeinstallation:step-by-step
-
-The "alternative installation" steps in the above link will be summarized here.
-You could use the "one-liner" installation, but it would not guarantee that you get Gazebo7.
-
-### Setup Ubuntu to Install Packages from the Open Source Robotics Foundation (OSRF) ###
-
-First you need to add OSRF's package repository to your system so it can install packages from there.
-Do so by running this command:
+## Install Dependencies
 
 
-```
-sudo sh -c '
-  echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable `lsb_release -cs` main" \
-    > /etc/apt/sources.list.d/gazebo-stable.list'
-```
+1. Install Gazebo7
 
-Next you need to add the signing key to your computer so the packages can be verified:
+    1. Add the Gazebo7 repository
 
-```
+        ```
+sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable `lsb_release -cs` main" > /etc/apt/sources.list.d/gazebo-stable.list'
+        ```
+
+    1. Download the signing key
+
+        ```
 wget http://packages.osrfoundation.org/gazebo.key -O - | sudo apt-key add -
-```
+        ```
 
-### Installing Gazebo ###
+    1. Update the apt database
 
-First update the `apt-get` database since you added the OSRF packages repository to the sources list:
-
-```
+        ```
 sudo apt-get update
-```
+        ```
 
-Finally, install `gazebo7`:
+    1. Finally, install gazebo7
 
-```
+        ```
 sudo apt-get install gazebo7
-```
+        ```
 
-## Installing ROS Indigo ##
+1. Install ROS Indigo
 
-Next you need to install ROS Indigo, which SRCSIM uses to provide the competition interface.
-Instructions to do this can be found here:
+    1. Add the ROS repository
 
-http://wiki.ros.org/indigo/Installation/Ubuntu
-
-These instructions will be summarized next.
-
-### Setup Ubuntu to Install Packages from ROS ###
-
-First add the ROS packages repository to `apt-get`'s list of sources:
-
-```
-sudo sh -c '
-  echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" \
+        ```
+sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" \
     > /etc/apt/sources.list.d/ros-latest.list'
-```
+        ```
 
-Then add the key ROS uses to sign the packages:
+    1. Download the signing key
 
-```
+        ```
 sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net --recv-key 0xB01FA116
-```
+        ```
 
-### Installing ROS Desktop ###
+    1. Update the apt database
 
-ROS has a few "variants" which contain commonly used components, e.g. "Robot" is a small set of things that you'd run on a deployed robot, "Desktop" is a superset of "Robot" that also contains tools you might use on a workstation, and "Desktop-Full" additionally has perception algorithms and simulators.
-Normally ROS Indigo uses Gazebo2, but since SRCSIM uses Gazebo7 you will need to avoid installing "Desktop-Full" and instead install the "Desktop" set of packages and then manually install the Gazebo7 version of the Gazebo-ROS compatibility packages afterwards.
-
-First update `apt-get`'s database since you added the ROS repositories to the list of sources:
-
-```
+        ```
 sudo apt-get update
-```
+        ```
 
-Then install the "Desktop" packages for ROS Indigo:
+    1. Install the "Desktop" packages for ROS Indigo
 
-```
+        ```
 sudo apt-get install ros-indigo-desktop
-```
+        ```
 
-To finish the ROS Indigo installation, initialize the `rosdep` database:
+    1. Initialize the rosdep database
 
-```
+        ```
 sudo rosdep init; rosdep update
-```
+        ```
 
-### Installing Gazebo-ROS Compatibility Packages ###
+    1. Install the Gazebo7 version of the Gazebo-ROS compatibility packages
 
-Now install the Gazebo7 version of the Gazebo-ROS compatibility packages:
-
-```
+        ```
 sudo apt-get install ros-indigo-gazebo7-ros-pkgs
-```
+        ```
 
-## Installing the SRCSIM packages from Binaries ##
+## Install SRC Sim
 
-Not available yet.
+### Binary install
 
-First add the SRCSim packages repository to apt-get's list of sources:
 
-```
+1. Add the SRCSim packages repository
+
+  ```
 sudo sh -c '
   echo "deb http://52.53.157.231/src trusty main" \
     > /etc/apt/sources.list.d/srcsim.list'
-```
+  ```
 
-Then add the key SRCSim uses to sign the packages:
+1. Add the key SRCSim uses to sign the packages:
 
-```
+  ```
 wget -O - http://52.53.157.231/src/src.key | sudo apt-key add -
-```
+  ```
 
 ## Alternative: Building the SRCSIM packages from Source ##
 
