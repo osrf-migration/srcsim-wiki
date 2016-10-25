@@ -78,7 +78,7 @@ sudo chown -R $USER:$USER /opt/ros/indigo/share/ihmc_ros_java_adapter
 * Create IHMC networking ini file in `/opt/ros/indigo/share/ihmc_valkeryie_ros/configurations/IHMCNetworkParameters.ini` with the following content (you will need to edit the file using `sudo`:
 
 
-    ```
+```
 #!c++
 
 rosURI=http\://localhost\:11311
@@ -88,7 +88,7 @@ networkManager=localhost
 
 #don't log any cameras
 loggedCameras=
-    ```
+```
 
 * Configure your users and groups with the following:
 
