@@ -4,7 +4,7 @@ This tutorial will walk you through the setup required to make a computer ready 
 
 ## Binary installation
 
-1. Install the Gazebo package repository
+* Install the Gazebo package repository
 
     1. Add the Gazebo7 repository
 
@@ -18,7 +18,7 @@ sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable `ls
 wget http://packages.osrfoundation.org/gazebo.key -O - | sudo apt-key add -
         ```
 
-1. Install the SRCSim package repository
+* Install the SRCSim package repository
 
     1. Add the SRCSim repository
 
@@ -33,52 +33,46 @@ sudo sh -c 'echo "deb http://srcsim.gazebosim.org/src trusty main" \
 wget -O - http://srcsim.gazebosim.org/src/src.key | sudo apt-key add -
         ```
 
-1. Update the `apt` database
+* Update the `apt` database
 
-    ```
+```
 sudo apt-get update
-    ```
+```
 
-1. Install the "SRCSim" package and all its dependencies
+* Install the "SRCSim" package and all its dependencies
 
-    ```
+```
 sudo apt-get install srcsim
-    ```
+```
 
-1. Initialize the rosdep database
+* Initialize the rosdep database
 
-    ```
+```
 sudo rosdep init; rosdep update
-    ```
+```
 
-1. Install Java 8
+* Install Java 8
    
-    ```
+```
 sudo apt-add-repository -y ppa:openjdk-r/ppa
-    ```
-
-    ```
 sudo apt-get update
-    ```
-
-    ```
 sudo apt-get install -y openjdk-8-jdk
-    ```
+```
+ 
 
-   
+* Update your `JAVA_HOME` environment variable
 
-1. Update your `JAVA_HOME` environment variable
-    ```
+```
 echo 'export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64' >> ~/.bashrc
-    ```
+```
 
-1. Change ownership of `ihmc_ros_java_adapter`. This ROS package requires to write some files in its installation directory at runtime. We're working on a fix for this issue. In the meantime, please change the ownership of this directory to your user.
+* Change ownership of `ihmc_ros_java_adapter`. This ROS package requires to write some files in its installation directory at runtime. We're working on a fix for this issue. In the meantime, please change the ownership of this directory to your user.
 
-    ```
-    sudo chown -R $USER:$USER /opt/ros/indigo/share/ihmc_ros_java_adapter
-    ```
+```
+sudo chown -R $USER:$USER /opt/ros/indigo/share/ihmc_ros_java_adapter
+```
 
-1. Create IHMC networking ini file in `/opt/ros/indigo/share/ihmc_valkeryie_ros/configurations/IHMCNetworkParameters.ini` with the following content (you will need to edit the file using `sudo`:
+* Create IHMC networking ini file in `/opt/ros/indigo/share/ihmc_valkeryie_ros/configurations/IHMCNetworkParameters.ini` with the following content (you will need to edit the file using `sudo`:
 
 
 ```
@@ -93,7 +87,7 @@ networkManager=localhost
 loggedCameras=
 ```
 
-1. Configure your users and groups with the following:
+* Configure your users and groups with the following:
 
 ```
 #!c++
@@ -108,7 +102,7 @@ sudo usermod -a -G sudo vanguard
 sudo usermod -a -G ros vanguard 
 ```
 
-1. Download all the required Gazebo models
+* Download all the required Gazebo models
 
 ```
 wget -P /tmp/ https://bitbucket.org/osrf/gazebo_models/get/default.tar.gz
@@ -116,7 +110,7 @@ tar -xvf /tmp/default.tar.gz -C $HOME/.gazebo/models --strip 1
 rm /tmp/default.tar.gz
 ```
 
-1. Pre-build ihmc_ros_java_adapter
+* Pre-build ihmc_ros_java_adapter
 
 ```
 roslaunch ihmc_valkyrie_ros valkyrie_warmup_graddle_cache.launch
@@ -124,7 +118,7 @@ roslaunch ihmc_valkyrie_ros valkyrie_warmup_graddle_cache.launch
 
 ## Test your installation
 
-1. Open a new terminal and type:
+* Open a new terminal and type:
 
 ```
 roslaunch srcsim qual2.launch init:=true walk_test:=true
