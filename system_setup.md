@@ -110,7 +110,7 @@ tar -xvf /tmp/default.tar.gz -C $HOME/.gazebo/models --strip 1
 rm /tmp/default.tar.gz
 ```
 
-* Pre-build ihmc_ros_java_adapter
+* Pre-build `ihmc_ros_java_adapter`
 
 ```
 roslaunch ihmc_valkyrie_ros valkyrie_warmup_graddle_cache.launch
