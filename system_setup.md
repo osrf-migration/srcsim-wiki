@@ -47,30 +47,30 @@ sudo apt-get install srcsim
 
 * Initialize the rosdep database
 
-```
+    ```
 sudo rosdep init; rosdep update
-```
+    ```
 
 * Install Java 8
    
-```
+    ```
 sudo apt-add-repository -y ppa:openjdk-r/ppa
 sudo apt-get update
 sudo apt-get install -y openjdk-8-jdk
-```
+    ```
  
 
 * Update your `JAVA_HOME` environment variable
 
-```
+    ```
 echo 'export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64' >> ~/.bashrc
-```
+    ```
 
 * Change ownership of `ihmc_ros_java_adapter`. This ROS package requires to write some files in its installation directory at runtime. We're working on a fix for this issue. In the meantime, please change the ownership of this directory to your user.
 
-```
+    ```
 sudo chown -R $USER:$USER /opt/ros/indigo/share/ihmc_ros_java_adapter
-```
+    ```
 
 * Create IHMC networking ini file in `/opt/ros/indigo/share/ihmc_valkeryie_ros/configurations/IHMCNetworkParameters.ini` with the following content (you will need to edit the file using `sudo`:
 
