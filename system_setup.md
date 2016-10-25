@@ -1,11 +1,10 @@
-# Setting up a system to run SRCSIM #
+# Setting up a system to run SRCSim #
 
-This tutorial will walk you through the setup required to make a computer ready to run SRCSIM. For more information about recommended and minimum requirements see the [System Requirements](https://bitbucket.org/osrf/srcsim/wiki/system_requirements) page.
+This tutorial will walk you through the setup required to make a computer ready to run SRCSim. For more information about recommended and minimum requirements see the [System Requirements](https://bitbucket.org/osrf/srcsim/wiki/system_requirements) page.
 
-## Install Dependencies
+## Binary installation
 
-
-1. Install Gazebo7
+1. Install the Gazebo package repository
 
     1. Add the Gazebo7 repository
 
@@ -19,110 +18,116 @@ sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable `ls
 wget http://packages.osrfoundation.org/gazebo.key -O - | sudo apt-key add -
         ```
 
-    1. Update the apt database
+1. Install the SRCSim package repository
+
+    1. Add the SRCSim repository
 
         ```
-sudo apt-get update
-        ```
-
-    1. Finally, install gazebo7
-
-        ```
-sudo apt-get install gazebo7
-        ```
-
-1. Install ROS Indigo
-
-    1. Add the ROS repository
-
-        ```
-sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" \
-    > /etc/apt/sources.list.d/ros-latest.list'
+sudo sh -c 'echo "deb http://srcsim.gazebosim.org/src trusty main" \
+    > /etc/apt/sources.list.d/src-latest.list'
         ```
 
     1. Download the signing key
 
         ```
-sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net --recv-key 0xB01FA116
+wget -O - http://srcsim.gazebosim.org/src/src.key | sudo apt-key add -
         ```
 
-    1. Update the apt database
+1. Update the `apt` database
 
-        ```
+    ```
 sudo apt-get update
-        ```
+    ```
 
-    1. Install the "Desktop" packages for ROS Indigo
+1. Install the "SRCSim" package and all its dependencies
 
-        ```
-sudo apt-get install ros-indigo-desktop
-        ```
+    ```
+sudo apt-get install srcsim
+    ```
 
-    1. Initialize the rosdep database
+1. Initialize the rosdep database
 
-        ```
+    ```
 sudo rosdep init; rosdep update
-        ```
-
-    1. Install the Gazebo7 version of the Gazebo-ROS compatibility packages
-
-        ```
-sudo apt-get install ros-indigo-gazebo7-ros-pkgs
-        ```
-
-## Install SRC Sim
-
-### Binary install
-
-
-1. Add the SRCSim packages repository
-
-    ```
-sudo sh -c 'echo "deb http://52.53.157.231/src trusty main" > /etc/apt/sources.list.d/srcsim.list'
     ```
 
-1. Add the key SRCSim uses to sign the packages:
-
+1. Install Java 8
+   
     ```
-wget -O - http://52.53.157.231/src/src.key | sudo apt-key add -
-    ```
-
-### Source Install
-
-This strategy is only recommended for a few cases:
-
-- You want to test a change you're going to propose to the SRCSIM source code.
-- There are no SRCSIM binaries available for your system.
-
-1. Set up a Catkin Workspace
-
-    ```
-mkdir -p ~/srcsim_ws/src
-cd ~/srcsim_ws
+sudo apt-add-repository -y ppa:openjdk-r/ppa
     ```
 
-1. Get the SRC Sim source code from bitbucket.
-
     ```
-cd ~/srcsim_ws/src
-hg clone https://bitbucket.org/osrf/srcsim
+sudo apt-get update
     ```
 
-1. Before starting the build, you need to source the ROS `setup.bash` file:
-
     ```
-source /opt/ros/indigo/setup.bash
+sudo apt-get install -y openjdk-8-jdk
     ```
 
-1. Start the build using the catkin build tool
+   
+
+1. Update your `JAVA_HOME` environment variable
+    ```
+echo 'export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64' >> ~/.bashrc
+    ```
+
+1. Change ownership of `ihmc_ros_java_adapter`. This ROS package requires to write some files in its installation directory at runtime. We're working on a fix for this issue. In the meantime, please change the ownership of this directory to your user.
 
     ```
-cd ~/srcsim_ws
-catkin_make install
+    sudo chown -R $USER:$USER /opt/ros/indigo/share/ihmc_ros_java_adapter
     ```
 
-1. Source the installed setup bash file before building your competition solution and running srcsim
+1. Create IHMC networking ini file in `/opt/ros/indigo/share/ihmc_valkeryie_ros/configurations/IHMCNetworkParameters.ini` with the following content (you will need to edit the file using `sudo`:
 
-      ``` 
-source ~/srcsim_ws/install/setup.bash
-    ```
+
+```
+#!c++
+
+rosURI=http\://localhost\:11311
+logger=localhost
+robotController=localhost
+networkManager=localhost
+
+#don't log any cameras
+loggedCameras=
+```
+
+1. Configure your users and groups with the following:
+
+```
+#!c++
+
+sudo groupadd ros
+sudo groupadd pgrimaging
+sudo adduser vanguard
+sudo usermod -a -G ros $USER
+sudo usermod -a -G dialout $USER
+sudo usermod -a -G pgrimaging $USER
+sudo usermod -a -G sudo vanguard
+sudo usermod -a -G ros vanguard 
+```
+
+1. Download all the required Gazebo models
+
+```
+wget -P /tmp/ https://bitbucket.org/osrf/gazebo_models/get/default.tar.gz
+tar -xvf /tmp/default.tar.gz -C $HOME/.gazebo/models --strip 1
+rm /tmp/default.tar.gz
+```
+
+1. Pre-build ihmc_ros_java_adapter
+
+```
+roslaunch ihmc_valkyrie_ros valkyrie_warmup_graddle_cache.launch
+```
+
+## Test your installation
+
+1. Open a new terminal and type:
+
+```
+roslaunch srcsim qual2.launch init:=true walk_test:=true
+```
+
+You should see your robot appear into the scene. After a few seconds, the robot should approach the ground, switch to high level control, detach from the virtual harness and start walking.
