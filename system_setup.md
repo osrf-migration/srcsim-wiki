@@ -131,3 +131,6 @@ roslaunch srcsim qual2.launch init:=true walk_test:=true
 ```
 
 You should see your robot appear into the scene. After a few seconds, the robot should approach the ground, switch to high level control, detach from the virtual harness and start walking.
+
+Here's a [video](https://vimeo.com/188873182) of the expected behavior.
+
