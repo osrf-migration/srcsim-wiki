@@ -53,11 +53,14 @@ sudo rosdep init; rosdep update
 
 * Install Java 8
    
-    ```
+
+```
+#!c++
+
 sudo apt-add-repository -y ppa:openjdk-r/ppa
 sudo apt-get update
 sudo apt-get install -y openjdk-8-jdk
-    ```
+```
  
 
 * Update your `JAVA_HOME` environment variable
