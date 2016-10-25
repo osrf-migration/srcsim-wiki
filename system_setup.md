@@ -75,7 +75,7 @@ sudo chown -R $USER:$USER /opt/ros/indigo/share/ihmc_ros_java_adapter
 * Create IHMC networking ini file in `/opt/ros/indigo/share/ihmc_valkeryie_ros/configurations/IHMCNetworkParameters.ini` with the following content (you will need to edit the file using `sudo`:
 
 
-```
+    ```
 #!c++
 
 rosURI=http\://localhost\:11311
@@ -85,11 +85,11 @@ networkManager=localhost
 
 #don't log any cameras
 loggedCameras=
-```
+    ```
 
 * Configure your users and groups with the following:
 
-```
+    ```
 #!c++
 
 sudo groupadd ros
@@ -100,33 +100,32 @@ sudo usermod -a -G dialout $USER
 sudo usermod -a -G pgrimaging $USER
 sudo usermod -a -G sudo vanguard
 sudo usermod -a -G ros vanguard 
-```
+    ```
 
 **Logout from your current session and log in to make sure that all these changes are in place.**
 
 * Download all the required Gazebo models
 
-```
+    ```
 wget -P /tmp/ https://bitbucket.org/osrf/gazebo_models/get/default.tar.gz
 tar -xvf /tmp/default.tar.gz -C $HOME/.gazebo/models --strip 1
 rm /tmp/default.tar.gz
-```
+    ```
 
 * Pre-build `ihmc_ros_java_adapter`. Open a new terminal and run:
 
-```
+    ```
 roslaunch ihmc_valkyrie_ros valkyrie_warmup_graddle_cache.launch
-```
+    ```
 
 ## Test your installation
 
 * Open a new terminal and type:
 
-```
+    ```
 roslaunch srcsim qual2.launch init:=true walk_test:=true
-```
+    ```
 
 You should see your robot appear into the Gazebo scene. After a few seconds, the robot should approach the ground, switch to high level control, detach from the virtual harness and start walking.
 
 Here's a [video](https://vimeo.com/188873182) of the expected behavior.
-
