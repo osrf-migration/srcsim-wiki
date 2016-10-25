@@ -6,7 +6,7 @@ This tutorial will walk you through the setup required to make a computer ready 
 
 * Install the Gazebo package repository
 
-    1. Add the Gazebo7 repository
+    1. Add the Gazebo7 repository. Open a new terminal and type:
 
         ```
 sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable `lsb_release -cs` main" > /etc/apt/sources.list.d/gazebo-stable.list'
