@@ -102,6 +102,8 @@ sudo usermod -a -G sudo vanguard
 sudo usermod -a -G ros vanguard 
 ```
 
+It's probably a good idea to logout from your current session and log in to make sure that all these changes are in place.
+
 * Download all the required Gazebo models
 
 ```
@@ -110,7 +112,7 @@ tar -xvf /tmp/default.tar.gz -C $HOME/.gazebo/models --strip 1
 rm /tmp/default.tar.gz
 ```
 
-* Pre-build `ihmc_ros_java_adapter`
+* Pre-build `ihmc_ros_java_adapter`. Open a new terminal and run:
 
 ```
 roslaunch ihmc_valkyrie_ros valkyrie_warmup_graddle_cache.launch
