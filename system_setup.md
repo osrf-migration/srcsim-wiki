@@ -109,11 +109,11 @@ sudo usermod -a -G ros vanguard
 
 * Download all the required Gazebo models
 
-    ```
+```
 wget -P /tmp/ https://bitbucket.org/osrf/gazebo_models/get/default.tar.gz
 tar -xvf /tmp/default.tar.gz -C $HOME/.gazebo/models --strip 1
 rm /tmp/default.tar.gz
-    ```
+```
 
 * Pre-build `ihmc_ros_java_adapter`. Open a new terminal and run:
 
