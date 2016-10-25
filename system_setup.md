@@ -102,7 +102,7 @@ sudo usermod -a -G sudo vanguard
 sudo usermod -a -G ros vanguard 
 ```
 
-It's probably a good idea to logout from your current session and log in to make sure that all these changes are in place.
+**Logout from your current session and log in to make sure that all these changes are in place.**
 
 * Download all the required Gazebo models
 
