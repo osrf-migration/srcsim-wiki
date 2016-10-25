@@ -35,15 +35,15 @@ wget -O - http://srcsim.gazebosim.org/src/src.key | sudo apt-key add -
 
 * Update the `apt` database
 
-```
+    ```
 sudo apt-get update
-```
+    ```
 
 * Install the "SRCSim" package and all its dependencies
 
-```
+    ```
 sudo apt-get install srcsim
-```
+    ```
 
 * Initialize the rosdep database
 
