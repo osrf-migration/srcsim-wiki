@@ -92,7 +92,7 @@ loggedCameras=
 
 * Configure your users and groups with the following:
 
-    ```
+```
 #!c++
 
 sudo groupadd ros
@@ -103,7 +103,7 @@ sudo usermod -a -G dialout $USER
 sudo usermod -a -G pgrimaging $USER
 sudo usermod -a -G sudo vanguard
 sudo usermod -a -G ros vanguard 
-    ```
+```
 
 **Logout from your current session and log in to make sure that all these changes are in place.**
 
