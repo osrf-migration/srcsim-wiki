@@ -75,7 +75,16 @@ echo 'export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64' >> ~/.bashrc
 sudo chown -R $USER:$USER /opt/ros/indigo/share/ihmc_ros_java_adapter
     ```
 
-* Create IHMC networking ini file in `/opt/ros/indigo/share/ihmc_valkeryie_ros/configurations/IHMCNetworkParameters.ini` with the following content (you will need to edit the file using `sudo`:
+* Copy the IHMC networking ini file 
+
+
+```
+#!c++
+
+mkdir -p ${HOME}/.ihmc
+curl https://raw.githubusercontent.com/ihmcrobotics/ihmc_ros_core/0.8.0/ihmc_ros_common/configurations/IHMCNetworkParametersTemplate.ini > ${HOME}/.ihmc/IHMCNetworkParameters.ini
+```
+
 
 
 ```
