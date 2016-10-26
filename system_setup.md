@@ -85,20 +85,6 @@ mkdir -p ${HOME}/.ihmc
 curl https://raw.githubusercontent.com/ihmcrobotics/ihmc_ros_core/0.8.0/ihmc_ros_common/configurations/IHMCNetworkParametersTemplate.ini > ${HOME}/.ihmc/IHMCNetworkParameters.ini
 ```
 
-
-
-```
-#!c++
-
-rosURI=http\://localhost\:11311
-logger=localhost
-robotController=localhost
-networkManager=localhost
-
-#don't log any cameras
-loggedCameras=
-```
-
 * Configure your users and groups with the following:
 
 ```
