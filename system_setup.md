@@ -68,7 +68,7 @@ echo 'export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64' >> ~/.bashrc
 sudo chown -R $USER:$USER /opt/ros/indigo/share/ihmc_ros_java_adapter
 ```
 
-* Copy the IHMC networking ini file 
+* Copy the IHMC networking `ini` file 
 
 
 ```
