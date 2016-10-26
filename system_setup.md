@@ -35,25 +35,18 @@ wget -O - http://srcsim.gazebosim.org/src/src.key | sudo apt-key add -
 
 * Update the `apt` database
 
-    ```
+```
 sudo apt-get update
-    ```
+```
 
 * Install the "SRCSim" package and all its dependencies
 
-    ```
+```
 sudo apt-get install srcsim
-    ```
-
-* Initialize the rosdep database
-
-    ```
-sudo rosdep init; rosdep update
-    ```
+```
 
 * Install Java 8
    
-
 ```
 #!c++
 
@@ -65,15 +58,15 @@ sudo apt-get install -y openjdk-8-jdk
 
 * Update your `JAVA_HOME` environment variable
 
-    ```
+```
 echo 'export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64' >> ~/.bashrc
-    ```
+```
 
 * Change ownership of `ihmc_ros_java_adapter`. This ROS package requires to write some files in its installation directory at runtime. We're working on a fix for this issue. In the meantime, please change the ownership of this directory to your user.
 
-    ```
+```
 sudo chown -R $USER:$USER /opt/ros/indigo/share/ihmc_ros_java_adapter
-    ```
+```
 
 * Copy the IHMC networking ini file 
 
@@ -112,17 +105,17 @@ rm /tmp/default.tar.gz
 
 * Pre-build `ihmc_ros_java_adapter`. Open a new terminal and run:
 
-    ```
+```
 roslaunch ihmc_valkyrie_ros valkyrie_warmup_graddle_cache.launch
-    ```
+```
 
 ## Test your installation
 
 * Open a new terminal and type:
 
-    ```
+```
 roslaunch srcsim qual2.launch init:=true walk_test:=true
-    ```
+```
 
 You should see your robot appear into the Gazebo scene. After a few seconds, the robot should approach the ground, switch to high level control, detach from the virtual harness and start walking.
 
