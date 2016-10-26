@@ -39,7 +39,7 @@ wget -O - http://srcsim.gazebosim.org/src/src.key | sudo apt-key add -
 sudo apt-get update
 ```
 
-* Install the "SRCSim" package and all its dependencies
+* Install the `SRCSim` package and all its dependencies
 
 ```
 sudo apt-get install srcsim
