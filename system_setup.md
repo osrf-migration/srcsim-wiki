@@ -15,7 +15,7 @@ sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable `ls
     1. Download the signing key
 
         ```
-wget http://packages.osrfoundation.org/gazebo.key -O - | sudo apt-key add -
+wget -O - http://packages.osrfoundation.org/gazebo.key | sudo apt-key add -
         ```
 
 * Install the SRCSim package repository
@@ -27,10 +27,14 @@ sudo sh -c 'echo "deb http://srcsim.gazebosim.org/src trusty main" \
     > /etc/apt/sources.list.d/src-latest.list'
         ```
 
-    1. Download the signing key
+    1. Download the signing keys
 
         ```
 wget -O - http://srcsim.gazebosim.org/src/src.key | sudo apt-key add -
+        ```
+
+        ```
+wget -O - https://bintray.com/user/downloadSubjectPublicKey?username=bintray | sudo apt-key add -
         ```
 
 * Update the `apt` database
