@@ -78,19 +78,14 @@ mkdir -p ${HOME}/.ihmc
 curl https://raw.githubusercontent.com/ihmcrobotics/ihmc_ros_core/0.8.0/ihmc_ros_common/configurations/IHMCNetworkParametersTemplate.ini > ${HOME}/.ihmc/IHMCNetworkParameters.ini
 ```
 
-* Configure your users and groups with the following:
+* Increase real-time scheduling priority for current user (rtprio), which is required by the IHMC controller. Add current user to ros group:
 
 ```
 #!c++
 
+sudo echo "@ros    -       rtprio      99" > /etc/security/limits.d/ros.conf
 sudo groupadd ros
-sudo groupadd pgrimaging
-sudo adduser vanguard
 sudo usermod -a -G ros $USER
-sudo usermod -a -G dialout $USER
-sudo usermod -a -G pgrimaging $USER
-sudo usermod -a -G sudo vanguard
-sudo usermod -a -G ros vanguard 
 ```
 
 **Logout from your current session and log in to make sure that all these changes are in place.**
