@@ -66,6 +66,13 @@ sudo apt-get install -y openjdk-8-jdk
 echo 'export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64' >> ~/.bashrc
 ```
 
+* Add `IS_GAZEBO` environment variable:
+
+```
+echo 'export IS_GAZEBO=true' >> ~/.bashrc
+```
+
+
 * Change ownership of `ihmc_ros_java_adapter`. This ROS package requires to write some files in its installation directory at runtime. We're working on a fix for this issue. In the meantime, please change the ownership of this directory to your user.
 
 ```
