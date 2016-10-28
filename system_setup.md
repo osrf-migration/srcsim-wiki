@@ -125,6 +125,7 @@ roslaunch ihmc_valkyrie_ros valkyrie_warmup_graddle_cache.launch
 * Open a new terminal and type:
 
 ```
+source /opt/nasa/indigo/setup.bash
 roslaunch srcsim qual2.launch init:=true walk_test:=true
 ```
 
