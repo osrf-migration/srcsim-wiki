@@ -62,13 +62,21 @@ Open a new terminal and configure the environment:
 source /opt/ros/indigo/setup.bash
 ```
 
-Download the script for testing the arm control from [here](https://bitbucket.org/!api/2.0/snippets/osrf/rrkoe/43e61e14d9034a42687108a7569ce6cd41247ac7/files/armdemo.py). Once your robot is ready standing in front of the doorway, execute the following command in a new terminal:
+Download the script for testing the arm control:
+
+```
+#!c++
+
+wget goo.gl/dSYWfW -O /tmp/armDemo.py
+```
+
+Once your robot is ready standing in front of the doorway, execute the following command in a new terminal:
 
 
 ```
 #!c++
 
-python armdemo.py
+python /tmp/armDemo.py
 ```
 
 You should see the right arm of your robot moving.
