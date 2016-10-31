@@ -13,10 +13,11 @@ Start line | Finish line
 
 # Quick Start
 
-1. Prefetch simulation models
+1. Open a new terminal and source the configuration file:
 
     ```
-    wget -O /tmp/doorway.tar.gz http://models.gazebosim.org/src_doorway/model.tar.gz && tar xvf /tmp/doorway.tar.gz -C ~/.gazebo/models
+source /opt/nasa/indigo/setup.bash
+
     ```
 
 1. Run qual task 2 simulation
