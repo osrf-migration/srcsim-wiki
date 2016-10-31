@@ -52,6 +52,35 @@ The robot should start walking a few steps.
 
 # Arm control
 
+The [SRCSim API](https://bitbucket.org/osrf/srcsim/wiki/api) provides a set of ROS messages that can be used to control the arms of your robot. In this tutorial, we'll use a helper script to demonstrate how to move an arm.
+
+Open a new terminal and configure the environment:
+
+```
+#!c++
+
+source /opt/ros/indigo/setup.bash
+```
+
+Download the script for testing the arm control:
+
+```
+#!c++
+
+wget https://bitbucket.org/snippets/osrf/rrkoe /tmp/armdemo.py
+```
+
+Once your robot is ready standing in front of the doorway, execute the following command in a new terminal:
+
+
+```
+#!c++
+
+python armdemo.py
+```
+
+You should see the right arm of your robot moving.
+
 # Upload your log file
 
 You need to add the parameter `extra_gazebo_args:="-r"` to roslaunch for enabling Gazebo logging. When you're ready to start your SRC task with logging enable, type:
