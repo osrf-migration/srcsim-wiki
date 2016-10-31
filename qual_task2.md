@@ -16,8 +16,7 @@ Start line | Finish line
 1. Open a new terminal and source the configuration file:
 
     ```
-source /opt/nasa/indigo/setup.bash
-
+    source /opt/nasa/indigo/setup.bash
     ```
 
 1. Run qual task 2 simulation
