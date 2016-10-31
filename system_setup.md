@@ -88,15 +88,21 @@ sudo groupadd ros
 sudo usermod -a -G ros $USER
     ```
 
-**Logout from your current session and log in to make sure that all these changes are in place.**
+    **Logout from your current session and log in to make sure that all these changes are in place.**
 
 1. Download all the required Gazebo models
 
-```
+    ```
 wget -P /tmp/ https://bitbucket.org/osrf/gazebo_models/get/default.tar.gz
+    ```
+
+    ```
 tar -xvf /tmp/default.tar.gz -C $HOME/.gazebo/models --strip 1
+    ```
+
+    ```
 rm /tmp/default.tar.gz
-```
+    ```
 
 1. Pre-build `ihmc_ros_java_adapter`. Open a new terminal and run:
 
@@ -108,10 +114,13 @@ roslaunch ihmc_valkyrie_ros valkyrie_warmup_graddle_cache.launch
 
 1. Open a new terminal and type:
 
-```
+    ```
 source /opt/nasa/indigo/setup.bash
+    ```
+
+    ```
 roslaunch srcsim qual2.launch init:=true walk_test:=true
-```
+    ```
 
 You should see your robot appear into the Gazebo scene. After a few seconds, the robot should approach the ground, switch to high level control, detach from the virtual harness and start walking.
 
