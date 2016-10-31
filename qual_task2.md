@@ -37,7 +37,7 @@ Please, refer to the [qualification 1 documentation](https://bitbucket.org/osrf/
 
 # Walking
 
-The DRCSim API (TBD) provides a set of ROS messages that can be used to control the walking of your robot. In this tutorial, we'll use a helper script to demonstrate how to start a multi-step behavior. Once your robot is ready standing in front of the doorway, execute the following command:
+The [SRCSim API](https://bitbucket.org/osrf/srcsim/wiki/api) provides a set of ROS messages that can be used to control the walking of your robot. In this tutorial, we'll use a helper script to demonstrate how to start a multi-step behavior. Once your robot is ready standing in front of the doorway, execute the following command:
 
 
 ```
