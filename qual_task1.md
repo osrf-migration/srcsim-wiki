@@ -12,13 +12,12 @@ The end of the task is marked by the center screen transitioning from white to b
 
 ## Quickstart
 
-1. Prefetch simulation models
-
-    ```
-    wget -O /tmp/control.tar.gz http://models.gazebosim.org/control_console/model.tar.gz && tar xvf /tmp/control.tar.gz -C ~/.gazebo/models
-    ```
 
 1. Run the qualification task
+
+    ```
+source /opt/nasa/indigo/setup.bash
+    ```
 
     ```
     roslaunch srcsim qual1.launch extra_gazebo_args:="-r" init:="true"
