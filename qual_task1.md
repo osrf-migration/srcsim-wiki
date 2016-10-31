@@ -37,7 +37,7 @@ source /opt/nasa/indigo/setup.bash
 
 ## 2D Image Processing
 
-Camera data is available on the `/TBD` ROS topic. Subscribe to this topic by registering a callback. The callback will receive camera image data when the data is available. Refer to the [ROS Publisher Subscriber Tutorial](http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber%28c%2B%2B%29) for more details on nodes, publishers, and subscribers.
+Refer to the [API](https://bitbucket.org/osrf/srcsim/wiki/api) for a topic that publishes camera data. Subscribe to this topic by registering a callback. The callback will receive camera image data when the data is available. Refer to the [ROS Publisher Subscriber Tutorial](http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber%28c%2B%2B%29) for more details on nodes, publishers, and subscribers.
 
 Make use of any image processing library, such as [OpenCV](http://opencv.org), to determine if an LED is on and where in the image the LED is located.
 
