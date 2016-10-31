@@ -37,13 +37,14 @@ Please, refer to the [qualification 1 documentation](https://bitbucket.org/osrf/
 
 # Walking
 
-The [SRCSim API](https://bitbucket.org/osrf/srcsim/wiki/api) provides a set of ROS messages that can be used to control the walking of your robot. In this tutorial, we'll use a helper script to demonstrate how to start a multi-step behavior. Once your robot is ready standing in front of the doorway, execute the following command:
+The [SRCSim API](https://bitbucket.org/osrf/srcsim/wiki/api) provides a set of ROS messages that can be used to control the walking of your robot. In this tutorial, we'll use a helper script to demonstrate how to start a multi-step behavior. Once your robot is ready standing in front of the doorway, execute the following command in a new terminal:
 
 
 ```
 #!c++
 
-rosrun ihmc_ros_diagnostics boxStep.py
+source /opt/ros/indigo/setup.bash
+rosrun srcsim walk_test.py
 ```
 
 The robot should start walking a few steps. 
