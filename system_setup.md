@@ -77,7 +77,7 @@ mkdir -p ${HOME}/.ihmc; curl https://raw.githubusercontent.com/ihmcrobotics/ihmc
 1. Increase real-time scheduling priority for current user (rtprio), which is required by the IHMC controller. Add current user to ros group:
 
     ```
-sudo bash -c 'echo "@ros    -       rtprio      99" > /etc/security/limits.d/ros.conf'
+sudo bash -c 'echo "@ros    -       rtprio      99" > /etc/security/limits.d/ros-rtprio.conf'
     ```
 
     ```
