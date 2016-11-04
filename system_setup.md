@@ -107,7 +107,7 @@ rm /tmp/default.tar.gz
 1. Pre-build `ihmc_ros_java_adapter`. Open a new terminal and run:
 
     ```
-roslaunch ihmc_valkyrie_ros valkyrie_warmup_graddle_cache.launch
+roslaunch ihmc_valkyrie_ros valkyrie_warmup_gradle_cache.launch
     ```
 
 ## Test your installation
