@@ -90,6 +90,20 @@ sudo usermod -a -G ros $USER
 
     **Logout from your current session and log in to make sure that all these changes are in place.**
 
+1. Download the deployed Valkyrie controller
+
+    ```
+wget -P /tmp/ http://gazebosim.org/distributions/srcsim/valkyrie_controller.tar.gz
+    ```
+
+    ```
+tar -xvf /tmp/valkyrie_controller.tar.gz -C $HOME
+    ```
+
+    ```
+rm /tmp/valkyrie_controller.tar.gz
+    ```
+
 1. Download all the required Gazebo models
 
     ```
