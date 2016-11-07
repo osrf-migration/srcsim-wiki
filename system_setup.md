@@ -139,3 +139,10 @@ roslaunch srcsim qual2.launch init:=true walk_test:=true
 You should see your robot appear into the Gazebo scene. After a few seconds, the robot should approach the ground, switch to high level control, detach from the virtual harness and start walking.
 
 Here's a [video](https://vimeo.com/188873182) of the expected behavior.
+
+Also, the following error message is often seen in the console. This is a severe warning when controlling a real robot but is expected when running a simulation on PC hardware.
+
+~~~
+[ERROR] [1478200728.329368274, 2.971000000]: Nov 03, 2016 7:18:48 PM us.ihmc.valkyrieRosControl.ValkyrieAffinity <init>
+[ERROR] [1478200728.329423149, 2.971000000]: SEVERE: WARNING: Hyper-Threading is enabled. Expect higher amounts of jitter
+~~~
