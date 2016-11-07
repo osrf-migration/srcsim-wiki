@@ -125,6 +125,10 @@ rm /tmp/default.tar.gz
 1. Pre-build `ihmc_ros_java_adapter`. Open a new terminal and run:
 
     ```
+source /opt/nasa/indigo/setup.bash
+    ```
+
+    ```
 roslaunch ihmc_valkyrie_ros valkyrie_warmup_gradle_cache.launch
     ```
 
