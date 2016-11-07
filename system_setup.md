@@ -111,6 +111,10 @@ wget -P /tmp/ https://bitbucket.org/osrf/gazebo_models/get/default.tar.gz
     ```
 
     ```
+mkdir -p $HOME/.gazebo/models
+    ```
+
+    ```
 tar -xvf /tmp/default.tar.gz -C $HOME/.gazebo/models --strip 1
     ```
 
