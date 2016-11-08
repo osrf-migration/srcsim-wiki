@@ -74,7 +74,7 @@ sudo chown -R $USER:$USER /opt/ros/indigo/share/ihmc_ros_java_adapter
 mkdir -p ${HOME}/.ihmc; curl https://raw.githubusercontent.com/ihmcrobotics/ihmc_ros_core/0.8.0/ihmc_ros_common/configurations/IHMCNetworkParametersTemplate.ini > ${HOME}/.ihmc/IHMCNetworkParameters.ini
     ```
 
-1. Increase real-time scheduling priority for current user (rtprio), which is required by the IHMC controller. Add current user to ros group:
+1. Increase real-time scheduling priority (`rtprio`) for group `ros`, which is required by the IHMC controller. Add current user to ros group:
 
     ```
 sudo bash -c 'echo "@ros    -       rtprio      99" > /etc/security/limits.d/ros-rtprio.conf'
