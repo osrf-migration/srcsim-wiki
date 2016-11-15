@@ -47,7 +47,7 @@ R5 comes equipped with a stereo camera and a spinning hokuyo laser. Make use of 
 
 ## Reporting LED location
 
-Send the location and color of each LED to the `/srcsim/qual1/light` topic. This topic expects a [srcsim/Console](https://bitbucket.org/osrf/srcsim/src/56895b58f7654df5a54934c562591020a558fde7/msg/Console.msg?at=default&fileviewer=file-view-default) message. Your answer will appear in a log file that you must submit in order to complete the qualification tasks. This log file is in your home directory with the name `src_qual1_<timestamp>.log`, where `<timestamp>` is an ISO string of the time that simulation started.
+Send the location and color of each LED, in meters relative the head frame of R5, to the `/srcsim/qual1/light` topic. This topic expects a [srcsim/Console](https://bitbucket.org/osrf/srcsim/src/56895b58f7654df5a54934c562591020a558fde7/msg/Console.msg?at=default&fileviewer=file-view-default) message. Your answer will appear in a log file that you must submit in order to complete the qualification tasks. This log file is in your home directory with the name `src_qual1_<timestamp>.log`, where `<timestamp>` is an ISO string of the time that simulation started.
 
 ## Upload your log files
 
