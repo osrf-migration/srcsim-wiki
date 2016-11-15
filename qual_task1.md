@@ -4,7 +4,7 @@ SRC qualification 1 is an image processing task. The qualification loads with R5
 
 The task is started when an empty message is sent to the `/srcsim/qual1/start` topic. At this point the large screen in the center of the console will turn white. This transition signals that the task is starting.
 
-One at a time, LEDs will turn on then off. An LED will stay on between 5 and 20 seconds. The color of the LED will be either red, green, or blue. During this time, you must report the color and center location of the LED relative to R5's head frame in meters. Color values are in the range of (0,1). For example, a red is `r=1, g=0, b=0`. Score is based on the accuracy of the reported locations and color.
+One at a time, LEDs will turn on then off. An LED will stay on between 5 and 20 seconds. The color of the LED will be either red, green, or blue. During this time, you must report the color and center location of the LED relative to R5's head frame in meters. Color values are in the range of (0,1). For example, red is `r=1, g=0, b=0`. Score is based on the accuracy of the reported locations and color.
 
 ![4007635085-srcsim_qual1_console_yellow.jpg](https://bitbucket.org/repo/xEbAAe/images/3389508772-4007635085-srcsim_qual1_console_yellow.jpg)
 
