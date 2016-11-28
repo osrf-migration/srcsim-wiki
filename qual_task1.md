@@ -6,6 +6,11 @@ The task is started when an empty message is sent to the `/srcsim/qual1/start` t
 
 One at a time, LEDs will turn on then off. An LED will stay on between 5 and 20 seconds. The color of the LED will be either red, green, or blue. During this time, you must report the color and center location of the LED relative to R5's head frame in meters. Color values are in the range of (0,1). For example, red is `r=1, g=0, b=0`. Score is based on the accuracy of the reported locations and color.
 
+**Important Note**
+
+Raw image data is inverted, due to the multisense head being mounted up-side-down. Make sure to adjust the image data correctly in order to arrive at physically accurate LED positions.
+
+
 ![4007635085-srcsim_qual1_console_yellow.jpg](https://bitbucket.org/repo/xEbAAe/images/3389508772-4007635085-srcsim_qual1_console_yellow.jpg)
 
 The end of the task is marked by the center screen transitioning from white to black. At this point, no more LEDs will turn on, and it is safe to quite Gazebo and submit your results.
@@ -41,6 +46,10 @@ Refer to the [API](https://bitbucket.org/osrf/srcsim/wiki/api) for a topic that 
 
 Make use of any image processing library, such as [OpenCV](http://opencv.org), to determine if an LED is on and where in the image the LED is located.
 
+**Important Note**
+
+Raw image data is inverted, due to the multisense head being mounted up-side-down. Make sure to adjust the image data correctly in order to arrive at physically accurate LED positions.
+
 ## Depth data
 
 R5 comes equipped with a stereo camera and a spinning hokuyo laser. Make use of these sensors to determine where an LED is located.
@@ -48,6 +57,11 @@ R5 comes equipped with a stereo camera and a spinning hokuyo laser. Make use of 
 ## Reporting LED color and location
 
 Send the location, in meters relative to the head frame of R3, and color, using a range of (0,1) for each RGB component, of each LED to the `/srcsim/qual1/light` topic. This topic expects a [srcsim/Console](https://bitbucket.org/osrf/srcsim/src/56895b58f7654df5a54934c562591020a558fde7/msg/Console.msg?at=default&fileviewer=file-view-default) message. Your answer will appear in a log file that you must submit in order to complete the qualification tasks. This log file is in your home directory with the name `src_qual1_<timestamp>.log`, where `<timestamp>` is an ISO string of the time that simulation started.
+
+**Important Note**
+
+Raw image data is inverted, due to the multisense head being mounted up-side-down. Make sure to adjust the image data correctly in order to arrive at physically accurate LED positions.
+
 
 ## Upload your log files
 
