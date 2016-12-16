@@ -60,6 +60,11 @@ echo 'export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64' >> ~/.bashrc
 echo 'export IS_GAZEBO=true' >> ~/.bashrc
     ```
 
+1. Add `ROS_IP` environment variable:
+
+    ```
+echo 'export ROS_IP=127.0.0.1' >> ~/.bashrc
+    ```
 
 1. Change ownership of `ihmc_ros_java_adapter`. This ROS package requires to write some files in its installation directory at runtime. We're working on a fix for this issue. In the meantime, please change the ownership of this directory to your user.
 
