@@ -120,3 +120,82 @@ gzip -c qual_2.log > qual_2.log.gz
 ```
 
 Always save the original log and submit the filtered log (`qual_2.log.gz`).
+
+# Check your score
+
+It's possible to execute a script that tells you the score that you obtained after running a task. We encourage teams to check the score before submission to make sure that your log file is correct and your score looks reasonable.
+
+Create a directory for storing the scoring scripts:
+
+
+```
+#!c++
+
+mkdir ~/srcsim_score && cd ~/srcsim_score
+```
+
+
+Download the following ruby scripts:
+
+
+```
+#!c++
+
+wget https://bitbucket.org/osrf/srcsim/raw/score/scoring/common.rb
+wget https://bitbucket.org/osrf/srcsim/raw/score/scoring/scoring_q2.rb
+```
+
+Install the following dependencies:
+
+
+```
+#!c++
+
+sudo apt-get install ruby-nokogiri
+```
+
+
+The next step is to prepare your log file to be used with the scoring script. The default log files are compressed to reduce its size but the scoring scripts need uncompressed log files. Replace `<timestamp>` with your appropriate directory name:
+ 
+
+```
+#!c++
+
+gz log -e -f ~/.gazebo/log/<timestamp>/gzserver/state.log > ~/.gazebo/log/<timestamp>/gzserver/qual_2.log
+```
+
+Make the scoring script executable:
+
+
+```
+#!c++
+
+chmod +x scoring_q2.rb
+```
+
+And check your score:
+
+
+```
+#!c++
+
+./scoring_q2.rb ~/.gazebo/log/<timestamp>/gzserver/qual_2.log
+
+```
+
+The output of the script should tell you the time where the robot crossed the starting and finish line, as well as the elapsed task time.
+
+
+```
+#!c++
+
+Start line crossed: [63 254000000]
+Finish line crossed: [117 224000000]
+Elapsed time: [53 970000000]
+```
+
+
+
+
+
+
