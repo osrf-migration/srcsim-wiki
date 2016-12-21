@@ -98,7 +98,7 @@ The size of a log file can be really big depending on the complexity of the worl
 ```
 #!c++
 
-gz log -e -f state.log --filter *.pose/*.pose -z 30 > qual_1.log
+gz log -e -f state.log --filter *.pose/*.pose -z 60 > qual_1.log
 ```
 
 And then, compress your file:
