@@ -110,3 +110,75 @@ gzip -c qual_1.log > qual_1.log.gz
 ```
 
 Always save the original log and submit the filtered log (`qual_1.log.gz`).
+
+# Check your score
+
+It's possible to execute a script that tells you the score that you obtained after running a task. We encourage teams to check the score before submission to make sure that your log file is correct and your score looks reasonable.
+
+Create a directory for storing the scoring scripts:
+
+
+```
+#!c++
+
+mkdir ~/srcsim_score && cd ~/srcsim_score
+```
+
+
+Download the following ruby scripts:
+
+
+```
+#!c++
+
+wget https://bitbucket.org/osrf/srcsim/raw/score/scoring/common.rb
+wget https://bitbucket.org/osrf/srcsim/raw/score/scoring/scoring_q1.rb
+```
+
+Install the following dependencies:
+
+
+```
+#!c++
+
+sudo apt-get install ruby-nokogiri
+```
+
+
+Make the scoring script executable:
+
+
+```
+#!c++
+
+chmod +x scoring_q1.rb
+```
+
+Check your score, giving to the script the previously generated files:
+
+
+```
+#!c++
+
+./scoring_q1.rb <path_to>/src_qual1_<timestamp>.log <path_to>/qual_1.log
+
+```
+
+The output of the script should tell you:
+
+* the total duration of the task
+* whether it was a success or a failure
+* the total score for the color tasks
+* the total score for the position tasks 
+* the total score for qualification 1.
+
+
+```
+#!c++
+
+Duration: 27.569000000
+Success: No
+Color score: 1.000000 / 1.0
+Position score: 0.500000 / 1.0
+Total score: 0.750000 / 1.0
+```
