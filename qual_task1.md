@@ -111,9 +111,9 @@ gzip -c qual_1.log > qual_1.log.gz
 
 Always save the original log and submit the filtered log (`qual_1.log.gz`).
 
-# Check your score
+# Check your answers
 
-It's possible to execute a script that tells you the score that you obtained after running a task. We encourage teams to check the score before submission to make sure that your log file is correct and your score looks reasonable.
+A script to test answers is being made available to the teams. We encourage teams to check their answers before submission to make sure that your log file is correct and your answers looks reasonable.
 
 Create a directory for storing the scoring scripts:
 
