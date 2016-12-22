@@ -164,21 +164,45 @@ Check your score, giving to the script the previously generated files:
 
 ```
 
-The output of the script should tell you:
+The script will compare each of your answers to the ground truth, for example:
 
-* the total duration of the task
-* whether it was a success or a failure
-* the total score for the color tasks
-* the total score for the position tasks 
-* the total score for qualification 1.
+~~~
+Answer 1: Color:    answer                         [0.0000 1.0000 0.0000]
+                    ground truth                   [1.0000 0.0000 0.0000]
+                    euclidean error                [1.414214]
+          Position: answer                         [2.5900 -0.4200 -0.6000]
+                    ground truth (neck)            [2.6013 -0.4091 -0.6288]
+                    ground truth (head)            [2.4890 0.4091 0.3825]
+                    ground truth (head flipped)    [2.4890 -0.4091 -0.3825]
+                    euclidean error (neck)         [0.032794]
+                    euclidean error (head)         [1.289608]
+                    euclidean error (head flipped) [0.240024]
+~~~
 
+The total for the whole task is shown in the end, for example:
 
-```
-#!c++
-
+~~~
 Duration: 27.569000000
-Success: No
-Color score: 1.000000 / 1.0
-Position score: 0.500000 / 1.0
-Total score: 0.750000 / 1.0
-```
+Total color euclidean error:                   7.171068
+Total position euclidean error (neck):         15.028268
+Total position euclidean error (head):         24.338433
+Total position euclidean error (head flipped): 16.885048
+~~~
+
+## Ground truth
+
+The script compares your answer to a few different frames:
+
+1. The "neck" frame corresponds to the `upperNeckPitchLink` frame, which has its `z` axis up when the robot is standing.
+1. The "head" frame corresponds to the `head` frame, which has its `z` axis down when the robot is standing.
+1. The "head flipped" frame is the same as the `head` frame, but rolled 180 degrees so the image is upright.
+
+![headframetopicheadann.png](https://bitbucket.org/repo/xEbAAe/images/3315428679-headframetopicheadann.png)
+
+![headframetopicflippedann.png](https://bitbucket.org/repo/xEbAAe/images/2957401953-headframetopicflippedann.png)
+
+* Note that the head frame should not be visible in your simulation, it was added here for demonstration purposes
+
+
+
+
