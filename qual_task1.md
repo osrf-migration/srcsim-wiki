@@ -90,7 +90,12 @@ A log file is written at ~/.gazebo/log/<timestamp>/gzserver/state.log . You can 
 gazebo -p ~/.gazebo/log/<timestamp>/gzserver/state.log
 ```
 
-It's highly recommended to playback your log files before submission.
+It's highly recommended to playback your log files before submission. 
+You can do it as follows (the lights won't flash while playing back the log):
+
+~~~
+roscore & rosrun gazebo_ros gazebo -p ~/.gazebo/log/<timestamp>/gzserver/state.log 
+~~~
 
 The size of a log file can be really big depending on the complexity of the world. For submission, we'll reduce the size of the log file by sampling at lower rate and filtering some of the information. Run the following command inside the folder where your log file was created. 
 
@@ -154,7 +159,8 @@ Make the scoring script executable:
 chmod +x scoring_q1.rb
 ```
 
-Check your score, giving to the script the previously generated files:
+Check your score, giving to the script the previously generated files
+(note that you should use `qual_1.log`, not `state.log`):
 
 
 ```
