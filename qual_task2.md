@@ -101,6 +101,11 @@ gazebo -p ~/.gazebo/log/<timestamp>/gzserver/state.log
 ```
 
 It's highly recommended to playback your log files before submission.
+You can do it as follows (the lights won't flash while playing back the log):
+
+~~~
+roscore & rosrun gazebo_ros gazebo -p ~/.gazebo/log/<timestamp>/gzserver/state.log 
+~~~
 
 The size of a log file can be really big depending on the complexity of the world. For submission, we'll reduce the size of the log file by sampling at lower rate and filtering some of the information. Run the following command inside the folder where your log file was created. 
 
@@ -123,7 +128,9 @@ Always save the original log and submit the filtered log (`qual_2.log.gz`).
 
 # Check your score
 
-It's possible to execute a script that tells you the score that you obtained after running a task. We encourage teams to check the score before submission to make sure that your log file is correct and your score looks reasonable.
+A script to test answers is being made available to the teams. We encourage teams to check their answers before submission to make sure that your log file is correct and your answers looks reasonable.
+
+**Note**: *The scoring files are only meant to aid in debugging. They do not reflect the real score.*
 
 Create a directory for storing the scoring scripts:
 
