@@ -120,7 +120,7 @@ Always save the original log and submit the filtered log (`qual_1.log.gz`).
 
 A script to test answers is being made available to the teams. We encourage teams to check their answers before submission to make sure that your log file is correct and your answers looks reasonable.
 
-**Note**: The scoring files are only meant to aid in debugging. They do not reflect the real score.
+**Note**: *The scoring files are only meant to aid in debugging. They do not reflect the real score.*
 
 Create a directory for storing the scoring scripts:
 
