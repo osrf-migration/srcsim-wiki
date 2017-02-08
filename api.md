@@ -1,6 +1,6 @@
 # SRC API
 
-Competitors in the Space Robotics Challenge (SRC) are expected to write a [ROS](ros.org) program that controls the R5 robot to solve each task. This page contains information about the ROS interfaces that competitors may use to collect state information (sensor data, joint states) and send control commands (foot placement).
+Competitors in the Space Robotics Challenge (SRC) are expected to write a [ROS](http://ros.org) program that controls the R5 robot to solve each task. This page contains information about the ROS interfaces that competitors may use to collect state information (sensor data, joint states) and send control commands (foot placement).
 
 Not listed on this page are standard ROS topics, such as `/tf`, which are not unique to the SRC. If this is confusing, then a good place to start are the [ROS tutorials](http://wiki.ros.org/ROS/Tutorials).
 
