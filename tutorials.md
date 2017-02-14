@@ -5,6 +5,12 @@ These tutorials provide information about how to install and use the SRCSim soft
 1. [System Setup](https://bitbucket.org/osrf/srcsim/wiki/system_setup)
     * A guide for configuring your personal PC and installing software for the challenge.
 
+
 1. Qualifications
     1. [Qualification task 1](https://bitbucket.org/osrf/srcsim/wiki/qual_task1)
     1. [Qualification task 2](https://bitbucket.org/osrf/srcsim/wiki/qual_task2)
+
+
+1. Finals
+    1. [General guidelines](https://bitbucket.org/osrf/srcsim/wiki/finals)
+    1. [Final task 1](https://bitbucket.org/osrf/srcsim/wiki/finals_task1)
