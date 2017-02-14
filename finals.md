@@ -47,15 +47,15 @@ checkpoints:
     rosservice call /srcsim/finals/start_task 1 1
     ```
 
-    The service arguments correspond to the task id and the checkpoint id
+    * The service arguments correspond to the task id and the checkpoint id
     respectively.
 
-    Once a checkpoint has been completed, the next checkpoint is available.
+    * Once a checkpoint has been completed, the next checkpoint is available.
 
-    Similarly, once a task has been completed, the next task is available.
+    * Similarly, once a task has been completed, the next task is available.
     Beware that each task has a timeout.
 
-    Teams may choose to skip checkpoints (and lose points). At any time, you may
+    * Teams may choose to skip checkpoints (and lose points). At any time, you may
     skip to a checkpoint of a specific task using the service above. It's not
     possible to restart the current checkpoint or to go back to an earlier
     checkpoint.
@@ -66,11 +66,10 @@ checkpoints:
     rostopic echo /srcsim/finals/task
     ```
 
-    Once a task starts, you will get information about its progress on this
+    * Once a task starts, you will get information about its progress on this
     topic.
 
 Click on a task above to see specific instructions for each task.
 
 For a complete list of the available interfaces, check the
 [API documentation](https://bitbucket.org/osrf/srcsim/wiki/api)
-
