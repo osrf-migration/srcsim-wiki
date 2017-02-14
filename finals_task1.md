@@ -2,9 +2,9 @@
 
 Task 1 consists of the following checkpoints:
 
-* Checkpoint 1: Move within 1 meter from the communication dish
-* Checkpoint 2: Move the communication dish to the correct pitch and yaw angles
-* Checkpoint 3: Walk into Task 1's finish box
+* **Checkpoint 1**: Move within 1 meter from the communication dish
+* **Checkpoint 2**: Move the communication dish to the correct pitch and yaw angles
+* **Checkpoint 3**: Walk into Task 1's finish box
 
 All checkpoints must be completed within 30 minutes.
 
@@ -29,6 +29,8 @@ An example step-by-step of how to run task 1:
     roslaunch srcsim unique_task1.launch init:="true"
     ```
 
+1. Wait to see the `Init: Done` message on the terminal before beginning.
+
 1. On a new terminal, listen to task updates:
 
     ```
@@ -40,7 +42,7 @@ An example step-by-step of how to run task 1:
 
 #### Checkpoint 1
 
-1. Once you're setup your controllers and are ready to perform the task, on a
+1. Once you've setup your controllers and are ready to perform the task, on a
    new terminal, call a service which starts task 1's first checkpoint:
 
     ```
@@ -61,7 +63,13 @@ An example step-by-step of how to run task 1:
         timed_out: False
         finished: False
 
-1. Perform checkpoint 1: move within 1 meter from the satellite dish.
+    You should also see messages like this on the console:
+
+        [Msg] Task [1] - Checkpoint [1] - Started (65 21000000)
+        [Msg] Started box contains plugin [task1/checkpoint1]
+
+1. Perform checkpoint 1: use your controllers to move the robot within 1 meter 
+from the satellite dish.
 
 1. Once you reach the satellite dish, the task message will be updated with the
 time checkpoint 1 was complete. You'll see something like this:
@@ -81,15 +89,21 @@ time checkpoint 1 was complete. You'll see something like this:
         timed_out: False
         finished: False
 
+    There will also be a confirmation message on the console telling you that 
+    checkpoint 2 has started:
+
+        [Msg] Stopped box contains plugin [task1/checkpoint1]
+        [Msg] Task [1] - Checkpoint [1] - Completed (95 21000000)
+        [Msg] Task [1] - Checkpoint [2] - Started (95 21000000)
+
 #### Checkpoint 2
 
-We're now performing checkpoint 2: Move the communication dish to the
-correct pitch and yaw angles. This consists of rotating the handles on the
+We're now performing checkpoint 2: *Move the communication dish to the
+correct pitch and yaw angles*. This consists of rotating the handles on the
 satellite until the correct angles are achieved.
 
 1. Conveniently, the satellite reports its current and target angles through a
 ROS topic. On a new terminal, start listening to the satellite updates:
-
 
     ```
     rostopic echo /task1/checkpoint2/satellite
@@ -108,7 +122,9 @@ ROS topic. On a new terminal, start listening to the satellite updates:
 
 1. As the robot moves the handles, you'll see the numbers for `current_pitch`
 and `current_yaw` change. These values are given in radians and correspond to
-the satellite's angles, not the angles of the handle whcih the robot is moving.
+the satellite dish's angles, not the angles of the handle which the robot is 
+moving. The ratio between the handles and the dish movement is unknown to the 
+robot.
 
 1. Once `current_pitch` is within a tolerance (currently using 5 degrees)
 distance from `target_pitch`, `pitch_correct_now` will change to `True`. The
@@ -117,7 +133,7 @@ same goes for `yaw_correct_now`.
 1. After `pitch_correct_now` is true for a target number of seconds
 (now using 5 s), `pitch_completed` becomes True. Make sure the handle stays in
 place, because if the pitch value moves away from the target, `pitch_completed`
-goes back to False. The same applies for yaw.
+goes back to False. The same applies to yaw.
 
 1. When both `pitch_completed` and `yaw_completed` are true for the same time
 (i.e. both values have been correct for over 5 seconds at the same time),
@@ -145,20 +161,26 @@ time of checkpoint 2's completion:
         timed_out: False
         finished: False
 
+    The console will have a message like this:
+
+        [Msg] Task [1] - Checkpoint [2] - Completed (115 21000000)
+        [Msg] Task [1] - Checkpoint [3] - Started (115 21000000)
+
 #### Checkpoint 3
 
-1. Checkpoint 3 consists of moving to the finish box. Make sure we're in this
-checkpoint by looking at the `current_checkpoint` field of the task status
-message.
+1. Checkpoint 3 consists of moving to the finish box.
 
 1. Walk to the finish box.
 
-1. The task should be completed.
+1. Task 1 should be completed. You'll see a message like this:
 
+        [Msg] Stopped box contains plugin [task1/checkpoint3]
+        [Msg] Task [1] - Checkpoint [3] - Completed (59 257000000)
+        [Msg] Task [1] finished.
 
 ## Timeout
 
-Make sure you complete all the checkpoints within 30 minutes.
+Make sure you complete all checkpoints in task 1 within 30 minutes.
 
 ## Skipping checkpoints
 
@@ -173,8 +195,8 @@ To skip to a checkpoint, simply use the task service to choose a new checkpoint
 and the robot will be teleported to a position where it can start that
 checkpoint from.
 
-For example, to start practice in front of the satellite (skip checkpoint 1),
-call the start task service with task 1, checkpoint 2:
+For example, to start practice in front of the satellite (consequently skipping
+checkpoint 1), call the start task service with task 1, checkpoint 2:
 
     rosservice call /srcsim/finals/start_task 1 2
 
@@ -185,3 +207,21 @@ won't move the satellite handles, you must call:
     rosservice call /srcsim/finals/start_task 1 3
 
 Otherwise, it will never be registered that you reached the finish box.
+
+## Practice versus competition
+
+Practice is different from the competition setup in several aspects. Keep these 
+in mind while practicing:
+
+* You won't have direct access to Gazebo during the competition, both to the 
+graphical interface and to the terminal running it. So you won't be able to 
+have a 3rd person view of the robot and the environment, or read console status 
+messages. Get used to interacting exclusively through ROS messages.
+
+* The world provided during practice is similar to the world which will be used
+during the competition, but not exactly the same. It's a good idea to practice 
+with different world setups to be prepared for the finals. A handy script which 
+can be used to generate randomized worlds will be provided for teams, stay tuned!
+
+* The final competition will happen in a world which contains all 3 tasks, and the
+tasks must be completed in a row, or explicitly skipped.
