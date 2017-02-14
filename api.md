@@ -1,18 +1,26 @@
 # SRC API
 
-Competitors in the Space Robotics Challenge (SRC) are expected to write a [ROS](http://ros.org) program that controls the R5 robot to solve each task. This page contains information about the ROS interfaces that competitors may use to collect state information (sensor data, joint states) and send control commands (foot placement).
+Competitors in the Space Robotics Challenge (SRC) are expected to write a
+[ROS](http://ros.org) program that controls the R5 robot to solve each task.
+This page contains information about the ROS interfaces that competitors may
+use to collect state information (sensor data, joint states), send control
+commands (foot placement) and manage the competition run (start / skip tasks).
 
-Not listed on this page are standard ROS topics, such as `/tf`, which are not unique to the SRC. If this is confusing, then a good place to start are the [ROS tutorials](http://wiki.ros.org/ROS/Tutorials).
+Not listed on this page are standard ROS topics, such as `/tf`, which are not
+unique to the SRC. If this is confusing, then a good place to start are the
+[ROS tutorials](http://wiki.ros.org/ROS/Tutorials).
 
-## ROS Topics
+Topics act as named data pipes, where the data transmitted is a ROS message.
+Information in this section was generated from the `rostopic list` and
+`rostopic info <topic_name>` command line utilities. We encourage competitors
+to use these tools during development.
 
-Topics act as named data pipes, where the data transmitted is a ROS message. Information in this section was generated from the `rostopic list` and `rostopic info <topic_name>` command line utilities. We encourage competitors to use these tools during development.
+### Robot interface
 
-The format of each item in the following list is `topic name` : `message type`.
+These are interfaces to receive sensor data and send commands to the robot.
 
 Topic / service name | Message type
 ---------- | ------------
-**R5 controls** |
 `/ihmc_ros/localization/pelvis_odom_pose_correction` | [nav_msgs/Odometry](http://docs.ros.org/api/nav_msgs/html/msg/Odometry.html)
 `/ihmc_ros/localization/pelvis_pose_correction` | [geometry_msgs/PoseStamped](http://docs.ros.org/api/geometry_msgs/html/msg/PoseStamped.html)
 `/ihmc_ros/valkyrie/control/abort_walking` | [ihmc_msgs/AbortWalkingRosMessage](https://github.com/ihmcrobotics/ihmc_ros_core/blob/develop/ihmc_msgs/msg/AbortWalkingRosMessage.msg)
@@ -57,7 +65,34 @@ Topic / service name | Message type
 `/ihmc_ros/valkyrie/output/robot_motion_status` | [std_msgs/String](http://docs.ros.org/api/std_msgs/html/msg/String.html)
 `/ihmc_ros/valkyrie/output/robot_pose` | [nav_msgs/Odometry](http://docs.ros.org/api/nav_msgs/html/msg/Odometry.html)
 `/ihmc_ros/valkyrie/output/walking_status` | [ihmc_msgs/WalkingStatusRosMessage](https://github.com/ihmcrobotics/ihmc_ros_core/blob/develop/ihmc_msgs/msg/WalkingStatusRosMessage.msg)
-**Finals** |
-`/srcsim/finals/start_task` |
-`/srcsim/finals/task` |
+
+### Competition interface (finals)
+
+These are the interfaces to interact with the flow of the competition.
+
+For more detailed information, see the [finals](https://bitbucket.org/osrf/srcsim/wiki/finals) tutorials.
+
+Topic name | Message / service | Description | Message definition
+---------- | ----------------- | ----------- | ----------------
+`/srcsim/finals/start_task` | Service | Start a specific task at a specific checkpoint. | [srcsim/StartTask.srv](https://bitbucket.org/osrf/srcsim/raw/default/srv/StartTask.srv)
+`/srcsim/finals/task` | Message | Task status updates | [srcsim/Task.msg](https://bitbucket.org/osrf/srcsim/raw/default/msg/Task.msg)
+
+#### Finals: Task 1
+
+These are interfaces specific to task 1:
+
+For more detailed information, see the [task 1](https://bitbucket.org/osrf/srcsim/wiki/finals_task1) tutorials.
+
+Topic name | Message / service | Description | Message definition
+---------- | ----------------- | ----------- | ----------------
+`/task1/checkpoint2/satellite` | Message | Satellite status updates | [srcsim/Satellite.msg](https://bitbucket.org/osrf/srcsim/raw/default/msg/Satellite.msg)
+
+
+#### Finals: Task 2
+
+TODO
+
+#### Finals: Task 3
+
+TODO
 
