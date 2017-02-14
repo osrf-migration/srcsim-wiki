@@ -71,4 +71,6 @@ checkpoints:
 
 Click on a task above to see specific instructions for each task.
 
+For a complete list of the available interfaces, check the
+[API documentation](https://bitbucket.org/osrf/srcsim/wiki/api)
 
