@@ -3,7 +3,7 @@
 Each run consists of 3 tasks and each task is composed of a different number of
 checkpoints:
 
-### Task 1
+### [Task 1](https://bitbucket.org/osrf/srcsim/wiki/finals_task1)
 
 * Checkpoint 1: Move within 1 meter from the communication dish
 * Checkpoint 2: Move the communication dish to the correct pitch and yaw angles
@@ -71,26 +71,4 @@ checkpoints:
 
 Click on a task above to see specific instructions for each task.
 
-<!--
-## Random world generation
-
-We offer a script which generates unique competition worlds with configurations
-similar to the configuration during the final competition. This is done to help
-teams practice in various different environments.
-
-1. Go to the `worlds` directory
-
-        cd <path>/worlds
-
-2.1. To generate the whole world, run:
-
-        erb unique.world.erb > unique.world
-
-2.2. To generate a world with only one task, give the task number (1, 2, 3) as
-an argument:
-
-        erb t=2 unique.world.erb > unique_task2.world
-
-TODO: Need to install worlds?!
--->
 
