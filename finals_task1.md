@@ -49,45 +49,37 @@ An example step-by-step of how to run task 1:
 
     You should see messages on the previous terminal, like this:
 
-    ```
-    ---
-    task: 1
-    current_checkpoint: 1
-    checkpoints_completion: []
-    start_time:
-      secs: 65
-      nsecs:  21000000
-    elapsed_time:
-      secs: 3
-      nsecs: 609000000
-    timed_out: False
-    finished: False
-    ---
-    ```
+        task: 1
+        current_checkpoint: 1
+        checkpoints_completion: []
+        start_time:
+          secs: 65
+          nsecs:  21000000
+        elapsed_time:
+          secs: 3
+          nsecs: 609000000
+        timed_out: False
+        finished: False
 
 1. Perform checkpoint 1: move within 1 meter from the satellite dish.
 
 1. Once you reach the satellite dish, the task message will be updated with the
 time checkpoint 1 was complete. You'll see something like this:
 
-    ```
-    ---
-    task: 1
-    current_checkpoint: 2
-    checkpoints_completion:
-      -
-        secs: 95
-        nsecs: 21000000
-    start_time:
-      secs: 65
-      nsecs:  21000000
-    elapsed_time:
-      secs: 30
-      nsecs: 000000000
-    timed_out: False
-    finished: False
-    ---
-    ```
+        task: 1
+        current_checkpoint: 2
+        checkpoints_completion:
+          -
+            secs: 95
+            nsecs: 21000000
+        start_time:
+          secs: 65
+          nsecs:  21000000
+        elapsed_time:
+          secs: 30
+          nsecs: 000000000
+        timed_out: False
+        finished: False
 
 #### Checkpoint 2
 
@@ -105,18 +97,14 @@ ROS topic. On a new terminal, start listening to the satellite updates:
 
 1. You'll see messages like:
 
-    ```
-    ---
-    target_pitch: -0.2
-    target_yaw: 1.0
-    current_pitch: -0.0306981597753
-    current_yaw: 0.238853778623
-    pitch_correct_now: False
-    yaw_correct_now: False
-    pitch_completed: False
-    yaw_completed: False
-    ---
-    ```
+        target_pitch: -0.2
+        target_yaw: 1.0
+        current_pitch: -0.0306981597753
+        current_yaw: 0.238853778623
+        pitch_correct_now: False
+        yaw_correct_now: False
+        pitch_completed: False
+        yaw_completed: False
 
 1. As the robot moves the handles, you'll see the numbers for `current_pitch`
 and `current_yaw` change. These values are given in radians and correspond to
@@ -139,27 +127,23 @@ checkpoint 2 is completed.
 time of checkpoint 2's completion:
 
 
-    ```
-    ---
-    task: 1
-    current_checkpoint: 3
-    checkpoints_completion:
-      -
-        secs: 95
-        nsecs: 21000000
-      -
-        secs: 115
-        nsecs: 21000000
-    start_time:
-      secs: 65
-      nsecs:  21000000
-    elapsed_time:
-      secs: 50
-      nsecs: 000000000
-    timed_out: False
-    finished: False
-    ---
-    ```
+        task: 1
+        current_checkpoint: 3
+        checkpoints_completion:
+          -
+            secs: 95
+            nsecs: 21000000
+          -
+            secs: 115
+            nsecs: 21000000
+        start_time:
+          secs: 65
+          nsecs:  21000000
+        elapsed_time:
+          secs: 50
+          nsecs: 000000000
+        timed_out: False
+        finished: False
 
 #### Checkpoint 3
 
@@ -192,17 +176,12 @@ checkpoint from.
 For example, to start practice in front of the satellite (skip checkpoint 1),
 call the start task service with task 1, checkpoint 2:
 
-    ```
     rosservice call /srcsim/finals/start_task 1 2
-    ```
 
 You must explicitly skip checkpoints which you don't wish to complete. For
 example, if you wish to walk directly to the finish box (checkpoint 3) and
 won't move the satellite handles, you must call:
 
-    ```
     rosservice call /srcsim/finals/start_task 1 3
-    ```
 
 Otherwise, it will never be registered that you reached the finish box.
-
