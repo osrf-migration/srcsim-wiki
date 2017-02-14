@@ -9,7 +9,7 @@ checkpoints:
 * Checkpoint 2: Move the communication dish to the correct pitch and yaw angles
 * Checkpoint 3: Walk into Task 1's finish box
 
-### Task 2
+### [Task 2](https://bitbucket.org/osrf/srcsim/wiki/finals_task2)
 
 * Checkpoint 1: Retrieve the solar panel from the rover
 * Checkpoint 2: Place the solar panel close to the power cable
@@ -18,7 +18,7 @@ checkpoints:
 * Checkpoint 5: Plug the power cable into the solar panel
 * Checkpoint 6: Walk into Task 2's finish box
 
-### Task 3
+### [Task 3](https://bitbucket.org/osrf/srcsim/wiki/finals_task3)
 
 * Checkpoint 1: Climb the stairs
 * Checkpoint 2: Open the door
