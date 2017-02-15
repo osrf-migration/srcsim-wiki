@@ -8,6 +8,8 @@ Task 1 consists of the following checkpoints:
 
 All checkpoints must be completed within 30 minutes.
 
+![task1_a_small.png](https://bitbucket.org/repo/xEbAAe/images/3579080731-task1_a_small.png)
+
 ## Practice run
 
 We provide an example world file which only contains task 1 for convenience
@@ -41,6 +43,8 @@ An example step-by-step of how to run task 1:
 
 
 #### Checkpoint 1
+
+![task1_b_small.png](https://bitbucket.org/repo/xEbAAe/images/507814120-task1_b_small.png)
 
 1. Once you've setup your controllers and are ready to perform the task, on a
    new terminal, call a service which starts task 1's first checkpoint:
@@ -97,6 +101,8 @@ time checkpoint 1 was complete. You'll see something like this:
         [Msg] Task [1] - Checkpoint [2] - Started (95 21000000)
 
 #### Checkpoint 2
+
+![task1_c_small.png](https://bitbucket.org/repo/xEbAAe/images/1976235125-task1_c_small.png)
 
 We're now performing checkpoint 2: *Move the communication dish to the
 correct pitch and yaw angles*. This consists of rotating the handles on the
@@ -167,6 +173,8 @@ time of checkpoint 2's completion:
         [Msg] Task [1] - Checkpoint [3] - Started (115 21000000)
 
 #### Checkpoint 3
+
+![task1_d.png](https://bitbucket.org/repo/xEbAAe/images/4283297297-task1_d.png)
 
 1. Checkpoint 3 consists of moving to the finish box.
 
