@@ -6,7 +6,7 @@ checkpoints:
 ### [Task 1](https://bitbucket.org/osrf/srcsim/wiki/finals_task1)
 
 * **Checkpoint 1**: Move within 1 meter from the communication dish
-* **Checkpoint 2**: Move the communication dish to the correct pitch and yaw angles (this corresponds in practice to 2 checkpoints)
+* **Checkpoint 2**: Move the communication dish to the correct pitch and yaw angles (consists of 2 checkpoints for scoring purposes)
 * **Checkpoint 3**: Walk into Task 1's finish box
 
 ### [Task 2](https://bitbucket.org/osrf/srcsim/wiki/finals_task2)
