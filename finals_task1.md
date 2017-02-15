@@ -3,7 +3,7 @@
 Task 1 consists of the following checkpoints:
 
 * **Checkpoint 1**: Move within 1 meter from the communication dish
-* **Checkpoint 2**: Move the communication dish to the correct pitch and yaw angles (this corresponds in practice to 2 checkpoints)
+* **Checkpoint 2**: Move the communication dish to the correct pitch and yaw angles (consists of 2 checkpoints for scoring purposes)
 * **Checkpoint 3**: Walk into Task 1's finish box
 
 All checkpoints must be completed within 30 minutes.
@@ -107,6 +107,9 @@ time checkpoint 1 was complete. You'll see something like this:
 We're now performing checkpoint 2: *Move the communication dish to the
 correct pitch and yaw angles*. This consists of rotating the handles on the
 satellite until the correct angles are achieved.
+
+For scoring purposes, this checkpoint corresponds to 2 checkpoints: one for
+the pitch and another one for the yaw. 
 
 1. Conveniently, the satellite reports its current and target angles through a
 ROS topic. On a new terminal, start listening to the satellite updates:
