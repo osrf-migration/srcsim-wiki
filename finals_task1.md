@@ -3,7 +3,7 @@
 Task 1 consists of the following checkpoints:
 
 * **Checkpoint 1**: Move within 1 meter from the communication dish
-* **Checkpoint 2**: Move the communication dish to the correct pitch and yaw angles
+* **Checkpoint 2**: Move the communication dish to the correct pitch and yaw angles (this corresponds in practice to 2 checkpoints)
 * **Checkpoint 3**: Walk into Task 1's finish box
 
 All checkpoints must be completed within 30 minutes.
