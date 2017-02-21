@@ -106,9 +106,9 @@ as follows:
 
         erb unique.world.erb > unique.world
 
-    * From time to time, an invalid world may be generated. This can be quickly
-      spotted by models constantly shaking or flying around. When this happens,
-      just generate a new world.*
+    *From time to time, an invalid world may be generated. This can be quickly
+     spotted by models constantly shaking or flying around. When this happens,
+     just generate a new world.*
 
 1. You can also generate worlds with each of the tasks separately, by passing
    the task number as an argument:
@@ -125,9 +125,9 @@ as follows:
 
         export CUSTOM_WORLD_PATH=~/src_finals_worlds/unique.world
 
-1. Obs: These commands will only set the environment variables for the current
-   terminal. If you wish to set the variables for every new terminal, you can
-   do:
+    *Obs: These commands will only set the environment variables for the current
+     terminal. If you wish to set the variables for every new terminal, you can
+     do:*
 
         echo "export USE_CUSTOM_WORLD=1" >> ~/.bashrc
         echo "export CUSTOM_WORLD_PATH=~/src_finals_worlds/unique.world" >> ~/.bashrc
@@ -135,5 +135,3 @@ as follows:
 1. Now you can use the usual launch file, and that will use the custom world:
 
         roslaunch srcsim unique.launch init:="true"
-
-
