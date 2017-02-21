@@ -72,7 +72,7 @@ An example step-by-step of how to run task 1:
         [Msg] Task [1] - Checkpoint [1] - Started (65 21000000)
         [Msg] Started box contains plugin [task1/checkpoint1]
 
-1. Perform checkpoint 1: use your controllers to move the robot within 1 meter 
+1. Perform checkpoint 1: use your controllers to move the robot within 1 meter
 from the satellite dish.
 
 1. Once you reach the satellite dish, the task message will be updated with the
@@ -93,7 +93,7 @@ time checkpoint 1 was complete. You'll see something like this:
         timed_out: False
         finished: False
 
-    There will also be a confirmation message on the console telling you that 
+    There will also be a confirmation message on the console telling you that
     checkpoint 2 has started:
 
         [Msg] Stopped box contains plugin [task1/checkpoint1]
@@ -109,7 +109,7 @@ correct pitch and yaw angles*. This consists of rotating the handles on the
 satellite until the correct angles are achieved.
 
 For scoring purposes, this checkpoint corresponds to 2 checkpoints: one for
-the pitch and another one for the yaw. 
+the pitch and another one for the yaw.
 
 1. Conveniently, the satellite reports its current and target angles through a
 ROS topic. On a new terminal, start listening to the satellite updates:
@@ -131,8 +131,8 @@ ROS topic. On a new terminal, start listening to the satellite updates:
 
 1. As the robot moves the handles, you'll see the numbers for `current_pitch`
 and `current_yaw` change. These values are given in radians and correspond to
-the satellite dish's angles, not the angles of the handle which the robot is 
-moving. The ratio between the handles and the dish movement is unknown to the 
+the satellite dish's angles, not the angles of the handle which the robot is
+moving. The ratio between the handles and the dish movement is unknown to the
 robot.
 
 1. Once `current_pitch` is within a tolerance (currently using 5 degrees)
@@ -221,17 +221,17 @@ Otherwise, it will never be registered that you reached the finish box.
 
 ## Practice versus competition
 
-Practice is different from the competition setup in several aspects. Keep these 
+Practice is different from the competition setup in several aspects. Keep these
 in mind while practicing:
 
-* You won't have direct access to Gazebo during the competition, both to the 
-graphical interface and to the terminal running it. So you won't be able to 
-have a 3rd person view of the robot and the environment, or read console status 
+* You won't have direct access to Gazebo during the competition, both to the
+graphical interface and to the terminal running it. So you won't be able to
+have a 3rd person view of the robot and the environment, or read console status
 messages. Get used to interacting exclusively through ROS messages.
 
-* The world provided during practice is similar to the world which will be used
-during the competition, but not exactly the same. It's a good idea to practice 
-with different world setups to be prepared for the finals. A handy script which 
+* The world provided during practice is similar to the worlds which will be used
+during the competition, but not exactly the same. It's a good idea to practice
+with different world setups to be prepared for the finals. A handy script which
 can be used to generate randomized worlds will be provided for teams, stay tuned!
 
 * The final competition will happen in a world which contains all 3 tasks, and the
