@@ -62,6 +62,14 @@ sudo update-alternatives --config java  # then select openjdk8
 sudo update-alternatives --config javac # then select openjdk8
     ```
 
+    ```
+sudo rm /usr/lib/jvm/default-java
+    ```
+
+    ```
+sudo ln -s /usr/lib/jvm/java-8-openjdk-amd64 /usr/lib/jvm/default-java
+    ```
+
 1. Add `IS_GAZEBO` environment variable:
 
     ```
