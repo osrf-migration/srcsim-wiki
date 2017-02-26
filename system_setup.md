@@ -52,10 +52,14 @@ sudo apt-get install srcsim
 
     ```
 echo 'export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64' >> ~/.bashrc
-# the following are interactive commands
-# select openjdk8 from the list
-sudo update-alternatives --config java
-sudo update-alternatives --config javac
+    ```
+
+    ```
+sudo update-alternatives --config java  # then select openjdk8
+    ```
+
+    ```
+sudo update-alternatives --config javac # then select openjdk8
     ```
 
 1. Add `IS_GAZEBO` environment variable:
