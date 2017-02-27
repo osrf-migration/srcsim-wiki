@@ -46,6 +46,9 @@ checkpoints:
     * The service arguments correspond to the task id and the checkpoint id
     respectively.
 
+    * When skipping to a checkpoint, the robot will be placed in a way as if
+      it had completed the previous checkpoint.
+
     * Once a checkpoint has been completed, the next checkpoint is available.
 
     * Similarly, once a task has been completed, the next task is available.
