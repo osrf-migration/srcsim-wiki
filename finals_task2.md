@@ -49,6 +49,8 @@ An example step-by-step of how to run task 2:
 
 #### Checkpoint 1
 
+We're start on checkpoint 1: *Pick up the solar panel*.
+
 ![task_2_b.png](https://bitbucket.org/repo/xEbAAe/images/3973924048-task_2_b.png)
 
 1. Once you've setup your controllers and are ready to perform the task, on a
@@ -113,10 +115,10 @@ updated with the time checkpoint 1 was complete. You'll see something like this:
 
 #### Checkpoint 2
 
-![**image**](https://bitbucket.org/repo/xEbAAe/images/2001505714-task_2_c.png)
-
 We're now performing checkpoint 2: *Place solar panel within reach of the power
 cable*.
+
+![**image**](https://bitbucket.org/repo/xEbAAe/images/2001505714-task_2_c.png)
 
 1. Perform checkpoint 2: Place the solar panel anywhere on top of the solar
 array.
@@ -152,9 +154,9 @@ messages telling you the checkpoint is completed, such as:
 
 #### Checkpoint 3
 
-**image**
-
 We're now performing checkpoint 3: *Deploy solar panel by pressing a button*.
+
+**image**
 
 1. Perform checkpoint 3: Press the button on top of the solar panel so it
 is deployed.
