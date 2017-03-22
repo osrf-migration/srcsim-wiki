@@ -90,13 +90,7 @@ Topic name | Message / service | Description | Message definition
 
 #### Finals: Task 2
 
-These are interfaces specific to task 2.
-
-For more detailed information, see the [task 2](https://bitbucket.org/osrf/srcsim/wiki/finals_task2) tutorials.
-
-Topic name | Message / service | Description | Message definition
----------- | ----------------- | ----------- | ----------------
-TODO | | |
+There are no interfaces specific to task 2.
 
 #### Finals: Task 3
 
@@ -106,4 +100,4 @@ For more detailed information, see the [task 3](https://bitbucket.org/osrf/srcsi
 
 Topic name | Message / service | Description | Message definition
 ---------- | ----------------- | ----------- | ----------------
-TODO | | |
+**TODO** | | |

@@ -35,7 +35,8 @@ and won't move the satellite handles, you must call:
 
     rosservice call /srcsim/finals/start_task 1 3
 
-Otherwise, it will never be registered that you reached the finish box.
+Just walking directly to the box without skipping to that checkpoint will **not
+register the checkpoint as complete**.
 
 ### "Unskippable" checkpoints
 
@@ -46,35 +47,34 @@ Your options are:
 
 1. Skip both checkpoints 1 and 2 with:
 
-    rosservice call /srcsim/finals/start_task 2 3
+        rosservice call /srcsim/finals/start_task 2 3
 
 1. Complete checkpoint 1 (pick up solar panel), and then skip checkpoint 2 with
-the call above.
+the call above. You'll receive points for checkpoint 1.
 
 ### Summary
 
-This is a summary of the behaviours of the goals and skip behaviours for each
-checkpoint.
+This is a summary of goals and skip behaviours for each checkpoint.
 
-The last column of the table describes what happens when a checkpoint is skipped.
-Note that this is different from "skipping to" that checkpoint.
+The last column of the table describes what happens when you **skip past** a
+checkpoint. Note that this is different from **skipping to** that checkpoint.
 
 Task | Checkpoint | Goal | Skip
 ---- | ---------- | ---- | ----
 1 | 1 | Go to satellite | Robot is teleported to be in front of the satellite
 1 | 2 | Rotate handles to correct positions | Robot is teleported to be in front of the satellite (nothing changes from 1/1)
 1 | 3 | Go to 1st finish box | Robot is teleported to be in the middle of the first finish box
-2 | 1 | Lift solar panel | This checkpoint can't be skipped.
+2 | 1 | Lift solar panel | This checkpoint can't be skipped by itself.
 2 | 2 | Place solar panel on array | Robot is teleported to be in front of the array, panel is teleported to be on top of the array
 2 | 3 | Press solar panel button | Robot is teleported to be in front of the array, solar panel opens
-2 | 4 | Lift power cable | This checkpoint can't be skipped.
+2 | 4 | Lift power cable | This checkpoint can't be skipped by itself.
 2 | 5 | Plug power cable | Robot is teleported to be in front of the array (nothing changes from 2/4)
 2 | 6 | Go to 2nd finish box | Robot is teleported to be in the middle of the second finish box
 3 | 1 | Climb stairs | Robot is teleported to be on top of the stairs
 3 | 2 | Open door | Robot is teleported to be in front of the door, door opens
 3 | 3 | Pass through door | Robot is teleported to be after the door
-3 | 4 | Lift detector | This checkpoint can't be skipped.
+3 | 4 | Lift detector | This checkpoint can't be skipped by itself.
 3 | 5 | Find the leak | Robot is teleported to be near the leak
-3 | 6 | Lift repair tool | This checkpoint can't be skipped.
+3 | 6 | Lift repair tool | This checkpoint can't be skipped by itself.
 3 | 7 | Repair leak | Robot is teleported to be near the leak
 3 | 8 | Go to 3rd finish box | Program ends
