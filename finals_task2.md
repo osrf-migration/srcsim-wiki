@@ -13,7 +13,7 @@ Task 2 consists of the following checkpoints:
 
 All checkpoints must be completed within 1 hour.
 
-**image**
+![task_2_a.png](https://bitbucket.org/repo/xEbAAe/images/814951482-task_2_a.png)
 
 ## Practice run
 
@@ -49,7 +49,7 @@ An example step-by-step of how to run task 2:
 
 #### Checkpoint 1
 
-**image**
+![task_2_b.png](https://bitbucket.org/repo/xEbAAe/images/3973924048-task_2_b.png)
 
 1. Once you've setup your controllers and are ready to perform the task, on a
    new terminal, call a service which starts task 2's first checkpoint:
@@ -113,7 +113,7 @@ updated with the time checkpoint 1 was complete. You'll see something like this:
 
 #### Checkpoint 2
 
-**image**
+![**image**](https://bitbucket.org/repo/xEbAAe/images/2001505714-task_2_c.png)
 
 We're now performing checkpoint 2: *Place solar panel within reach of the power
 cable*.
@@ -240,4 +240,3 @@ Make sure you complete all checkpoints in task 2 within 30 minutes.
 * [Skipping checkpoints](https://bitbucket.org/osrf/srcsim/wiki/skip_summary)
 * [Practice versus competition](https://bitbucket.org/osrf/srcsim/wiki/practice_vs_competition)
 * [Random world generator](https://bitbucket.org/osrf/srcsim/wiki/world_generator)
-
