@@ -1,17 +1,63 @@
-## Summary of behavior when skipping checkpoints
+## Skipping checkpoints
 
-### Goal vs Skip
+It's possible to skip checkpoints at any time during practice or during the
+final competition.
 
-The last column of the table describes what happens when a checkpoint is skipped. Note that this is different from "skipping to" that checkpoint. For example, if you start a round and **skip to task 2, checkpoint 3**, i.e. `rosservice call /srcsim/finals/start_task 2 3`:
+Beware that failing to complete a checkpoint will cost you points. Also note
+that it is not possible to restart a checkpoint or to go back to an earlier
+checkpoint.
+
+### How to skip
+
+To skip to a checkpoint, simply use the task service to choose a new checkpoint
+and the robot will be teleported to a position where it can start that
+checkpoint from. The configuration of other objects may also be changed,
+depending on the checkpoint.
+
+For example, if you want to practice task 2 checkpoint 3 (press button on solar
+panel), call the start task service with task 2, checkpoint 3:
+
+    rosservice call /srcsim/finals/start_task 2 3
+
+The result will be:
 
 * Task 1 is completely skipped
 * Task 2, checkpoint 1 is skipped
 * Task 2, checkpoint 2 is skipped
-* Task 2, checkpoint 3 is **not** skipped - this is the checkpoint you're currently trying to complete.
+* Task 2, checkpoint 3 is **not** skipped - this is the checkpoint you're currently
+  trying to complete.
+
+### Must skip
+
+You must explicitly skip checkpoints which you don't wish to complete. For
+example, if you wish to walk directly to the finish box on task 1 (checkpoint 3)
+and won't move the satellite handles, you must call:
+
+    rosservice call /srcsim/finals/start_task 1 3
+
+Otherwise, it will never be registered that you reached the finish box.
 
 ### "Unskippable" checkpoints
 
-TODO: Add note about checkpoints which can't be skipped 
+It's not possible to skip directly to certain checkpoints. For example, it's not
+possible to skip to task 2 checkpoint 2 (place solar panel on the array),
+because that requires that you complete checkpoint 1 first (pick up solar panel).
+Your options are:
+
+1. Skip both checkpoints 1 and 2 with:
+
+    rosservice call /srcsim/finals/start_task 2 3
+
+1. Complete checkpoint 1 (pick up solar panel), and then skip checkpoint 2 with
+the call above.
+
+### Summary
+
+This is a summary of the behaviours of the goals and skip behaviours for each
+checkpoint.
+
+The last column of the table describes what happens when a checkpoint is skipped.
+Note that this is different from "skipping to" that checkpoint.
 
 Task | Checkpoint | Goal | Skip
 ---- | ---------- | ---- | ----

@@ -193,46 +193,11 @@ time of checkpoint 2's completion:
 
 Make sure you complete all checkpoints in task 1 within 30 minutes.
 
-## Skipping checkpoints
+## Other resources
 
-It's possible to skip checkpoints at any time during practice or during the
-final competition.
+* [API documentation](https://bitbucket.org/osrf/srcsim/wiki/api)
+* [Skipping checkpoints](https://bitbucket.org/osrf/srcsim/wiki/skip_summary)
+* [Practice versus competition](https://bitbucket.org/osrf/srcsim/wiki/practice_vs_competition)
+* [Random world generator](https://bitbucket.org/osrf/srcsim/wiki/world_generator)
 
-Beware that failing to complete a checkpoint will cost you points. Also note
-that it is not possible to restart a checkpoint or to go back to an earlier
-checkpoint.
 
-To skip to a checkpoint, simply use the task service to choose a new checkpoint
-and the robot will be teleported to a position where it can start that
-checkpoint from.
-
-For example, to start practice in front of the satellite (consequently skipping
-checkpoint 1), call the start task service with task 1, checkpoint 2:
-
-    rosservice call /srcsim/finals/start_task 1 2
-
-You must explicitly skip checkpoints which you don't wish to complete. For
-example, if you wish to walk directly to the finish box (checkpoint 3) and
-won't move the satellite handles, you must call:
-
-    rosservice call /srcsim/finals/start_task 1 3
-
-Otherwise, it will never be registered that you reached the finish box.
-
-## Practice versus competition
-
-Practice is different from the competition setup in several aspects. Keep these
-in mind while practicing:
-
-* You won't have direct access to Gazebo during the competition, both to the
-graphical interface and to the terminal running it. So you won't be able to
-have a 3rd person view of the robot and the environment, or read console status
-messages. Get used to interacting exclusively through ROS messages.
-
-* The world provided during practice is similar to the worlds which will be used
-during the competition, but not exactly the same. It's a good idea to practice
-with different world setups to be prepared for the finals. A handy script which
-can be used to generate randomized worlds will be provided for teams, stay tuned!
-
-* The final competition will happen in a world which contains all 3 tasks, and the
-tasks must be completed in a row, or explicitly skipped.
