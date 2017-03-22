@@ -118,7 +118,7 @@ updated with the time checkpoint 1 was complete. You'll see something like this:
 We're now performing checkpoint 2: *Place solar panel within reach of the power
 cable*.
 
-![**image**](https://bitbucket.org/repo/xEbAAe/images/2001505714-task_2_c.png)
+![task_2_c](https://bitbucket.org/repo/xEbAAe/images/2001505714-task_2_c.png)
 
 1. Perform checkpoint 2: Place the solar panel anywhere on top of the solar
 array.
@@ -156,7 +156,7 @@ messages telling you the checkpoint is completed, such as:
 
 We're now performing checkpoint 3: *Deploy solar panel by pressing a button*.
 
-**image**
+![task_2_d.png](https://bitbucket.org/repo/xEbAAe/images/22174731-task_2_d.png)
 
 1. Perform checkpoint 3: Press the button on top of the solar panel so it
 is deployed.
