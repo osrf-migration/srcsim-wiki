@@ -84,7 +84,7 @@ We're start on checkpoint 1: *Pick up the solar panel*.
 and lift the solar panel. The moment Val picks up the solar panel, you'll see
 a message on the console:
 
-        [Msg] ...
+        [Msg] Model [solar_panel] started touching [valkyrie] at 35 332000000 seconds
 
 1. Once the panel has been lifted for 5 seconds, the task message will be
 updated with the time checkpoint 1 was complete. You'll see something like this:
@@ -193,34 +193,93 @@ is deployed.
 
 #### Checkpoint 4
 
-**image**
-
 You're now performing checkpoint 4: *Pick up the power cable*.
 
 1. Perform checkpoint 4: Lift the tip of the cable. The moment Val picks it up,
 you'll see a message:
 
-#### Checkpoint 5
+        [Msg] Model [solar_panel_cable] started touching [valkyrie] at 43 165000000 seconds
 
-**image**
+1. Once the cable has been held for 1 second, the task message will be updated to show checkpoint 4 has been completed:
+
+        task: 2
+        current_checkpoint: 5
+        checkpoints_completion:
+          -
+            secs: 40
+            nsecs: 332000000
+          -
+            secs: 40
+            nsecs: 756000000
+          -
+            secs: 42
+            nsecs: 942000000
+          -
+            secs: 44
+            nsecs: 165000000
+        start_time:
+          secs: 35
+          nsecs: 236000000
+        elapsed_time:
+          secs: 10
+          nsecs: 695000000
+        timed_out: False
+        finished: False
+
+    There will also be feedback on the console:
+
+        [Msg] Model [solar_panel_cable] touched [valkyrie] exclusively for 1 0 seconds
+        [Msg] Stopped touch plugin [task2/checkpoint4]
+        [Msg] Task [2] - Checkpoint [4] - Completed (44 165000000)
+        [Msg] Task [2] - Checkpoint [5] - Started (44 165000000)
+
+#### Checkpoint 5
 
 You're now performing checkpoint 5: *Plug the power cable into the solar panel*.
 
 1. Perform checkpoint 5: Touch the blue tip of the cable onto the blue outlet
 on the solar panel. The moment they touch you'll see a message like:
 
-        [Msg] Plug started touching outlet at 43 142000000 seconds
+        [Msg] Plug started touching outlet at 56 483000000 seconds
 
 1. Keep them in continuous contact for 3 seconds, and they will get stuck. The
 task message is updated:
 
-
+        task: 2
+        current_checkpoint: 6
+        checkpoints_completion:
+          -
+            secs: 40
+            nsecs: 332000000
+          -
+            secs: 40
+            nsecs: 756000000
+          -
+            secs: 42
+            nsecs: 942000000
+          -
+            secs: 44
+            nsecs: 165000000
+          -
+            secs: 59
+            nsecs: 483000000
+        start_time:
+          secs: 35
+          nsecs: 236000000
+        elapsed_time:
+          secs: 32
+          nsecs: 221000000
+        timed_out: False
+        finished: False
 
     And the terminal notifies the completion:
 
-#### Checkpoint 6
+        [Msg] The cable plug has been fixed to the outlet
+        [Msg] Task [2] - Checkpoint [5] - Completed (59 483000000)
+        [Msg] Task [2] - Checkpoint [6] - Started (59 483000000)
+        [Msg] Started box contains plugin [task2/checkpoint6]
 
-**image**
+#### Checkpoint 6
 
 1. Checkpoint 6 consists of moving to the finish box.
 
@@ -229,12 +288,12 @@ task message is updated:
 1. Task 2 should be completed! You'll see a message like this:
 
         [Msg] Stopped box contains plugin [task2/checkpoint6]
-        [Msg] Task [2] - Checkpoint [6] - Completed (49 232000000)
+        [Msg] Task [2] - Checkpoint [6] - Completed (67 366000000)
         [Msg] Task [2] finished.
 
 ## Timeout
 
-Make sure you complete all checkpoints in task 2 within 30 minutes.
+Make sure you complete all checkpoints in task 2 within 1 hour.
 
 ## Other resources
 
