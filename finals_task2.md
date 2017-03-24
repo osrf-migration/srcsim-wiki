@@ -285,6 +285,10 @@ task message is updated:
 
 #### Checkpoint 6
 
+You're now performing checkpoint 5: *Go to the finish box*.
+
+![t2cp6.png](https://bitbucket.org/repo/xEbAAe/images/3175127162-t2cp6.png)
+
 1. Checkpoint 6 consists of moving to the finish box.
 
 1. Walk to the finish box.
