@@ -195,6 +195,8 @@ is deployed.
 
 You're now performing checkpoint 4: *Pick up the power cable*.
 
+![t2cp4_2.png](https://bitbucket.org/repo/xEbAAe/images/80016327-t2cp4_2.png)
+
 1. Perform checkpoint 4: Lift the tip of the cable. The moment Val picks it up,
 you'll see a message:
 
@@ -236,6 +238,8 @@ you'll see a message:
 #### Checkpoint 5
 
 You're now performing checkpoint 5: *Plug the power cable into the solar panel*.
+
+![t2cp5_4.png](https://bitbucket.org/repo/xEbAAe/images/567550910-t2cp5_4.png)
 
 1. Perform checkpoint 5: Touch the blue tip of the cable onto the blue outlet
 on the solar panel. The moment they touch you'll see a message like:
