@@ -293,7 +293,39 @@ You're now performing checkpoint 5: *Go to the finish box*.
 
 1. Walk to the finish box.
 
-1. Task 2 should be completed! You'll see a message like this:
+1. Task 2 should be completed! The task message is updated:
+
+        task: 2
+        current_checkpoint: 0
+        checkpoints_completion:
+          -
+            secs: 40
+            nsecs: 332000000
+          -
+            secs: 40
+            nsecs: 756000000
+          -
+            secs: 42
+            nsecs: 942000000
+          -
+            secs: 44
+            nsecs: 165000000
+          -
+            secs: 59
+            nsecs: 483000000
+          -
+            secs: 67
+            nsecs: 366000000
+        start_time:
+          secs: 35
+          nsecs: 236000000
+        elapsed_time:
+          secs: 32
+          nsecs: 221000000
+        timed_out: False
+        finished: True
+
+    And you'll see a message like this:
 
         [Msg] Stopped box contains plugin [task2/checkpoint6]
         [Msg] Task [2] - Checkpoint [6] - Completed (67 366000000)
