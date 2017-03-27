@@ -84,9 +84,9 @@ We're start on checkpoint 1: *Pick up the solar panel*.
 and lift the solar panel. The moment Val picks up the solar panel, you'll see
 a message on the console:
 
-        [Msg] Model [solar_panel] started touching [valkyrie] at 35 332000000 seconds
+        [Msg] Model [solar_panel] started touching [valkyrie] at 39 832000000 seconds
 
-1. Once the panel has been lifted for 5 seconds, the task message will be
+1. Once the panel has been lifted for 0.5 seconds, the task message will be
 updated with the time checkpoint 1 was complete. You'll see something like this:
 
         task: 2
@@ -200,9 +200,9 @@ You're now performing checkpoint 4: *Pick up the power cable*.
 1. Perform checkpoint 4: Lift the tip of the cable. The moment Val picks it up,
 you'll see a message:
 
-        [Msg] Model [solar_panel_cable] started touching [valkyrie] at 43 165000000 seconds
+        [Msg] Model [solar_panel_cable] started touching [valkyrie] at 43 665000000 seconds
 
-1. Once the cable has been held for 1 second, the task message will be updated to show checkpoint 4 has been completed:
+1. Once the cable has been held for 0.5 seconds, the task message will be updated to show checkpoint 4 has been completed:
 
         task: 2
         current_checkpoint: 5
