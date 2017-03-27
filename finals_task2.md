@@ -107,7 +107,7 @@ updated with the time checkpoint 1 was complete. You'll see something like this:
     There will also be a confirmation message on the console telling you that
     checkpoint 2 has started:
 
-        [Msg] Model [solar_panel] touched [valkyrie] exclusively for 5 0 seconds
+        [Msg] Model [solar_panel] touched [valkyrie] exclusively for 0 500000000 seconds
         [Msg] Stopped touch plugin [task2/checkpoint1]
         [Msg] Task [2] - Checkpoint [1] - Completed (40 332000000)
         [Msg] Task [2] - Checkpoint [2] - Started (40 332000000)
@@ -230,7 +230,7 @@ you'll see a message:
 
     There will also be feedback on the console:
 
-        [Msg] Model [solar_panel_cable] touched [valkyrie] exclusively for 1 0 seconds
+        [Msg] Model [solar_panel_cable] touched [valkyrie] exclusively for 0 500000000 seconds
         [Msg] Stopped touch plugin [task2/checkpoint4]
         [Msg] Task [2] - Checkpoint [4] - Completed (44 165000000)
         [Msg] Task [2] - Checkpoint [5] - Started (44 165000000)
