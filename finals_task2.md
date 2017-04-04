@@ -46,21 +46,33 @@ An example step-by-step of how to run task 2:
 
     You shouldn't see anything yet, because the task has not started.
 
+#### Start task
 
-#### Checkpoint 1
-
-We're start on checkpoint 1: *Pick up the solar panel*.
-
-![task_2_b.png](https://bitbucket.org/repo/xEbAAe/images/3973924048-task_2_b.png)
+You'll start the task inside a start walkway. Time only starts counting as you
+leave the start walkway.
 
 1. Once you've setup your controllers and are ready to perform the task, on a
-   new terminal, call a service which starts task 2's first checkpoint:
+   new terminal, call a service to start task 1's first checkpoint:
 
     ```
     rosservice call /srcsim/finals/start_task 2 1
     ```
 
-    You should see messages on the previous terminal, like this:
+1. You'll see the following message on the console:
+
+        [Msg] Task [2] - Started: time will start counting as you leave the box.
+        [Msg] Started box contains plugin [task2/start]
+
+Be sure not to forget this step.
+
+#### Checkpoint 1
+
+We'll start on checkpoint 1: *Pick up the solar panel*.
+
+![task_2_b.png](https://bitbucket.org/repo/xEbAAe/images/3973924048-task_2_b.png)
+
+1. The moment you step out of the start box, you'll see messages on the
+   previous terminal, such as:
 
         task: 2
         current_checkpoint: 1
