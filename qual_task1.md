@@ -13,7 +13,7 @@ Raw image data is inverted, due to the multisense head being mounted up-side-dow
 
 ![4007635085-srcsim_qual1_console_yellow.jpg](https://bitbucket.org/repo/xEbAAe/images/3389508772-4007635085-srcsim_qual1_console_yellow.jpg)
 
-The end of the task is marked by the center screen transitioning from white to black. At this point, no more LEDs will turn on, and it is safe to quite Gazebo and submit your results.
+The end of the task is marked by the center screen transitioning from white to black. At this point, no more LEDs will turn on, and it is safe to quit Gazebo and submit your results.
 
 ## Quickstart
 
@@ -210,7 +210,3 @@ The script compares your answer to a few different frames:
 ![headframetopicflippedann.png](https://bitbucket.org/repo/xEbAAe/images/2957401953-headframetopicflippedann.png)
 
 * Note that the head frame should not be visible in your simulation, it was added here for demonstration purposes
-
-
-
-
