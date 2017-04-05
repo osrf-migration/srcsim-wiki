@@ -28,6 +28,9 @@ as follows:
 
         wget https://bitbucket.org/osrf/srcsim/raw/default/worlds/unique.world.erb
         wget https://bitbucket.org/osrf/srcsim/raw/default/worlds/satellite.erb
+        wget https://bitbucket.org/osrf/srcsim/raw/default/worlds/solar_panel.erb
+        wget https://bitbucket.org/osrf/srcsim/raw/default/worlds/cable.erb
+        wget https://bitbucket.org/osrf/srcsim/raw/default/worlds/air_leak_detector.erb
 
 1. Generate a world with all 3 tasks as follows. Each time this command is run,
    a different world will be generated.
