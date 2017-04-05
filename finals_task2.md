@@ -13,7 +13,7 @@ Task 2 consists of the following checkpoints:
 
 All checkpoints must be completed within 1 hour.
 
-![task_2_a.png](https://bitbucket.org/repo/xEbAAe/images/814951482-task_2_a.png)
+![t2over.png](https://bitbucket.org/repo/xEbAAe/images/3846487934-t2over.png)
 
 ## Practice run
 
@@ -51,6 +51,8 @@ An example step-by-step of how to run task 2:
 You'll start the task inside a start walkway. Time only starts counting as you
 leave the start walkway.
 
+![t2start.png](https://bitbucket.org/repo/xEbAAe/images/2175615210-t2start.png)
+
 1. Once you've setup your controllers and are ready to perform the task, on a
    new terminal, call a service to start task 1's first checkpoint:
 
@@ -62,14 +64,6 @@ leave the start walkway.
 
         [Msg] Task [2] - Started: time will start counting as you leave the box.
         [Msg] Started box contains plugin [task2/start]
-
-Be sure not to forget this step.
-
-#### Checkpoint 1
-
-We'll start on checkpoint 1: *Pick up the solar panel*.
-
-![task_2_b.png](https://bitbucket.org/repo/xEbAAe/images/3973924048-task_2_b.png)
 
 1. The moment you step out of the start box, you'll see messages on the
    previous terminal, such as:
@@ -91,6 +85,12 @@ We'll start on checkpoint 1: *Pick up the solar panel*.
         [Msg] Task [1] - Skipped (35 236000000)
         [Msg] Task [2] - Checkpoint [1] - Started (35 236000000)
         success: True
+
+#### Checkpoint 1
+
+We'll start on checkpoint 1: *Pick up the solar panel*.
+
+![task_2_b.png](https://bitbucket.org/repo/xEbAAe/images/3973924048-task_2_b.png)
 
 1. Perform checkpoint 1: use your controllers to move towards the Mars Explorer
 and lift the solar panel. The moment Val picks up the solar panel, you'll see
