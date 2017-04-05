@@ -46,6 +46,8 @@ An example step-by-step of how to run task 1:
 You'll start the task inside a start walkway. Time only starts counting as you
 leave the start walkway.
 
+![t1start.png](https://bitbucket.org/repo/xEbAAe/images/1585779460-t1start.png)
+
 1. Once you've setup your controllers and are ready to perform the task, on a
    new terminal, call a service to start task 1's first checkpoint:
 
@@ -57,12 +59,6 @@ leave the start walkway.
 
         [Msg] Task [1] - Started: time will start counting as you leave the box.
         [Msg] Started box contains plugin [task1/start]
-
-Be sure not to forget this step.
-
-#### Checkpoint 1
-
-![task1_b_small.png](https://bitbucket.org/repo/xEbAAe/images/507814120-task1_b_small.png)
 
 1. The moment you step out of the start box, you'll see messages on the
    previous terminal, such as:
@@ -84,8 +80,13 @@ Be sure not to forget this step.
         [Msg] Task [1] - Checkpoint [1] - Started (65 21000000)
         [Msg] Started box contains plugin [task1/checkpoint1]
 
-1. Perform checkpoint 1: use your controllers to move the robot within 1 meter
-from the satellite dish.
+#### Checkpoint 1
+
+Start checkpoint 1: *move the robot within 1 meter from the satellite dish*
+
+![task1_b_small.png](https://bitbucket.org/repo/xEbAAe/images/507814120-task1_b_small.png)
+
+1. Perform checkpoint 1: use your controllers to move towards the satellite dish.
 
 1. Once you reach the satellite dish, the task message will be updated with the
 time checkpoint 1 was complete. You'll see something like this:
@@ -114,11 +115,11 @@ time checkpoint 1 was complete. You'll see something like this:
 
 #### Checkpoint 2
 
-![task1_c_small.png](https://bitbucket.org/repo/xEbAAe/images/1976235125-task1_c_small.png)
-
 We're now performing checkpoint 2: *Move the communication dish to the
 correct pitch and yaw angles*. This consists of rotating the handles on the
 satellite until the correct angles are achieved.
+
+![task1_c_small.png](https://bitbucket.org/repo/xEbAAe/images/1976235125-task1_c_small.png)
 
 For scoring purposes, this checkpoint corresponds to 2 checkpoints: one for
 the pitch and another one for the yaw.
@@ -189,9 +190,9 @@ time of checkpoint 2's completion:
 
 #### Checkpoint 3
 
-![task1_d.png](https://bitbucket.org/repo/xEbAAe/images/4283297297-task1_d.png)
+You're now performing checkpoint 3: *Go to the finish box*.
 
-1. Checkpoint 3 consists of moving to the finish box.
+![task1_d.png](https://bitbucket.org/repo/xEbAAe/images/4283297297-task1_d.png)
 
 1. Walk to the finish box.
 
@@ -211,5 +212,3 @@ Make sure you complete all checkpoints in task 1 within 30 minutes.
 * [Skipping checkpoints](https://bitbucket.org/osrf/srcsim/wiki/skip_summary)
 * [Practice versus competition](https://bitbucket.org/osrf/srcsim/wiki/practice_vs_competition)
 * [Random world generator](https://bitbucket.org/osrf/srcsim/wiki/world_generator)
-
-
