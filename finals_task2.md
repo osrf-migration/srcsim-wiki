@@ -54,7 +54,7 @@ leave the start walkway.
 ![t2start.png](https://bitbucket.org/repo/xEbAAe/images/2175615210-t2start.png)
 
 1. Once you've setup your controllers and are ready to perform the task, on a
-   new terminal, call a service to start task 1's first checkpoint:
+   new terminal, call a service to start task 2's first checkpoint:
 
     ```
     rosservice call /srcsim/finals/start_task 2 1
@@ -62,6 +62,7 @@ leave the start walkway.
 
 1. You'll see the following message on the console:
 
+        [Msg] Task [1] - Skipped (35 236000000)
         [Msg] Task [2] - Started: time will start counting as you leave the box.
         [Msg] Started box contains plugin [task2/start]
 
@@ -82,7 +83,6 @@ leave the start walkway.
 
     You should also see messages like this on the console:
 
-        [Msg] Task [1] - Skipped (35 236000000)
         [Msg] Task [2] - Checkpoint [1] - Started (35 236000000)
         success: True
 
