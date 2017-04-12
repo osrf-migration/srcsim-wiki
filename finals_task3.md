@@ -13,7 +13,9 @@ Task 3 consists of the following checkpoints:
 * **Checkpoint 7**: Repair the leak
 * **Checkpoint 8**: Walk into Task 3's finish box
 
-All checkpoints must be completed within 1 hour.
+All checkpoints must be completed within 2 hours.
+
+![t3_a.png](https://bitbucket.org/repo/xEbAAe/images/3877616181-t3_a.png)
 
 ## Practice run
 
@@ -50,6 +52,8 @@ An example step-by-step of how to run task 3:
 
 You'll start the task inside a start walkway. Time only starts counting as you
 leave the start walkway.
+
+![t3_b.png](https://bitbucket.org/repo/xEbAAe/images/1499553971-t3_b.png)
 
 1. Once you've setup your controllers and are ready to perform the task, on a
    new terminal, call a service to start task 3's first checkpoint:
@@ -88,6 +92,8 @@ leave the start walkway.
 #### Checkpoint 1
 
 We'll start on checkpoint 1: *Climb the stairs*.
+
+![t3_c.png](https://bitbucket.org/repo/xEbAAe/images/1178427936-t3_c.png)
 
 1. Perform checkpoint 1: climb to the top of the stairs.
 
