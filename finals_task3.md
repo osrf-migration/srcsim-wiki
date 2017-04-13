@@ -15,7 +15,7 @@ Task 3 consists of the following checkpoints:
 
 All checkpoints must be completed within 2 hours.
 
-![t3_a.png](https://bitbucket.org/repo/xEbAAe/images/3877616181-t3_a.png)
+![task3_opt.gif](https://bitbucket.org/repo/xEbAAe/images/1336454180-task3_opt.gif)
 
 ## Practice run
 
