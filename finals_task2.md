@@ -13,7 +13,7 @@ Task 2 consists of the following checkpoints:
 
 All checkpoints must be completed within 1 hour.
 
-![t2over.png](https://bitbucket.org/repo/xEbAAe/images/3846487934-t2over.png)
+![t2_a.png](https://bitbucket.org/repo/xEbAAe/images/191484822-t2_a.png)
 
 ## Practice run
 
@@ -90,7 +90,7 @@ leave the start walkway.
 
 We'll start on checkpoint 1: *Pick up the solar panel*.
 
-![task_2_b.png](https://bitbucket.org/repo/xEbAAe/images/3973924048-task_2_b.png)
+![t2_b.png](https://bitbucket.org/repo/xEbAAe/images/1005836777-t2_b.png)
 
 1. Perform checkpoint 1: use your controllers to move towards the Mars Explorer
 and lift the solar panel. The moment Val picks up the solar panel, you'll see
@@ -130,7 +130,7 @@ updated with the time checkpoint 1 was complete. You'll see something like this:
 We're now performing checkpoint 2: *Place solar panel within reach of the power
 cable*.
 
-![task_2_c](https://bitbucket.org/repo/xEbAAe/images/2001505714-task_2_c.png)
+![t2_c.png](https://bitbucket.org/repo/xEbAAe/images/296043003-t2_c.png)
 
 1. Perform checkpoint 2: Place the solar panel anywhere on top of the solar
 array.
@@ -168,7 +168,7 @@ messages telling you the checkpoint is completed, such as:
 
 We're now performing checkpoint 3: *Deploy solar panel by pressing a button*.
 
-![task_2_d.png](https://bitbucket.org/repo/xEbAAe/images/22174731-task_2_d.png)
+![t2_d.png](https://bitbucket.org/repo/xEbAAe/images/223290231-t2_d.png)
 
 1. Perform checkpoint 3: Press the button on top of the solar panel so it
 is deployed.
