@@ -125,6 +125,10 @@ We'll start on checkpoint 1: *Climb the stairs*.
 
 We're now performing checkpoint 2: *Open the door*.
 
+Turn valve to unlock | Push door open
+----- | -----
+![t3_d.png](https://bitbucket.org/repo/xEbAAe/images/3460481447-t3_d.png) | ![t3_j.png](https://bitbucket.org/repo/xEbAAe/images/3274264517-t3_j.png)
+
 1. The door starts locked. To unlock it, first turn the door valve a full
 rotation counter-clockwise.
 
