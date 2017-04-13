@@ -170,6 +170,8 @@ pose).
 
 We're now performing checkpoint 3: *Pass through the door*.
 
+![t3_f.png](https://bitbucket.org/repo/xEbAAe/images/1182017986-t3_f.png)
+
 1. Perform checkpoint 3: walk all the way into the habitat. This means you
 must reach the large grey area to the right of the door.
 
@@ -206,6 +208,8 @@ You'll then see:
 #### Checkpoint 4
 
 You're now performing checkpoint 4: *Pick up the leak detector*.
+
+![t3_g.png](https://bitbucket.org/repo/xEbAAe/images/2530120514-t3_g.png)
 
 1. Perform checkpoint 4: Lift the leak detector from the table. The moment
 Val picks it up you'll see:
@@ -249,6 +253,8 @@ updated to show checkpoint 4 has been completed:
 #### Checkpoint 5
 
 You're now performing checkpoint 5: *Find the leak*.
+
+![t3_h.png](https://bitbucket.org/repo/xEbAAe/images/2959862727-t3_h.png)
 
 The leak is located on the wall to the left of the entrance. It is somewhere
 between 0.8 m and 1.4 m from the ground.
@@ -363,6 +369,8 @@ you'll see:
 #### Checkpoint 7
 
 You're now performing checkpoint 7: *Repair the leak*.
+
+![t3_i.png](https://bitbucket.org/repo/xEbAAe/images/749924072-t3_i.png)
 
 1. Carry the patch tool back to where the leak is.
 
