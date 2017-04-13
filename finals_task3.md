@@ -321,7 +321,9 @@ Once the leak is within the frustum, this checkpoint is complete:
 
 #### Checkpoint 6
 
-You're now performing checkpoint 5: *Pick up the leak repair tool*.
+You're now performing checkpoint 6: *Pick up the leak repair tool*.
+
+![t3_l.png](https://bitbucket.org/repo/xEbAAe/images/84766533-t3_l.png)
 
 1. Pick up the leak patch tool from the table. The moment Val touches it
 you'll see:
@@ -422,6 +424,8 @@ the checkpoint will be complete!
 #### Checkpoint 8
 
 You're now performing checkpoint 8: *Go to the finish box*.
+
+![t3_m.png](https://bitbucket.org/repo/xEbAAe/images/3879188980-t3_m.png)
 
 1. Checkpoint 8 consists of moving to the finish box located on the long module.
 
