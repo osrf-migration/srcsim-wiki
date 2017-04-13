@@ -8,7 +8,16 @@ Task 1 consists of the following checkpoints:
 
 All checkpoints must be completed within 30 minutes.
 
-![task1_a_small.png](https://bitbucket.org/repo/xEbAAe/images/3579080731-task1_a_small.png)
+![t1.png](https://bitbucket.org/repo/xEbAAe/images/1480766054-t1.png)
+
+### Updates
+
+The tutorial below has been updated to reflect the updates.
+
+##### Since srcsim_0.3.0
+
+* There's now a start box.
+* The satellite control panel colors have changed.
 
 ## Practice run
 
@@ -84,7 +93,7 @@ leave the start walkway.
 
 Start checkpoint 1: *move the robot within 1 meter from the satellite dish*
 
-![task1_b_small.png](https://bitbucket.org/repo/xEbAAe/images/507814120-task1_b_small.png)
+![t1_a.png](https://bitbucket.org/repo/xEbAAe/images/2053972142-t1_a.png)
 
 1. Perform checkpoint 1: use your controllers to move towards the satellite dish.
 
@@ -114,12 +123,12 @@ time checkpoint 1 was complete. You'll see something like this:
         [Msg] Task [1] - Checkpoint [2] - Started (95 21000000)
 
 #### Checkpoint 2
-
+![task1_c_small.png](https://bitbucket.org/repo/xEbAAe/images/1976235125-task1_c_small.png)
 We're now performing checkpoint 2: *Move the communication dish to the
 correct pitch and yaw angles*. This consists of rotating the handles on the
 satellite until the correct angles are achieved.
 
-![task1_c_small.png](https://bitbucket.org/repo/xEbAAe/images/1976235125-task1_c_small.png)
+![t1_b.png](https://bitbucket.org/repo/xEbAAe/images/3163083520-t1_b.png)
 
 For scoring purposes, this checkpoint corresponds to 2 checkpoints: one for
 the pitch and another one for the yaw.
