@@ -14,7 +14,7 @@ All checkpoints must be completed within 30 minutes.
 
 The tutorial below has been updated to reflect the updates.
 
-##### Since srcsim_0.3.0
+##### New on SRCSim 0.4.0
 
 * There's now a start box.
 * The satellite control panel colors have changed.
