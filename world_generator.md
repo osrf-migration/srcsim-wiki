@@ -1,7 +1,5 @@
 ## Random world generator
 
-** Not released yet **
-
 The worlds provided during practice are similar to the worlds which will be used
 during the competition, but not exactly the same. It's a good idea to practice
 with different world setups to be prepared for the finals. A handy script which
