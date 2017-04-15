@@ -1,7 +1,5 @@
 # Overview
 
-** Not released yet **
-
 Task 2 consists of the following checkpoints:
 
 * **Checkpoint 1**: Pick up the solar panel
