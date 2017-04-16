@@ -42,6 +42,12 @@ wget -O - https://bintray.com/user/downloadSubjectPublicKey?username=bintray | s
 sudo apt-get update
     ```
 
+1. Install the latest Gazebo 7 release
+
+    ```
+sudo apt-get install gazebo7
+    ```
+
 1. Install the SRCSim package and all its dependencies
 
     ```
