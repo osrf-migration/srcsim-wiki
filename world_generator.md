@@ -22,13 +22,19 @@ as follows:
         mkdir ~/src_finals_worlds
         cd ~/src_finals_worlds
 
+1. If you've done this before, first delete the old erb files:
+
+        rm *.erb
+
 1. Copy the necessary scripts:
 
-        wget https://bitbucket.org/osrf/srcsim/raw/default/worlds/unique.world.erb
+        wget https://bitbucket.org/osrf/srcsim/raw/default/worlds/air_leak_detector.erb
+        wget https://bitbucket.org/osrf/srcsim/raw/default/worlds/cable.erb
+        wget https://bitbucket.org/osrf/srcsim/raw/default/worlds/habitat.erb
+        wget https://bitbucket.org/osrf/srcsim/raw/default/worlds/leak.erb
         wget https://bitbucket.org/osrf/srcsim/raw/default/worlds/satellite.erb
         wget https://bitbucket.org/osrf/srcsim/raw/default/worlds/solar_panel.erb
-        wget https://bitbucket.org/osrf/srcsim/raw/default/worlds/cable.erb
-        wget https://bitbucket.org/osrf/srcsim/raw/default/worlds/air_leak_detector.erb
+        wget https://bitbucket.org/osrf/srcsim/raw/default/worlds/unique.world.erb
 
 1. Generate a world with all 3 tasks as follows. Each time this command is run,
    a different world will be generated.
