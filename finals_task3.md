@@ -134,7 +134,7 @@ rotation counter-clockwise.
 
 1. When the full rotation is completed, you'll see the message:
 
-    [Msg] Task [3] - Checkpoint [2] - Door unlocked
+        [Msg] Task [3] - Checkpoint [2] - Door unlocked
 
 1. Now push the door until it is completely open (90 degrees from the initial
 pose).
