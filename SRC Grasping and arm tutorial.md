@@ -172,3 +172,29 @@ This will print out all of the messages that are being printed on the arm_trajec
     ---
 
 There are a few things to notice about this message.  First, `robot_side` describes whether we are controlling the left (0) or the right (1) side of the robot.  Second, there is a list of `joint_trajectory_messages`; one for each joint that can be controlled in the arm.  Third, notice that all of the positions and velocities are 0.0, with the exception of the 4th trajectory (counting from 0).  There you see that we have requested position 0.1, so the controller will attempt to drive to that position for that joint.
+
+By using the command:
+
+    $ rostopic type /ihmc_ros/valkyrie/control/arm_trajectory
+
+We can see that the arm_trajectory topic is of type `ihmc_msgs/ArmTrajectoryRosMessage`.  By using the command:
+
+    $ rosmsg show ihmc_msgs/ArmTrajectoryRosMessage
+
+We can see that an `ArmTrajectoryRosMessage` looks like:
+
+    uint8 LEFT=0
+    uint8 RIGHT=1
+    uint8 OVERRIDE=0
+    uint8 QUEUE=1
+    uint8 robot_side
+    ihmc_msgs/OneDoFJointTrajectoryRosMessage[] joint_trajectory_messages
+      ihmc_msgs/TrajectoryPoint1DRosMessage[] trajectory_points
+        float64 time
+        float64 position
+        float64 velocity
+        int64 unique_id
+      int64 unique_id
+    uint8 execution_mode
+    int64 previous_message_id
+    int64 unique_id
