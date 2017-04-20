@@ -93,3 +93,10 @@ $/4  | Left thumb roll
 -/_  | Right reset hand to home position
 
 ## Watching the messages
+
+At this point, we have a basic idea of how to control the hand with the keyboard.  Let's go a little bit further and look at what exactly the keyboard_teleop node publishes when you hit a key.
+
+
+Assuming you followed the tutorial above, you should have the simulation running in a gazebo window, and another terminal in which keyboard_teleop is running.  To start with, make sure the keyboard_teleop terminal is active, then press '`' and '-' to reset the hands to the home position.  Open up another terminal, and in that terminal run:
+
+    $ rostopic echo /right_hand_position_controller/command
