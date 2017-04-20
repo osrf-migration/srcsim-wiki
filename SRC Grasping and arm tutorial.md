@@ -177,11 +177,11 @@ By using the command:
 
     $ rostopic type /ihmc_ros/valkyrie/control/arm_trajectory
 
-We can see that the arm_trajectory topic is of type `ihmc_msgs/ArmTrajectoryRosMessage`.  By using the command:
+We can see that the /ihmc_ros/valkyrie/control/arm_trajectory topic is of type `ihmc_msgs/ArmTrajectoryRosMessage`.  By using the command:
 
     $ rosmsg show ihmc_msgs/ArmTrajectoryRosMessage
 
-We can see that an `ArmTrajectoryRosMessage` looks like:
+We can see that an `ihms_msgs/ArmTrajectoryRosMessage` looks like:
 
     uint8 LEFT=0
     uint8 RIGHT=1
@@ -198,3 +198,15 @@ We can see that an `ArmTrajectoryRosMessage` looks like:
     uint8 execution_mode
     int64 previous_message_id
     int64 unique_id
+
+For the arm, the `joint_trajectory_messages1` array must have 7 elements, one for each degree of freedom on the arm.  The array elements map to the joints (and the keyboard keys) as follows:
+
+Element | Joint              | Keyboard
+------- | -----              | --------
+   0    |  Shoulder rotation | q (left), u (right)
+   1    |  Shoulder joint    | W (left), i (right)
+   2    |  ???               | e (left), o (right)
+   3    |  ???               | R (left), p (right)
+   4    |  ???               | a (left), j (right)
+   5    |  ???               | S (left), k (right)
+   6    |  ???               | D (left), l (right)
