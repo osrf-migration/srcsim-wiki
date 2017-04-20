@@ -472,7 +472,7 @@ Make sure you complete all checkpoints in task 3 within 2 hours.
 This section contains more detailed information about the leak location and
 detection.
 
-### Leak location
+#### Leak location
 
 During the competition, teams will not know the exact location of the leak
 and must find it using the leak detector. However, the region where the leak
@@ -499,18 +499,32 @@ For debugging purposes during practice, you can visualize the leak as follows:
 
 Teams will not be able to visualize the leak during the finals.
 
-### Leak detection
+#### Leak detection
 
-The detector publishes messages on a topic with the value it is currently reading.
-The value ranges from 0 to 1, where 0 means far away and 1 means close to
-the detector's antena.
+The leak can be detected using the Air Leak Detector tool. The detector 
+publishes messages on ROS topic `/task3/checkpoint5/leak` with the value it is
+currently reading. 
 
-The value emitted by the detector is based on a frustum coming out of the antena:
+The value ranges from 0 to 1, where the higher the number is, the closer the leak
+is to the detector's antenna.
 
-* Whenever the leak is out of the frustum, the detector reports 0.01.
+The value emitted is based on the following frustum coming out of the antenna.
+Checkpoint 5 is completed when the leak is within this frustum.
+
+![antenna.png](https://bitbucket.org/repo/xEbAAe/images/744960137-antenna.png)
+
+* Whenever the leak is out of the frustum, the detector reports 0.01, for example
 * Whenever the leak is within the frustum, the detector reports a value equal to
 `f ^ d`, where `f` is a constant, and `d` is the distance from the center of
-the leak to the point on the antena located at the base of the frustum.
+the leak to the point on the antenna located at the base of the frustum.
+
+Some example readings:
+
+0.01 | 0.021 | 0.574
+---- | ----- | ----
+![fru1.png](https://bitbucket.org/repo/xEbAAe/images/4206459929-fru1.png) | ![fru2.png](https://bitbucket.org/repo/xEbAAe/images/4064879223-fru2.png) | ![fru3.png](https://bitbucket.org/repo/xEbAAe/images/364842782-fru3.png)
+
+
 
 ## Other resources
 
