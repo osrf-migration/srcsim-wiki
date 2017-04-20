@@ -91,5 +91,7 @@ Keys | Action
 ---- | ------
 q/Q  | Positive/negative rotation of the left arm joint around the shoulder
 W/w  | Positive/negative rotation of the left arm shoulder joint
+R/r  | Positive/negative bend of the left elbow
 u/U  | Positive/negative rotation of the right arm joint around the shoulder
 i/I  | Positive/negative rotation of the right arm joint around the shoulder
+p/P  | Positive/negative bend of the right elbow
