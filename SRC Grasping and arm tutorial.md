@@ -1,8 +1,8 @@
-This tutorial aims to explain how to control the R5’s arm and grasping.  This tutorial assumes you have already setup your system for SRC, and can successfully run the SRC qualifiers and/or the main competition.  If this isn’t true, please see the previous tutorials on how to do this.
+This tutorial aims to explain how to control the R5’s arm and grasping.  This tutorial assumes you have already setup your system for SRC, and can successfully run the SRC qualifiers and/or the main competition.  If this isn’t true, please see the previous [tutorials](https://bitbucket.org/osrf/srcsim/wiki/tutorials) on how to do this.
 
 This tutorial is broken into two parts.  In the first part, we’ll be going over how to use the keyboard_teleop SRC node to control the arm and hand of the R5.  In the second part, we’ll be going over how to publish your own transforms to send to the robot.
 
-Part 1 - Controlling the robot with the keyboard_teleop node
+# Part 1 - Controlling the robot with the keyboard_teleop node
 
 The SRC ships with a ROS node that allows you to teleop the R5 from the keyboard.  This is called the keyboard_teleop node.  Let’s start up the SRC simulation, and start up the keyboard_teleop node:
 
