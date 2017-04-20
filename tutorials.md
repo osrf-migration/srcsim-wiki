@@ -13,6 +13,7 @@ These tutorials provide information about how to install and use the SRCSim soft
 
 1. Finals
     1. [General guidelines](https://bitbucket.org/osrf/srcsim/wiki/finals)
+    1. [Grasping](https://bitbucket.org/osrf/srcsim/wiki/grasping)
     1. [Final task 1](https://bitbucket.org/osrf/srcsim/wiki/finals_task1)
     1. [Final task 2](https://bitbucket.org/osrf/srcsim/wiki/finals_task2)
     1. [Final task 3](https://bitbucket.org/osrf/srcsim/wiki/finals_task3)
