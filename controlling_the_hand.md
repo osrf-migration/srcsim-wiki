@@ -66,3 +66,7 @@ As can be seen above, there are controls for the left and right arms, left and r
 Let's put the arms of the robot in the "home" position by pressing 't' and then 'y'.  With that done, the robot should look like below.
 
 ![src-armtut-02-arm-home-position.png](https://bitbucket.org/repo/xEbAAe/images/56993020-src-armtut-02-arm-home-position.png)
+
+Now, let's control one of the fingers on the R5.  Press the '8' key approximately 10 times, which should cause the index finger to curl up.  When you are done, the finger should look approximately like the following picture.
+
+![src-armtut-05-right-finger.png](https://bitbucket.org/repo/xEbAAe/images/3417929898-src-armtut-05-right-finger.png)
