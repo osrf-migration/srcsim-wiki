@@ -226,4 +226,4 @@ Thus, to control the arm from your own code, you should do the following:
 3.  Set the robot_side of the message to 0 to control the left, or 1 to control the right.
 4.  Create an array of 7 elements in the joint_trajectory_elements.
 5.  Fill in the position of each degree of freedom.
-6.  Publish the message.
+6.  Publish the message to the `/ihmc_ros/valkyrie/control/arm_trajectory` topic.
