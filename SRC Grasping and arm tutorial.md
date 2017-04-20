@@ -13,3 +13,15 @@ In one terminal, fire up the simulation; note that this tutorial uses qual2.laun
 The simulation will launch and will slowly lower the R5 robot to the ground.  Once the harness has released, the robot is free to move.  The arm and hand position should look something like the picture below.
 
 ![src-armtut-01-default-position.png](https://bitbucket.org/repo/xEbAAe/images/844246496-src-armtut-01-default-position.png)
+
+At this point, we want to make sure that the grasping controller is active.  In another terminal, run:
+
+    $ rostopic list | grep hand_position_controller
+
+You should see the /left_hand_position_controller/command and the /right_hand_position_controller/command topics there.  If you do not, go back into your launch file and make sure that the grasping_init arg is set to true.
+
+Now in another terminal launch the keyboard_teleop node:
+
+    $ ./src/srcsim/scripts/keyboard_teleop.py # FIXME: this needs to get installed somewhere
+
+When you first launch the keyboard_teleop.py node, you’ll get some information on how to control the robot using the keyboard, similar to what is below.
