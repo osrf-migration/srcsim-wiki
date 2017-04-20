@@ -199,7 +199,7 @@ We can see that an `ihms_msgs/ArmTrajectoryRosMessage` looks like:
     int64 previous_message_id
     int64 unique_id
 
-For the arm, the `joint_trajectory_messages1` array must have 7 elements, one for each degree of freedom on the arm.  The array elements map to the joints (and the keyboard keys) as follows:
+For the arm, the `joint_trajectory_messages` array must have 7 elements, one for each degree of freedom on the arm.  The array elements map to the joints (and the keyboard keys) as follows:
 
 Element | Joint               | Keyboard
 ------- | -----               | --------
