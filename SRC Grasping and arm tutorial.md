@@ -81,11 +81,16 @@ Similarly, we can control the elbow joint on the arms by using the ‘r’ and t
 
 ![src-armtut-04-elbow-90-degrees.png](https://bitbucket.org/repo/xEbAAe/images/1554513140-src-armtut-04-elbow-90-degrees.png)
 
+Additionally, we can control the hands using the keyboard.  Hit 't' and 'y' to reset the arms to the home position.  Then control the index finger on the right hand by hitting the '8' key about 10 times.  The robot should look like below.
+
+![src-armtut-05-right-finger.png](https://bitbucket.org/repo/xEbAAe/images/3737807227-src-armtut-05-right-finger.png)
 
 Other keys on the keyboard do similar things.  For basic reference, the keys are mapped as follows:
 
 q/Q - Positive/negative rotation of the left arm joint around the shoulder
+
 W/w - Positive/negative rotation of the left arm shoulder joint
 
 u/U - Positive/negative rotation of the right arm joint around the shoulder
+
 i/I - Positive/negative rotation of the right arm joint around the shoulder
