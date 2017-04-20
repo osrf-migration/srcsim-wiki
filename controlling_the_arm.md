@@ -204,3 +204,11 @@ Element | Joint               | Keyboard
    4    |  Lower arm rotation | a (left), j (right)
    5    |  Wrist X            | S (left), k (right)
    6    |  Wrist Y            | D (left), l (right)
+
+Thus, to control the arm from your own code, you should do the following:
+1.  Construct a message of type `ihms_msgs/ArmTrajectoryRosMessage`.
+2.  Set the unique_id of the message to -1.
+3.  Set the robot_side of the message to 0 to control the left, or 1 to control the right.
+4.  Create an array of 7 elements in the joint_trajectory_elements.
+5.  Fill in the position of each degree of freedom.
+6.  Publish the message.
