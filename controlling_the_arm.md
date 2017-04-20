@@ -1,5 +1,7 @@
 # Controlling the arm
 
+## Starting up the simulation
+
 The SRC ships with a ROS node that allows you to teleop the R5 from the keyboard.  This is called the keyboard_teleop node.  Let’s start up the SRC simulation, and start up the keyboard_teleop node:
 
 In one terminal, fire up the simulation; note that this tutorial uses qual2.launch, but you can use any other launch file that you choose. (IMPORTANT NOTE: the launch file *must* have the grasping arg set to true!)
@@ -15,6 +17,8 @@ At this point, we want to make sure that the grasping controller is active.  In 
     $ rostopic list | grep hand_position_controller
 
 You should see the /left_hand_position_controller/command and the /right_hand_position_controller/command topics there.  If you do not, go back into your launch file and make sure that the grasping_init arg is set to true.
+
+## Keyboard control
 
 Now in another terminal launch the keyboard_teleop node:
 
