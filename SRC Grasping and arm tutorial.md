@@ -4,6 +4,8 @@ This tutorial is broken into two parts.  In the first part, we’ll be going ove
 
 # Part 1 - Controlling the robot with the keyboard_teleop node
 
+## Basic control
+
 The SRC ships with a ROS node that allows you to teleop the R5 from the keyboard.  This is called the keyboard_teleop node.  Let’s start up the SRC simulation, and start up the keyboard_teleop node:
 
 In one terminal, fire up the simulation; note that this tutorial uses qual2.launch, but you can use any other launch file that you choose. (IMPORTANT NOTE: the launch file *must* have the grasping arg set to true!)
