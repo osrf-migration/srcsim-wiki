@@ -80,3 +80,12 @@ Now, let’s rotate the shoulders back to the original position by pressing ‘U
 Similarly, we can control the elbow joint on the arms by using the ‘r’ and the ‘p’ keys.  Press the ‘r’ key about 15 times and the ‘p’ key about 15 times to make the elbows go to approximately 90 degrees.  The robot should look like below.
 
 ![src-armtut-04-elbow-90-degrees.png](https://bitbucket.org/repo/xEbAAe/images/1554513140-src-armtut-04-elbow-90-degrees.png)
+
+
+Other keys on the keyboard do similar things.  For basic reference, the keys are mapped as follows:
+
+q/Q - Positive/negative rotation of the left arm joint around the shoulder
+W/w - Positive/negative rotation of the left arm shoulder joint
+
+u/U - Positive/negative rotation of the right arm joint around the shoulder
+i/I - Positive/negative rotation of the right arm joint around the shoulder
