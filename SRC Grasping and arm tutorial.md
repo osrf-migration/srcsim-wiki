@@ -63,3 +63,10 @@ When you first launch the keyboard_teleop.py node, you’ll get some information
             ?: Print this menu
             <TAB>: Print all current joint values
             <ESC>: Quit
+
+
+As can be seen above, there are controls for the left and right arms, left and right hands, the head, the neck, and for walking.  This tutorial will focus just on the arms.
+
+Let’s control the arms of the robot.  Make sure the terminal with the keyboard_teleop node is in focus, and then send the arms to their “home” position by pressing ‘t’ and then ‘y’.  With that done, the robot should look like below.
+
+![src-armtut-02-arm-home-position.png](https://bitbucket.org/repo/xEbAAe/images/56993020-src-armtut-02-arm-home-position.png)
