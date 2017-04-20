@@ -31,7 +31,7 @@ Topic / service name | Message type
 `/ihmc_ros/valkyrie/control/foot_trajectory` | [ihmc_msgs/FootTrajectoryRosMessage](https://github.com/ihmcrobotics/ihmc_ros_core/blob/develop/ihmc_msgs/msg/FootTrajectoryRosMessage.msg)
 `/ihmc_ros/valkyrie/control/footstep_list` | [ihmc_msgs/FootstepDataListRosMessage](https://github.com/ihmcrobotics/ihmc_ros_core/blob/develop/ihmc_msgs/msg/FootstepDataListRosMessage.msg)
 `/ihmc_ros/valkyrie/control/go_home` | [ihmc_msgs/GoHomeRosMessage](https://github.com/ihmcrobotics/ihmc_ros_core/blob/develop/ihmc_msgs/msg/GoHomeRosMessage.msg)
-`/ihmc_ros/valkyrie/control/hand_desired_configuration` | [ihmc_msgs/HandDesiredConfigurationRosMessage](https://github.com/ihmcrobotics/ihmc_ros_core/blob/develop/ihmc_msgs/msg/HandDesiredConfigurationRosMessage.msg)
+~~/ihmc_ros/valkyrie/control/hand_desired_configuration~~ | [~~ihmc_msgs/HandDesiredConfigurationRosMessage~~](https://github.com/ihmcrobotics/ihmc_ros_core/blob/develop/ihmc_msgs/msg/HandDesiredConfigurationRosMessage.msg), this topic is not in use
 `/ihmc_ros/valkyrie/control/hand_trajectory` | [ihmc_msgs/HandTrajectoryRosMessage](https://github.com/ihmcrobotics/ihmc_ros_core/blob/develop/ihmc_msgs/msg/HandTrajectoryRosMessage.msg)
 `/ihmc_ros/valkyrie/control/head_trajectory` | [ihmc_msgs/HeadTrajectoryRosMessage](https://github.com/ihmcrobotics/ihmc_ros_core/blob/develop/ihmc_msgs/msg/HeadTrajectoryRosMessage.msg)
 `/ihmc_ros/valkyrie/control/high_level_state` | [ihmc_msgs/HighLevelStateRosMessage](https://github.com/ihmcrobotics/ihmc_ros_core/blob/develop/ihmc_msgs/msg/HighLevelStateRosMessage.msg)
