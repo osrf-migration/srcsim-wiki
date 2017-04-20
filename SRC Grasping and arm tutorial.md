@@ -97,3 +97,78 @@ R/r  | Positive/negative bend of the left elbow
 u/U  | Positive/negative rotation of the right arm joint around the shoulder
 i/I  | Positive/negative rotation of the right arm joint around the shoulder
 p/P  | Positive/negative bend of the right elbow
+
+## Watching the messages
+
+At this point, we have a basic idea on how to control the robot using the keyboard.  Let's go a little bit further and look at what exactly the keyboard_teleop node publishes when you hit a key.
+
+Assuming you followed the tutorial above, you should have the simulation running in a gazebo window, and another terminal in which keyboard_teleop is running.  To start with, make sure the keyboard_teleop terminal is active, then press 't' and 'y' to reset the arms to the home position.  Open up another terminal, and in that terminal run:
+
+    $ rostopic echo /ihmc_ros/valkyrie/control/arm_trajectory
+
+This will print out all of the messages that are being printed on the arm_trajectory topic.  Now that you have that, go back to the terminal window running keyboard_teleop, and press 'j' once.  Switching back to the terminal window containing the rostopic echo command, you should see this:
+
+    robot_side: 1
+    joint_trajectory_messages: 
+      - 
+        trajectory_points: 
+          - 
+            time: 1.0
+            position: 0.0
+            velocity: 0.0
+            unique_id: 0
+        unique_id: 0
+      - 
+        trajectory_points: 
+          - 
+            time: 1.0
+            position: 0.0
+            velocity: 0.0
+            unique_id: 0
+        unique_id: 0
+      - 
+        trajectory_points: 
+          - 
+            time: 1.0
+            position: 0.0
+            velocity: 0.0
+            unique_id: 0
+        unique_id: 0
+      - 
+        trajectory_points: 
+          - 
+            time: 1.0
+            position: 0.0
+            velocity: 0.0
+            unique_id: 0
+        unique_id: 0
+      - 
+        trajectory_points: 
+          - 
+            time: 1.0
+            position: 0.1
+            velocity: 0.0
+            unique_id: 0
+        unique_id: 0
+      - 
+        trajectory_points: 
+          - 
+            time: 1.0
+            position: 0.0
+            velocity: 0.0
+            unique_id: 0
+        unique_id: 0
+      - 
+        trajectory_points: 
+          - 
+            time: 1.0
+            position: 0.0
+            velocity: 0.0
+            unique_id: 0
+        unique_id: 0
+    execution_mode: 0
+    previous_message_id: 0
+    unique_id: -1
+    ---
+
+There are a few things to notice about this message.  First, `robot_side` describes whether we are controlling the left (0) or the right (1) side of the robot.  Second, there is a list of `joint_trajectory_messages`; one for each joint that can be controlled in the arm.  Third, notice that all of the positions and velocities are 0.0, with the exception of the 4th trajectory (counting from 0).  There you see that we have requested position 0.1, so the controller will attempt to drive to that position for that joint.
