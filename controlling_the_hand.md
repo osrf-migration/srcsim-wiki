@@ -133,3 +133,13 @@ We can see that a `std_msgs/Float64MultiArray` looks like:
         uint32 stride
       uint32 data_offset
     float64[] data
+
+For the hand, the data array must have 5 elements, one to control each finger (with two for the thumb).  The array elements map to the fingers (and the keyboard keys) as follows:
+
+Element | Finger      | Keyboard
+------- | ------      | --------
+   0    | Thumb pitch | 5 (left), 6 (right)
+   1    | Thumb roll  | $ (left), 7 (right)
+   2    | Index       | # (left), 8 (right)
+   3    | Middle      | @ (left), 9 (right)
+   4    | Ring        | ! (left), 0 (right)
