@@ -80,8 +80,10 @@ $/4  | Left thumb roll
 #/3  | Left curl/uncurl index finger
 @/2  | Left curl/uncurl middle finger
 !/1  | Left curl/uncurl ring finger
+`/~  | Left reset hand to home position
 6/^  | Right thumb pitch
 7/&  | Right thumb roll
 8/*  | Right curl/uncurl index finger
 9/(  | Right curl/uncurl middle finger
 0/)  | Right curl/uncurl ring finger
+-/_  | Right reset hand to home position
