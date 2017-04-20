@@ -81,7 +81,7 @@ Additionally, we can control the hands using the keyboard.  Hit 't' and 'y' to r
 
 ![src-armtut-05-right-finger.png](https://bitbucket.org/repo/xEbAAe/images/3737807227-src-armtut-05-right-finger.png)
 
-Other keys on the keyboard do similar things.  For basic reference, the keys are mapped as follows:
+Other keys on the keyboard do similar things.  For reference, the keys are mapped as follows:
 
 Keys | Action
 ---- | ------
@@ -92,6 +92,7 @@ R/r  | Positive/negative bend of the left elbow
 a/A  | Positive/negative rotation of the left lower arm
 S/s  | Positive/negative X offset of the left wrist
 D/d  | Positive/negative Y offset of the left wrist
+t/T  | Reset left arm to home position
 u/U  | Positive/negative rotation of the right arm joint around the shoulder
 i/I  | Positive/negative rotation of the right arm joint around the shoulder
 o/O  | Positive/negative rotation of the right arm upper arm
@@ -99,6 +100,7 @@ p/P  | Positive/negative bend of the right elbow
 j/J  | Positive/negative rotation of the right lower arm
 k/K  | Positive/negative X offset of the right wrist
 l/L  | Positive/negative Y offset of the right wrist
+y/Y  | Reset right arm to home position
 
 ## Watching the messages
 
