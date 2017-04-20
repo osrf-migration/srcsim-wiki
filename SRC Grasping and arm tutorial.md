@@ -70,3 +70,13 @@ As can be seen above, there are controls for the left and right arms, left and r
 Let’s control the arms of the robot.  Make sure the terminal with the keyboard_teleop node is in focus, and then send the arms to their “home” position by pressing ‘t’ and then ‘y’.  With that done, the robot should look like below.
 
 ![src-armtut-02-arm-home-position.png](https://bitbucket.org/repo/xEbAAe/images/56993020-src-armtut-02-arm-home-position.png)
+
+Next, let’s rotate the arms around the shoulder joint 90 degrees.  Press the ‘u’ key approximately 15 times, then press the ‘q’ key approximately 15 times.  When you are done, the shoulder should have rotated 90 degrees, and look like below.
+
+![src-armtut-03-shoulder-rotation.png](https://bitbucket.org/repo/xEbAAe/images/3541547728-src-armtut-03-shoulder-rotation.png)
+
+Now, let’s rotate the shoulders back to the original position by pressing ‘U’ about 15 times, and then pressing ‘Q’ about 15 times.  The robot should be approximately back at the “home” position.
+
+Similarly, we can control the elbow joint on the arms by using the ‘r’ and the ‘p’ keys.  Press the ‘r’ key about 15 times and the ‘p’ key about 15 times to make the elbows go to approximately 90 degrees.  The robot should look like below.
+
+![src-armtut-04-elbow-90-degrees.png](https://bitbucket.org/repo/xEbAAe/images/1554513140-src-armtut-04-elbow-90-degrees.png)
