@@ -256,19 +256,7 @@ You're now performing checkpoint 5: *Find the leak*.
 
 ![t3_h.png](https://bitbucket.org/repo/xEbAAe/images/2959862727-t3_h.png)
 
-The leak is located on the wall to the left of the entrance. It is somewhere
-between 0.8 m and 1.4 m from the ground.
-
-The detector publishes messages on a topic with the value it is currently reading.
-The value ranges from 0 to 1, where 0 means far away and 1 means close to
-the detector's antena.
-
-The value emitted by the detector is based on a frustum coming out of the antena:
-
-* Whenever the leak is out of the frustum, the detector reports 0.01.
-* Whenever the leak is within the frustum, the detector reports a value equal to
-`f ^ d`, where `f` is a constant, and `d` is the distance from the center of
-the leak to the point on the antena located at the base of the frustum.
+See the **Leak** section below for detailed information about the leak detection.
 
 1. On a new terminal, start listening to the detector's readings:
 
@@ -478,6 +466,51 @@ You're now performing checkpoint 8: *Go to the finish box*.
 ## Timeout
 
 Make sure you complete all checkpoints in task 3 within 2 hours.
+
+## Leak
+
+This section contains more detailed information about the leak location and
+detection.
+
+### Leak location
+
+During the competition, teams will not know the exact location of the leak
+and must find it using the leak detector. However, the region where the leak
+can be located is known, so the robot should only need to search that area.
+
+It is known that the leak is located on the wall to the left of the entrance.
+For each world, the leak is randomly placed somewhere between 0.835 m and 
+1.713 m from the ground. 
+
+The blue rectangle below marks the region where the leak can be (the rectangle
+is not present in the worlds):
+
+![wall3.png](https://bitbucket.org/repo/xEbAAe/images/2099664621-wall3.png)
+
+![wall2.png](https://bitbucket.org/repo/xEbAAe/images/60609230-wall2.png)
+
+For debugging purposes during practice, you can visualize the leak as follows:
+
+1. On the left panel's world tab, scroll down until you find the `leak` model
+1. Right-click `leak` and choose `View->Collisions`
+1. The leak will show as an orange sphere on the wall, like this:
+
+![leak1.png](https://bitbucket.org/repo/xEbAAe/images/2011524842-leak1.png)
+
+Teams will not be able to visualize the leak during the finals.
+
+### Leak detection
+
+The detector publishes messages on a topic with the value it is currently reading.
+The value ranges from 0 to 1, where 0 means far away and 1 means close to
+the detector's antena.
+
+The value emitted by the detector is based on a frustum coming out of the antena:
+
+* Whenever the leak is out of the frustum, the detector reports 0.01.
+* Whenever the leak is within the frustum, the detector reports a value equal to
+`f ^ d`, where `f` is a constant, and `d` is the distance from the center of
+the leak to the point on the antena located at the base of the frustum.
 
 ## Other resources
 
