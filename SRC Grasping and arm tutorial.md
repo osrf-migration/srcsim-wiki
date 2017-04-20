@@ -25,3 +25,41 @@ Now in another terminal launch the keyboard_teleop node:
     $ ./src/srcsim/scripts/keyboard_teleop.py # FIXME: this needs to get installed somewhere
 
 When you first launch the keyboard_teleop.py node, you’ll get some information on how to control the robot using the keyboard, similar to what is below.
+
+            Keyboard Teleop for Space Robotics Challenge 0.1.0
+            Copyright (C) 2017 Open Source Robotics Foundation
+            Released under the Apache 2 License
+            --------------------------------------------------
+            Left arm joints: q, W, e, R
+                             a, S, D
+                Reset: t or T
+
+            Right arm joints: u, i, o, p
+                              j, k, l
+                Reset: y or Y
+
+            Left hand joints: 5, $, #, @, !
+                Reset: ` or ~
+
+            Right hand joints: 6, 7, 8, 9, 0
+                Reset: - or _
+
+            Head angles:
+                Roll: x
+                Pitch: c
+                Yaw: v
+                Reset all head angles: g or G
+
+            Neck joints: b, n, m
+                Reset all neck joints: h or H
+
+            The shown characters turn the joints in positive direction.
+            The opposite case turns the joints in negative direction.
+            For numbers the uppercase character is based on an English layout.
+
+            Walking controls:
+                Walk: f lowercase meaning forward and uppercase backwards
+                Rotating on the spot: z lowercase is counterclockwise, uppercase is clockwise
+            ?: Print this menu
+            <TAB>: Print all current joint values
+            <ESC>: Quit
