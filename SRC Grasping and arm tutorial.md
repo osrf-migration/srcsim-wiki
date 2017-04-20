@@ -8,6 +8,6 @@ The SRC ships with a ROS node that allows you to teleop the R5 from the keyboard
 
 In one terminal, fire up the simulation; note that this tutorial uses qual2.launch, but you can use any other launch file that you choose. (IMPORTANT NOTE: the launch file *must* have the grasping arg set to true!)
 
-$ roslaunch srcsim qual2.launch init:=true # start up the simulation
+    $ roslaunch srcsim qual2.launch init:=true
 
 The simulation will launch and will slowly lower the R5 robot to the ground.  Once the harness has released, the robot is free to move.  The arm and hand position should look something like the picture below.
