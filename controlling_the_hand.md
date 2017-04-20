@@ -150,4 +150,4 @@ Thus, to control the hand from your own code, you should do the following:
 1.  Fill in the size and stride of the MultiArray dimension as 5.
 1.  Set the data_offset of the MultiArray to 0.
 1.  Fill in the positions for each of the fingers.
-1.  Publish the message to the `/right_hand_position_controller/command` or `/left_hand_position_controller/command' topic.
+1.  Publish the message to the `/right_hand_position_controller/command` or `/left_hand_position_controller/command` topic.
