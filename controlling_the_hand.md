@@ -75,13 +75,13 @@ Other keys on the keyboard do similar things.  For reference, the keys are mappe
 
 Keys | Action
 ---- | ------
-5/%  | Left ???
-$/4  | Left ???
-#/3  | Left ???
-@/2  | Left ???
-!/1  | Left ???
-6/^  | Right ???
-7/&  | Right ???
-8/*  | Right ???
-9/(  | Right ???
-0/)  | Right ???
+5/%  | Left thumb pitch
+$/4  | Left thumb roll
+#/3  | Left curl/uncurl index finger
+@/2  | Left curl/uncurl middle finger
+!/1  | Left curl/uncurl ring finger
+6/^  | Right thumb pitch
+7/&  | Right thumb roll
+8/*  | Right curl/uncurl index finger
+9/(  | Right curl/uncurl middle finger
+0/)  | Right curl/uncurl ring finger
