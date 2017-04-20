@@ -11,3 +11,5 @@ In one terminal, fire up the simulation; note that this tutorial uses qual2.laun
     $ roslaunch srcsim qual2.launch init:=true
 
 The simulation will launch and will slowly lower the R5 robot to the ground.  Once the harness has released, the robot is free to move.  The arm and hand position should look something like the picture below.
+
+![src-armtut-01-default-position.png](https://bitbucket.org/repo/xEbAAe/images/844246496-src-armtut-01-default-position.png)
