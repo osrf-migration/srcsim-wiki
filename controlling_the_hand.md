@@ -100,3 +100,16 @@ At this point, we have a basic idea of how to control the hand with the keyboard
 Assuming you followed the tutorial above, you should have the simulation running in a gazebo window, and another terminal in which keyboard_teleop is running.  To start with, make sure the keyboard_teleop terminal is active, then press '`' and '-' to reset the hands to the home position.  Open up another terminal, and in that terminal run:
 
     $ rostopic echo /right_hand_position_controller/command
+
+
+This will print out all of the messages that are being printed on the `/right_hand_position_controller/command` topic.  Now that you have that, go back to the terminal window running keyboard_teleop, and press '6' once.  Switching back to the terminal window containing the rostopic echo command, you should see this:
+
+    layout: 
+      dim: 
+        - 
+          label: fingers
+          size: 5
+          stride: 5
+      data_offset: 0
+    data: [0.1, 0.0, 0.0, 0.0, 0.0]
+    ---
