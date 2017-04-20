@@ -113,3 +113,23 @@ This will print out all of the messages that are being printed on the `/right_ha
       data_offset: 0
     data: [0.1, 0.0, 0.0, 0.0, 0.0]
     ---
+
+There's a couple of things to note about this message.  First, the size describes how many elements are in the data array, five in this case.  Second, the data array is all 0.0 except for the 0th element.  There you see the keyboard_teleop program has requested a position of 0.1, so the controller will attempt to drive to that position for that joint (thumb pitch).
+
+By using the command:
+
+    $ rostopic type /right_hand_position_controller/command
+
+We see that the /right_hand_position_controller/command topic is of type `std_msgs/Float64MultiArray`.  By using the command:
+
+    $ rosmsg show std_msgs/Float64MultiArray
+
+We can see that a `std_msgs/Float64MultiArray` looks like:
+
+    std_msgs/MultiArrayLayout layout
+      std_msgs/MultiArrayDimension[] dim
+        string label
+        uint32 size
+        uint32 stride
+      uint32 data_offset
+    float64[] data
