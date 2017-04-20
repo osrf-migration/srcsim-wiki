@@ -87,19 +87,9 @@ Additionally, we can control the hands using the keyboard.  Hit 't' and 'y' to r
 
 Other keys on the keyboard do similar things.  For basic reference, the keys are mapped as follows:
 
-<table>
-    <tr>
-        <th>Keys</th>
-        <th>Action</th>
-    </tr>
-    <tr>
-        <td>q/Q</td>
-        <td>Positive/negative rotation of the left arm joint around the shoulder</td>
-    </tr>
-</table>
-
-W/w - Positive/negative rotation of the left arm shoulder joint
-
-u/U - Positive/negative rotation of the right arm joint around the shoulder
-
-i/I - Positive/negative rotation of the right arm joint around the shoulder
+Keys | Action
+---- | ------
+q/Q  | Positive/negative rotation of the left arm joint around the shoulder
+W/w  | Positive/negative rotation of the left arm shoulder joint
+u/U  | Positive/negative rotation of the right arm joint around the shoulder
+i/I  | Positive/negative rotation of the right arm joint around the shoulder
