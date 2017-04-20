@@ -143,3 +143,11 @@ Element | Finger      | Keyboard
    2    | Index       | # (left), 8 (right)
    3    | Middle      | @ (left), 9 (right)
    4    | Ring        | ! (left), 0 (right)
+
+Thus, to control the hand from your own code, you should do the following:
+
+1.  Construct a message of type `std_msgs/Float64MultiArray`.
+1.  Fill in the size and stride of the MultiArray dimension as 5.
+1.  Set the data_offset of the MultiArray to 0.
+1.  Fill in the positions for each of the fingers.
+1.  Publish the message to the `/right_hand_position_controller/command` or `/left_hand_position_controller/command' topic.
