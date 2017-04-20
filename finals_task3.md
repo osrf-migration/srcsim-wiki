@@ -520,7 +520,7 @@ Far plane distance from the origin of the tool | 0.5 m
 Horizontal field of view | PI / 9 rad
 Aspect ratio | 1
 
-* Whenever the leak is out of the frustum, the detector reports 0.01, for example
+* Whenever the leak is out of the frustum, the detector reports 0.01
 * Whenever the leak is within the frustum, the detector reports a value equal to
 `f ^ d`, where `f` is a constant, and `d` is the distance from the center of
 the leak to the point on the antenna located at the base of the frustum.
