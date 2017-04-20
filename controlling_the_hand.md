@@ -70,3 +70,18 @@ Let's put the arms of the robot in the "home" position by pressing 't' and then 
 Now, let's control one of the fingers on the R5.  Press the '8' key approximately 10 times, which should cause the index finger to curl up.  When you are done, the finger should look approximately like the following picture.
 
 ![src-armtut-05-right-finger.png](https://bitbucket.org/repo/xEbAAe/images/3417929898-src-armtut-05-right-finger.png)
+
+Other keys on the keyboard do similar things.  For reference, the keys are mapped as follows:
+
+Keys | Action
+---- | ------
+5/%  | Left ???
+$/4  | Left ???
+#/3  | Left ???
+@/2  | Left ???
+!/1  | Left ???
+6/^  | Right ???
+7/&  | Right ???
+8/*  | Right ???
+9/(  | Right ???
+0/)  | Right ???
