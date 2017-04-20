@@ -1,4 +1,4 @@
-## Basic control
+# Controlling the arm
 
 The SRC ships with a ROS node that allows you to teleop the R5 from the keyboard.  This is called the keyboard_teleop node.  Let’s start up the SRC simulation, and start up the keyboard_teleop node:
 
