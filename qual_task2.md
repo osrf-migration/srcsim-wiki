@@ -81,39 +81,7 @@ python /tmp/armDemo.py
 
 You should see the right arm of your robot moving.
 
-
-# Interactively control the arm, fingers, head, and neck joints
-
-
-While the previous two sections demonstrate executing a set of fixed motions this tutorial will use a helper script to perform custom motions based on interactively provided keyboard input.
-It uses the same ROS messages to control the robot.
-
-Open a new terminal and configure the environment:
-
-```
-#!shell
-source /opt/ros/indigo/setup.bash
-```
-
-Run the script converting keyboard input into ROS message to control the robot:
-
-```
-#!shell
-rosrun srcsim keyboard_teleop.py
-```
-
-- Note: This script has not been merged and packaged yet.
-  So for now you need to download the script manually and invoke it directly:
-  
-        :::shell
-        wget https://bitbucket.org/osrf/srcsim/raw/86698c836249481f78dcf83b43a50d15b7eb13f1/scripts/keyboard_teleop.py /tmp/keyboard_teleop.py
-        python /tmp/keyboard_teleop.py
-
-The script will show some usage information which key maps to what action.
-If you e.g. press the key `y` the right arm should move to its default position (straight to the right).
-After pressing `i` and/or `p` multiple times the right arm should rotate in the shoulder / elbow.
-Holding shift and pressing `I` and/or `P` should rotate the same joints in the opposite direction.
-
+For more information about controlling the arm and the fingers using a keyboard, please see the [grasping tutorial](https://bitbucket.org/osrf/srcsim/wiki/grasping).
 
 # Upload your log file
 
