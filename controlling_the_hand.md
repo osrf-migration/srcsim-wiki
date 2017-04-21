@@ -20,9 +20,14 @@ You should see the /left_hand_position_controller/command and the /right_hand_po
 
 ## Keyboard control
 
-Now in another terminal launch the keyboard_teleop node:
 
-    $ ./src/srcsim/scripts/keyboard_teleop.py # FIXME: this needs to get installed somewhere
+Now in another terminal fetch the keyboard_teleop node:
+
+    $ wget https://bitbucket.org/osrf/srcsim/raw/default/scripts/keyboard_teleop.py
+
+Now launch the keyboard_teleop node:
+
+    $ ./keyboard_teleop.py
 
 When you first launch the keyboard_teleop.py node, you’ll get some information on how to control the robot using the keyboard, similar to what is below.
 
