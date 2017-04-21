@@ -151,3 +151,9 @@ Thus, to control the hand from your own code, you should do the following:
 1.  Set the data_offset of the MultiArray to 0.
 1.  Fill in the positions for each of the fingers.
 1.  Publish the message to the `/right_hand_position_controller/command` or `/left_hand_position_controller/command` topic.
+
+## Why is there only one input for each finger?
+
+If you look closely at the fingers on the R5, each one contains 3 (phalanges)[https://en.wikipedia.org/wiki/Phalanx_bone].  Yet, there is only one input per finger (with the exception of the thumb, which has two).  Why is this?
+
+The reason is that the phalanges on the R5 hand are all coupled together, and not separately controllable.  Thus, there is only one actuator input per finger.
