@@ -2,10 +2,20 @@ Here you'll find instructions on how to use CloudSim for practice and for the co
 
 # One-time setup
 
-## Sign-up
+To use CloudSim, you'll need to:
+
+1. Create a CloudSim account
+1. Host your field computer code on a GitHub repository (public or private)
+
+### Sign-up into CloudSim
 
 1. Sign up with a Google account at https://cloudsim.io
-1. Email cloudsim@osrfoundation.org to request access. Wait to hear confirmation, then log out and back in.
+1. Email `cloudsim@osrfoundation.org` to request access, stating:
+    * the email you used to sign up 
+    * the name of your team. 
+1. Wait to hear confirmation, then log out and back in.
+
+> Only the first user of a team needs to send an email to OSRF. After one user has been added, they can add other CloudSim users to the team as long as they've created accounts.
 
 ### Github deploy key
 
@@ -30,9 +40,12 @@ Once that's done, all CloudSim needs is the private key to be able to clone your
 1. Log in to https://cloudsim.io
 1. Click on the SRC link (on the left menu bar, under the Dashboard)
 
-# Start a SRC round
+# Start an SRC round
 
-SRC machines are grouped into Rounds. Click on the round button (with a + inside) to create a new round. You must supply the Github repository URI containing your code, the Github deploy key for that repo if it's a private repo, and the name of your team. See the "One-time setup" section above to learn how to set up the deploy key. 
+SRC machines are grouped into Rounds. Click on the round button (with a + inside) to create a new round. You must supply:
+
+* the Github repository URI containing your code, for example `https://github.com/username/reponame.git`
+* the Github deploy key for that repo (private repos only). See the "One-time setup" section above to learn how to set up the deploy key. 
 
 Click on continue to launch the machine instances on the cloud. 
 
