@@ -24,3 +24,4 @@ These tutorials provide information about how to install and use the SRCSim soft
     * [Skipping checkpoints](https://bitbucket.org/osrf/srcsim/wiki/skip_summary)
     * [Practice versus competition](https://bitbucket.org/osrf/srcsim/wiki/practice_vs_competition)
     * [Random world generator](https://bitbucket.org/osrf/srcsim/wiki/world_generator)
+    * [Using CloudSim](https://bitbucket.org/osrf/srcsim/wiki/cloud)
