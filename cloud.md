@@ -71,24 +71,22 @@ Click on the round button (with a + inside) to create a new constellation. You m
 
 Click on continue to launch the machine instances on the cloud. 
 
-### Start a round
+### Start a constellation
 
 There are two instances in a round: One for the Simulator (top), and the other for the Field Computer (bottom).
 
-In the Simulator instance, there is a `Run` widget that allows you to run 5 different rounds of SRC simulation. Clicking on a numbered button here will launch the SRC simulator inside the Simulator instance. Before doing so, make sure the instances is up and running by clicking on the IP address link. A page will be displayed when the instance is ready, otherwise the link will not work.
+1. You must wait until both machines are provisioned before using them. This might take a few minutes.
+    1. Wait for the instance's public IP to show up on the interface
+    1. Once they show up, click on both of them, this opens 2 new tabs on your browser
+    1. At first, nothing will show on the tab. Refresh those tabs from time to time until you see a cloudsim message indicating that the instance is up and running.
 
-Click on the `>1` button to launch the simulation. 
+1. In the Simulator instance, there is a `Run` widget that allows you to run 5 different SRC worlds. Clicking on a numbered button here will launch the SRC world inside the Simulator instance. Click on the `>1` button to launch the first world. 
 
-### Launch your software on Field computer
+### Launch your software on field computer
 
 The Field Computer instance is where your code will be deployed. The `Run` widget has a `START` button, that once triggered, will clone your repo, build the docker image as per your Dockerfile, and run the docker container. 
 
 Click on the `START` button to launch your software. 
-
-### Stop the Round
-
-
-Once you're done with the round, click on the `STOP` button in the Simulator instance to stop the simulation, and click on the `STOP` button in the Field computer instance to stop the docker container running your code.
 
 ### VPN Access
 
@@ -109,3 +107,10 @@ During practice, you'll be able to download the ssh keys for both instances by c
 unzip keys.zip
 ssh -i cloudsim.pem ubuntu@55.55.55.222
 ~~~
+
+### Stop the Round
+
+Once you're done with the round:
+
+1. Click on the `STOP` button in the Simulator instance to stop the simulation
+1. Click on the `STOP` button in the Field computer instance to stop the docker container running your code.
