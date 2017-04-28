@@ -2,41 +2,8 @@ Here you'll find instructions on how to use [CloudSim](https://cloudsim.io) for 
 
 **NOT YET RELEASED**
 
-# One-time setup
-
-To use CloudSim, you'll need to:
-
-1. Create a [CloudSim](https://cloudsim.io) account
-1. Host your field computer code on a [GitHub](https://github.com/) repository (public or private)
-
-### Sign-up into CloudSim
-
-1. Sign up with a Google account at https://cloudsim.io
-1. Email `cloudsim@osrfoundation.org` to request access, stating:
-    * the email you used to sign up 
-    * the name of your team. 
-1. Wait to hear confirmation, then log out and back in.
-
-> Only the first user of a team needs to send an email to OSRF. After one user has been added, they can add other CloudSim users to the team as long as they've created accounts.
-
-### Github deploy key
-
-If your software is held in a private Github repository, you'll need to provide us a Github deploy key. See [this Github help page](https://developer.github.com/guides/managing-deploy-keys/#deploy-keys) for more information on deploy keys. You do not need to provide a Github deploy key if you are using a public repository.
-
-To setup the deploy key: 
-
-1. On your machine, run 
-
-        ssh-keygen -t rsa -b 4096
-
-      **Leave the passphrase empty**
-
-1. Import the public key in your Github repo by going to your repository, selecting `Settings` > `Deploy Keys` and clicking on `Add deploy key` to add the public key that you just generated.
-
-Once that's done, all CloudSim needs is the private key to be able to clone your repository and deploy it in the field computer instance.
-
 # Constellation structure
-Leave the passphrase empty
+
 ![src_cloud.png](https://bitbucket.org/repo/xEbAAe/images/2411928160-src_cloud.png)
 
 Teams will use the CloudSim interface to launch a "constellation" of machines on Amazon Web Services for practice and for the final competition, as depicted above.
@@ -54,6 +21,45 @@ Teams will use the CloudSim interface to launch a "constellation" of machines on
     * **Firewall**: limits traffic between Gazebo and team code so Gazebo topics and some ROS topics are not available.
     * **Traffic shaper**: Limits traffic between Team Code and OCU
     * **Data log**: saves competition logs during the finals and uploads it to an S3 bucket once the simulation is over.
+
+# One-time setup
+
+To use CloudSim, you'll need to:
+
+1. Create a [CloudSim](https://cloudsim.io) account
+1. Host your field computer code on a [GitHub](https://github.com/) repository (public or private)
+
+### Sign-up into CloudSim
+
+1. Sign up with a Google account at https://cloudsim.io
+1. Email `cloudsim@osrfoundation.org` to request access, stating:
+    * the email you used to sign up 
+    * the name of your team. 
+1. Wait to hear confirmation, then log out and back in.
+
+> Only the first user of a team needs to send an email to OSRF. After one user has been added, they can add other CloudSim users to the team as long as they've created accounts.
+
+### Github repository
+
+#### Repository structure
+
+TODO: Explain the required repository structure and offer an example repo
+
+#### Deploy key
+
+If your software is held in a private Github repository, you'll need to provide us a Github deploy key. See [this Github help page](https://developer.github.com/guides/managing-deploy-keys/#deploy-keys) for more information on deploy keys. You do not need to provide a Github deploy key if you are using a public repository.
+
+To setup the deploy key: 
+
+1. On your machine, run 
+
+        ssh-keygen -t rsa -b 4096
+
+      **Leave the passphrase empty**
+
+1. Import the public key in your Github repo by going to your repository, selecting `Settings` > `Deploy Keys` and clicking on `Add deploy key` to add the public key that you just generated.
+
+Once that's done, all CloudSim needs is the private key to be able to clone your repository and deploy it in the field computer instance.
 
 # Practice instructions
 
