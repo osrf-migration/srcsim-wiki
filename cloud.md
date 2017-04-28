@@ -7,7 +7,7 @@ Here you'll find instructions on how to use [CloudSim](https://cloudsim.io) for 
 To use CloudSim, you'll need to:
 
 1. Create a [CloudSim](https://cloudsim.io) account
-1. Host your field computer code on a GitHub repository (public or private)
+1. Host your field computer code on a [GitHub](https://github.com/) repository (public or private)
 
 ### Sign-up into CloudSim
 
@@ -57,28 +57,32 @@ Teams will use the CloudSim interface to launch a "constellation" of machines on
 
 # Practice instructions
 
+![cstutorial.png](https://bitbucket.org/repo/xEbAAe/images/3141748960-cstutorial.png)
+
 ### Login to cloudsim.io
 
 1. Log in to https://cloudsim.io
-1. Click on the SRC link (on the left menu bar, under the Dashboard)
+1. Go to the SRC Competition Kiosk
 
 ### Start an SRC constellation
 
-Click on the round button (with a + inside) to create a new constellation. You must supply:
+1. Click on the round gray button (with a + inside) to start a new constellation. You must supply:
 
-* the Github repository URI containing your code, for example `git://github.com/username/reponame.git`
-* the Github deploy private key for that repo (private repos only). See the "One-time setup" section above to learn how to set up the deploy key. 
+    * the Github repository URI containing your code, for example `git://github.com/username/reponame.git`
+    * the Github deploy private key for that repo (private repos only). See the "One-time setup" section above to learn how to set up the deploy key. 
 
-Click on continue to launch the machine instances on the cloud.
+1. Click on continue to launch the machine instances on the cloud.
 
-There are two instances in a round: One for the Simulator (top), and the other for the Field Computer (bottom).
+1. A new tab will come up showing the two instances: the Simulator (top), and the Field Computer (bottom).
 
 1. You must wait until both machines are provisioned before using them. This might take a few minutes.
     1. Wait for the instance's public IP to show up on the interface
     1. Once they show up, click on both of them, this opens 2 new tabs on your browser
-    1. At first, nothing will show on the tab. Refresh those tabs from time to time until you see a cloudsim message indicating that the instance is up and running.
+    1. At first, nothing will show on the tab. Refresh those tabs from time to time until you see something like the image below, indicating that the instance is up and running.
 
-1. In the Simulator instance, there is a `Run` widget that allows you to run 5 different SRC worlds. Clicking on a numbered button here will launch the SRC world inside the Simulator instance. Click on the `>1` button to launch the first world. 
+        ![cssimsim.png](https://bitbucket.org/repo/xEbAAe/images/3281358634-cssimsim.png)
+
+1. In the Simulator instance, there is a `Run` widget that allows you to run 5 different SRC worlds. Click on the `>1` button to launch the first world inside the Simulator instance. 
 
 ### Launch your software on field computer
 
@@ -88,7 +92,7 @@ Click on the `START` button to launch your software.
 
 ### VPN Access
 
-You can setup a VPN connection with the field computer by downloading the VPN keys available in the Field computer instance widget. Extract the files and start openvpn:
+You can setup a VPN connection with the field computer by downloading the VPN keys available in the Field computer instance widget. Extract the files and start `openvpn`:
 
 ~~~
 tar xvzf client_vpn.tar.gz
