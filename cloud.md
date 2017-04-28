@@ -1,5 +1,7 @@
 Here you'll find instructions on how to use CloudSim for practice and for the competition.
 
+**NOT YET RELEASED**
+
 # One-time setup
 
 To use CloudSim, you'll need to:
