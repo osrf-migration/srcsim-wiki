@@ -29,7 +29,7 @@ To setup the deploy key:
 
         ssh-keygen -t rsa -b 4096
 
-   **Leave the passphrase empty**
+      **Leave the passphrase empty**
 
 1. Import the public key in your Github repo by going to your repository, selecting `Settings` > `Deploy Keys` and clicking on `Add deploy key` to add the public key that you just generated.
 
