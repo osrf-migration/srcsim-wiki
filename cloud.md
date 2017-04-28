@@ -59,24 +59,34 @@ In the Simulator instance, there is a `Run` widget that allows you to run 5 diff
 
 Click on the `>1` button to launch the simulation. 
 
-Launch your software on Field computer
-==
+# Launch your software on Field computer
+
 
 The Field Computer instance is where your code will be deployed. The `Run` widget has a `START` button, that once triggered, will clone your repo, build the docker image as per your Dockerfile, and run the docker container. 
 
 Click on the `START` button to launch your software. 
 
-Stop the Round
-==
+# Stop the Round
+
 
 Once you're done with the round, click on the `STOP` button in the Simulator instance to stop the simulation, and click on the `STOP` button in the Field computer instance to stop the docker container running your code.
 
+# VPN Access
 
-SSH Access
-===
+You can setup a VPN connection with the field computer by downloading the VPN keys available in the Field computer instance widget. Extract the files and start openvpn:
+
+~~~
+tar xvzf client_vpn.tar.gz
+sudo openvpn --config openvpn.conf
+~~~
+
+You should now have a `tap0` network interface with the ip address `192.168.2.150`. The field computer is located at `192.168.2.10`.
+
+# SSH Access
 
 During practice, you'll be able to download the ssh keys for both instances by clicking on the `SSH` button in the `Practice mode` widget. Unzip the file and ssh in as the `ubuntu` user, e.g.
 
 ~~~ 
+unzip keys.zip
 ssh -i cloudsim.pem ubuntu@55.55.55.222
 ~~~
