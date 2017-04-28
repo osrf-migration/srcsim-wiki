@@ -29,14 +29,14 @@ To setup the deploy key:
 
         ssh-keygen -t rsa -b 4096
 
-    Leave the passphrase empty
+   **Leave the passphrase empty**
 
 1. Import the public key in your Github repo by going to your repository, selecting `Settings` > `Deploy Keys` and clicking on `Add deploy key` to add the public key that you just generated.
 
 Once that's done, all CloudSim needs is the private key to be able to clone your repository and deploy it in the field computer instance.
 
 # Constellation structure
-
+Leave the passphrase empty
 ![src_cloud.png](https://bitbucket.org/repo/xEbAAe/images/2411928160-src_cloud.png)
 
 Teams will use the CloudSim interface to launch a "constellation" of machines on Amazon Web Services for practice and for the final competition, as depicted above.
@@ -73,9 +73,9 @@ Teams will use the CloudSim interface to launch a "constellation" of machines on
 
 1. Click on continue to launch the machine instances on the cloud.
 
-1. A new tab will come up showing the two instances: the Simulator (top), and the Field Computer (bottom).
+1. A new tab in the application will come up showing the two instances: the Simulator (top), and the Field Computer (bottom).
 
-1. You must wait until both machines are provisioned before using them. This might take a few minutes.
+1. **Important:** You must wait until both machines are provisioned before using them. This might take a few minutes.
     1. Wait for the instance's public IP to show up on the interface
     1. Once they show up, click on both of them, this opens 2 new tabs on your browser
     1. At first, nothing will show on the tab. Refresh those tabs from time to time until you see something like the image below, indicating that the instance is up and running.
