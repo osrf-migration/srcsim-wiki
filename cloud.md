@@ -71,8 +71,6 @@ Click on the round button (with a + inside) to create a new constellation. You m
 
 Click on continue to launch the machine instances on the cloud.
 
-### Start a constellation
-
 There are two instances in a round: One for the Simulator (top), and the other for the Field Computer (bottom).
 
 1. You must wait until both machines are provisioned before using them. This might take a few minutes.
