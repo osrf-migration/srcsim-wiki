@@ -62,14 +62,14 @@ Teams will use the CloudSim interface to launch a "constellation" of machines on
 1. Log in to https://cloudsim.io
 1. Click on the SRC link (on the left menu bar, under the Dashboard)
 
-### Create an SRC constellation
+### Start an SRC constellation
 
 Click on the round button (with a + inside) to create a new constellation. You must supply:
 
 * the Github repository URI containing your code, for example `git://github.com/username/reponame.git`
 * the Github deploy private key for that repo (private repos only). See the "One-time setup" section above to learn how to set up the deploy key. 
 
-Click on continue to launch the machine instances on the cloud. 
+Click on continue to launch the machine instances on the cloud.
 
 ### Start a constellation
 
@@ -114,3 +114,9 @@ Once you're done with the round:
 
 1. Click on the `STOP` button in the Simulator instance to stop the simulation
 1. Click on the `STOP` button in the Field computer instance to stop the docker container running your code.
+
+### Team budget
+
+Each team will have a limited budget of hours that can be used on CloudSim for practice. You can check your budget by clicking on your username on the top right corner.
+
+Teams are able to start as many constellations at the same time as they wish. But note that this is being taken from your budget.
