@@ -52,3 +52,27 @@ Click on continue to launch the machine instances on the cloud.
 # Start a task
 
 There are two instances in a round: One for the Simulator (top), and the other for the Field Computer (bottom).
+
+In the Simulator instance, there is a `Run` widget that allows you to run 5 different rounds of SRC simulation. Clicking on a numbered button here will launch the SRC simulator inside the Simulator instance. Before doing so, make sure the instances is up and running by clicking on the IP address link. A page will be displayed when the instance is ready, otherwise the link will not work.
+
+e.g. Click on the `>1` button to launch the simulation. 
+
+Launch your software
+==
+
+The Field Computer instance is where your code will be deployed, and it talks to the Simulator over VPN. The `Run` widget has a `START` button, , that once triggered, will clone your repo, build the docker image as per your Dockerfile, and run the docker container. 
+
+Stop the Round
+==
+
+Once you're done with the round, click on the `STOP` button in the Simulator instance to stop the simulation, and click on the `STOP` button in the Field computer instance to stop the docker container running your code.
+
+
+SSH Access
+===
+
+During practice, you'll be able to download the ssh keys for both instances by clicking on the `SSH` button in the `Practice mode` widget. Unzip the file and ssh in using as `ubuntu` user, e.g.
+
+~~~ 
+ssh -i cloudsim.pem ubuntu@55.55.55.222
+~~~
