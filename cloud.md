@@ -1,4 +1,4 @@
-Here you'll find instructions on how to use CloudSim for practice and for the competition.
+Here you'll find instructions on how to use [CloudSim](https://cloudsim.io) for practice and for the competition.
 
 **NOT YET RELEASED**
 
@@ -6,7 +6,7 @@ Here you'll find instructions on how to use CloudSim for practice and for the co
 
 To use CloudSim, you'll need to:
 
-1. Create a CloudSim account
+1. Create a [CloudSim](https://cloudsim.io) account
 1. Host your field computer code on a GitHub repository (public or private)
 
 ### Sign-up into CloudSim
@@ -35,23 +35,43 @@ To setup the deploy key:
 
 Once that's done, all CloudSim needs is the private key to be able to clone your repository and deploy it in the field computer instance.
 
+# Constellation structure
 
+![src_cloud.png](https://bitbucket.org/repo/xEbAAe/images/2411928160-src_cloud.png)
 
-# Login to cloudsim.io
+Teams will use the CloudSim interface to launch a "constellation" of machines on Amazon Web Services for practice and for the final competition, as depicted above.
+
+* The dark gray area delimits what lives within AWS.
+* Each light grey area represents an AWS instance / S3 bucket:
+    * The **Field Computer** is an EC2 instance (probably g2.2xlarge). Teams will have SSH access during practice, and traffic-controlled VPN access during the competition.
+    * The **Simulator** is another EC2 instance (TBD). Teams will have SSH access during practice and no access during the competition.
+    * The **S3 bucket** is where log files will be stored for scoring. Each team will be given read access to their own bucket.
+* Teams are able to run code in each blue area:
+    * The **team code** inside the field computer has direct access to the IHMC and SRCSim ROS topics on Gazebo.
+    * The **Operator Control Unit (OCU)** is connected to the team code in the field computer through a traffic-controlled VPN network.
+* All the other areas (green):
+    * **Gazebo**: Runs the Gazebo server (gzserver), the robot controller and the competition plugins
+    * **Firewall**: limits traffic between Gazebo and team code so Gazebo topics and some ROS topics are not available.
+    * **Traffic shaper**: Limits traffic between Team Code and OCU
+    * **Data log**: saves competition logs during the finals and uploads it to an S3 bucket once the simulation is over.
+
+# Practice instructions
+
+### Login to cloudsim.io
 
 1. Log in to https://cloudsim.io
 1. Click on the SRC link (on the left menu bar, under the Dashboard)
 
-# Create an SRC round
+### Create an SRC constellation
 
-SRC machines are grouped into Rounds. Click on the round button (with a + inside) to create a new round. You must supply:
+Click on the round button (with a + inside) to create a new constellation. You must supply:
 
 * the Github repository URI containing your code, for example `git://github.com/username/reponame.git`
-* the Github deploy key for that repo (private repos only). See the "One-time setup" section above to learn how to set up the deploy key. 
+* the Github deploy private key for that repo (private repos only). See the "One-time setup" section above to learn how to set up the deploy key. 
 
 Click on continue to launch the machine instances on the cloud. 
 
-# Start a round
+### Start a round
 
 There are two instances in a round: One for the Simulator (top), and the other for the Field Computer (bottom).
 
@@ -59,19 +79,18 @@ In the Simulator instance, there is a `Run` widget that allows you to run 5 diff
 
 Click on the `>1` button to launch the simulation. 
 
-# Launch your software on Field computer
-
+### Launch your software on Field computer
 
 The Field Computer instance is where your code will be deployed. The `Run` widget has a `START` button, that once triggered, will clone your repo, build the docker image as per your Dockerfile, and run the docker container. 
 
 Click on the `START` button to launch your software. 
 
-# Stop the Round
+### Stop the Round
 
 
 Once you're done with the round, click on the `STOP` button in the Simulator instance to stop the simulation, and click on the `STOP` button in the Field computer instance to stop the docker container running your code.
 
-# VPN Access
+### VPN Access
 
 You can setup a VPN connection with the field computer by downloading the VPN keys available in the Field computer instance widget. Extract the files and start openvpn:
 
@@ -82,7 +101,7 @@ sudo openvpn --config openvpn.conf
 
 You should now have a `tap0` network interface with the ip address `192.168.2.150`. The field computer is located at `192.168.2.10`.
 
-# SSH Access
+### SSH Access
 
 During practice, you'll be able to download the ssh keys for both instances by clicking on the `SSH` button in the `Practice mode` widget. Unzip the file and ssh in as the `ubuntu` user, e.g.
 
