@@ -133,6 +133,12 @@ satellite until the correct angles are achieved.
 For scoring purposes, this checkpoint corresponds to 2 checkpoints: one for
 the pitch and another one for the yaw.
 
+The friction on the valve joints will be randomized for each world. The ranges are as follows:
+
+Joint | Min friction | Max friction | Min damping | Max damping
+----- | ------------ | ------------ | ----------- | ----------- 
+Wheel valves | 2.0 | 3.0 | 0.0 | 0.0
+
 1. Conveniently, the satellite reports its current and target angles through a
 ROS topic. On a new terminal, start listening to the satellite updates:
 
