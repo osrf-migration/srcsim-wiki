@@ -123,7 +123,7 @@ time checkpoint 1 was complete. You'll see something like this:
         [Msg] Task [1] - Checkpoint [2] - Started (95 21000000)
 
 #### Checkpoint 2
-![task1_c_small.png](https://bitbucket.org/repo/xEbAAe/images/1976235125-task1_c_small.png)
+
 We're now performing checkpoint 2: *Move the communication dish to the
 correct pitch and yaw angles*. This consists of rotating the handles on the
 satellite until the correct angles are achieved.
