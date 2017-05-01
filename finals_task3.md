@@ -125,6 +125,14 @@ We'll start on checkpoint 1: *Climb the stairs*.
 
 We're now performing checkpoint 2: *Open the door*.
 
+The friction of the door and valve hinges will fall within the following ranges for each world:
+
+Joint | Min friction | Max friction | Min damping | Max damping
+----- | ------------ | ------------ | ----------- | ----------- 
+Valve | 1.0 | 1.6 | 0.01 | 0.05
+Door hinge | 10.0 | 20.0 | 1.0 | 4.0
+
+
 Turn valve to unlock | Push door open
 ----- | -----
 ![t3_d.png](https://bitbucket.org/repo/xEbAAe/images/3460481447-t3_d.png) | ![t3_j.png](https://bitbucket.org/repo/xEbAAe/images/3274264517-t3_j.png)
