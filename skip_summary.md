@@ -62,8 +62,9 @@ checkpoint. Note that this is different from **skipping to** that checkpoint.
 Task | Checkpoint | Goal | Skip
 ---- | ---------- | ---- | ----
 1 | 1 | Go to satellite | Robot is teleported to be in front of the satellite
-1 | 2 | Rotate handles to correct positions | Robot is teleported to be in front of the satellite (nothing changes from 1/1)
-1 | 3 | Go to 1st finish box | Robot is teleported to be in the middle of the first finish box
+1 | 2 | Rotate either handle to correct position | Robot is teleported to be in front of the satellite
+1 | 3 | Rotate both handles to correct positions | Robot is teleported to be in front of the satellite
+1 | 4 | Go to 1st finish box | Robot is teleported to be in the middle of the first finish box
 2 | 1 | Lift solar panel | This checkpoint can't be skipped by itself
 2 | 2 | Place solar panel on array | Robot is teleported to be in front of the array, panel is teleported to be on top of the array
 2 | 3 | Press solar panel button | Robot is teleported to be in front of the array, solar panel opens
@@ -74,7 +75,7 @@ Task | Checkpoint | Goal | Skip
 3 | 2 | Open door | Robot is teleported to be in front of the door, door opens
 3 | 3 | Pass through door | Robot is teleported to be after the door
 3 | 4 | Lift detector | This checkpoint can't be skipped by itself
-3 | 5 | Find the leak | Robot is teleported to be near the leak
+3 | 5 | Find the leak | Robot is teleported to be after the door
 3 | 6 | Lift repair tool | This checkpoint can't be skipped by itself
-3 | 7 | Repair leak | Robot is teleported to be near the leak
+3 | 7 | Repair leak | Robot is teleported to be after the door
 3 | 8 | Go to 3rd finish box | Program ends
