@@ -3,8 +3,9 @@
 Task 1 consists of the following checkpoints:
 
 * **Checkpoint 1**: Move within 1 meter from the communication dish
-* **Checkpoint 2**: Move the communication dish to the correct pitch and yaw angles (consists of 2 checkpoints for scoring purposes)
-* **Checkpoint 3**: Walk into Task 1's finish box
+* **Checkpoint 2**: Move the communication dish **either** to the correct pitch or the correct yaw angle
+* **Checkpoint 3**: Move the communication dish to **both** correct pitch and yaw angles
+* **Checkpoint 4**: Walk into Task 1's finish box
 
 All checkpoints must be completed within 30 minutes.
 
@@ -18,6 +19,10 @@ The tutorial below has been updated to reflect the updates.
 
 * There's now a start box.
 * The satellite control panel colors have changed.
+
+##### New on SRCSim 0.5.0
+
+* There are 4 checkpoints instead of 3 (previous checkpoint 2 has been split into 2 and 3)
 
 ## Practice run
 
@@ -124,14 +129,11 @@ time checkpoint 1 was complete. You'll see something like this:
 
 #### Checkpoint 2
 
-We're now performing checkpoint 2: *Move the communication dish to the
-correct pitch and yaw angles*. This consists of rotating the handles on the
-satellite until the correct angles are achieved.
+We're now performing checkpoint 2: _Move the communication dish **either** to the
+correct pitch or the correct yaw angle_. This consists of rotating the handles on the
+satellite until the a correct angle is achieved.
 
 ![t1_b.png](https://bitbucket.org/repo/xEbAAe/images/3163083520-t1_b.png)
-
-For scoring purposes, this checkpoint corresponds to 2 checkpoints: one for
-the pitch and another one for the yaw.
 
 The friction on the valve joints will be randomized for each world. The ranges are as follows:
 
@@ -168,17 +170,12 @@ distance from `target_pitch`, `pitch_correct_now` will change to `True`. The
 same goes for `yaw_correct_now`.
 
 1. After `pitch_correct_now` is true for a target number of seconds
-(now using 5 s), `pitch_completed` becomes True. Make sure the handle stays in
-place, because if the pitch value moves away from the target, `pitch_completed`
-goes back to False. The same applies to yaw.
-
-1. When both `pitch_completed` and `yaw_completed` are true for the same time
-(i.e. both values have been correct for over 5 seconds at the same time),
-checkpoint 2 is completed.
+(now using 5 s), `pitch_completed` becomes True and checkpoint 2 is complete.
+The same happens for yaw. You can complete either of them for this checkpoint
+to be considered completed.
 
 1. You should see a message like this on the task update, which includes the
 time of checkpoint 2's completion:
-
 
         task: 1
         current_checkpoint: 3
@@ -205,7 +202,58 @@ time of checkpoint 2's completion:
 
 #### Checkpoint 3
 
-You're now performing checkpoint 3: *Go to the finish box*.
+We're now performing checkpoint 3: _Move the communication dish to **both**
+correct pitch and yaw angles_.
+
+1. Make sure you're still listening to the satellite message as before:
+
+    ```
+    rostopic echo /task1/checkpoint2/satellite
+    ```
+
+1. Manipulate the handle corresponding to the incomplete checkpoint so until that
+checkpoint is also completed for 5 seconds.
+
+    > Make sure not to dislocate the previously completed valve by mistake, because 
+      you'll need both to be correct for this checkpoint to be completed.
+
+1. When both `pitch_completed` and `yaw_completed` are true for the same time
+(i.e. both values have been correct for over 5 seconds at the same time),
+checkpoint 3 is completed.
+
+1. You should see a message like this on the task update, which includes the
+time of checkpoint 3's completion:
+
+
+        task: 1
+        current_checkpoint: 4
+        checkpoints_completion:
+          -
+            secs: 95
+            nsecs: 21000000
+          -
+            secs: 115
+            nsecs: 21000000
+          -
+            secs: 135
+            nsecs: 21000000
+        start_time:
+          secs: 65
+          nsecs:  21000000
+        elapsed_time:
+          secs: 80
+          nsecs: 000000000
+        timed_out: False
+        finished: False
+
+    The console will have a message like this:
+
+        [Msg] Task [1] - Checkpoint [3] - Completed (135 21000000)
+        [Msg] Task [1] - Checkpoint [4] - Started (135 21000000)
+
+#### Checkpoint 4
+
+You're now performing checkpoint 4: *Go to the finish box*.
 
 ![task1_d.png](https://bitbucket.org/repo/xEbAAe/images/4283297297-task1_d.png)
 
@@ -214,7 +262,7 @@ You're now performing checkpoint 3: *Go to the finish box*.
 1. Task 1 should be completed. You'll see a message like this:
 
         [Msg] Stopped box contains plugin [task1/checkpoint3]
-        [Msg] Task [1] - Checkpoint [3] - Completed (59 257000000)
+        [Msg] Task [1] - Checkpoint [4] - Completed (99 257000000)
         [Msg] Task [1] finished.
 
 ## Timeout
