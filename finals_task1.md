@@ -19,6 +19,7 @@ The tutorial below has been updated to reflect the updates.
 
 * There's now a start box.
 * The satellite control panel colors have changed.
+* Clockwise rotations increase angles.
 
 ##### New on SRCSim 0.5.0
 
