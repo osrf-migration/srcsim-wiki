@@ -127,6 +127,9 @@ Once you're done with the round:
 
 ### Team budget
 
-Each team will have a limited budget of hours that can be used on CloudSim for practice. You can check your budget by clicking on your username on the top right corner.
+Each team will have a limited budget of (AWS) hours that can be used on CloudSim for practice. 
 
-Teams are able to start as many constellations at the same time as they wish. But note that this is being taken from your budget.
+* You can check your budget by clicking on your username on the top right corner.
+* Teams are able to start as many constellations at the same time as they wish. But note that this is being taken from your budget.
+* Each constellation consists of 2 machines, so the AWS hours are subtracted in pairs.
+* There are no partial hours, having a constellation up for 5 minutes counts the same as having it up for 55 minutes. Likewise, having the constellation up for 65 minutes will count as double the time compared to 55 minutes. Use your time wisely.
