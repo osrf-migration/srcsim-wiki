@@ -74,7 +74,9 @@ Once that's done, all CloudSim needs is the private key to be able to clone your
 
 1. Click on the round gray button (with a + inside) to start a new constellation. You must supply:
 
-    * the Github repository URI containing your code, for example `git://github.com/username/reponame.git` (**Note the .git in the end**)
+    * the Github repository URI containing your code, for example (**Note the .git in the end**):
+        * public repo: `https://github.com/username/reponame.git` (use https://)
+        * private repo: `git://github.com/username/reponame.git` (use git://)
     * the Github deploy private key for that repo (private repos only). See the "One-time setup" section above to learn how to set up the deploy key. 
 
 1. Click on continue to launch the machine instances on the cloud.
