@@ -138,4 +138,4 @@ Each team will have a limited budget of hours that can be used on CloudSim for p
 * Each constellation consists of 2 machine instances (simulator and field computer), so the hours are subtracted in pairs.
     i.e. Running a constellation up for 1 hour will deduct 2 hours from your budget.
 * Teams are able to launch as many constellations at the same time as they wish. But note that this is being taken from your budget.
-* There are no partial hours. So having a constellation up for 5 minutes counts as 1 hour. Likewise, having the constellation up for 65 minutes will count as 2 hours. Use your time wisely.
+* There are no partial hours. So having one machine instance up for 5 minutes counts as 1 hour. Likewise, having the machine instance up for 65 minutes will count as 2 hours. Use your time wisely.
