@@ -90,13 +90,18 @@ Once that's done, all CloudSim needs is the private key to be able to clone your
 
         ![cssimsim.png](https://bitbucket.org/repo/xEbAAe/images/3281358634-cssimsim.png)
 
-1. In the Simulator instance, there is a `Run` widget that allows you to run 5 different SRC worlds. Click on the `>1` button to launch the first world inside the Simulator instance. 
+1. In the Simulator instance, there is a `Run` widget that allows you to run 5 different SRC worlds. Click on the `>1` button to launch the first world inside the Simulator instance. **Note: Currenlty only >1 is active for practice. We'll add the 4 other different SRC worlds soon**
+
+    > During practice, you can ssh into the sim instance to monitor the simulation process. The `>1` button launches a docker container with srcsim. So inside the sim machine instance, you can type `docker ps` to make sure the process has been started. You can also execute an interactive bash shell on the running docker container by doing `docker exec -it gazebo_run bash`
 
 ### Launch your software on field computer
 
 The Field Computer instance is where your code will be deployed. The `Run` widget has a `START` button, that once triggered, will clone your repo, build the docker image as per your Dockerfile, and run the docker container. 
 
 Click on the `START` button to launch your software. 
+
+> During practice, you can ssh into the field computer instance to check if your docker image has been built successfully. In the terminal, typing `docker images` should show a `team_container` docker image, and when the `START` button is pressed, a container based on that image should be running.
+
 
 ### VPN Access
 
