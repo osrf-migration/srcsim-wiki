@@ -98,6 +98,8 @@ Once that's done, all CloudSim needs is the private key to be able to clone your
 
 The Field Computer instance is where your code will be deployed. The `Run` widget has a `START` button, that once triggered, will clone your repo, build the docker image as per your Dockerfile, and run the docker container. 
 
+See the Field Computer Docker Example section for an example of what a Dockerfile looks like.
+
 Click on the `START` button to launch your software. 
 
 > During practice, you can ssh into the field computer instance to check if your docker image has been built successfully. In the terminal, typing `docker images` should show a `team_container` docker image, and when the `START` button is pressed, a container based on that image should be running.
@@ -139,3 +141,16 @@ Each team will have a limited budget of hours that can be used on CloudSim for p
     i.e. Running a constellation up for 1 hour will deduct 2 hours from your budget.
 * Teams are able to launch as many constellations at the same time as they wish. But note that this is being taken from your budget.
 * There are no partial hours. So having one machine instance up for 5 minutes counts as 1 hour. Likewise, having the machine instance up for 65 minutes will count as 2 hours. Use your time wisely.
+
+
+### Field Computer Docker Example 
+
+Here's a github repo with an example Dockerfile that shows the necessary dependencies to communicate with the simulator.
+
+https://github.com/scpeters/src_field_computer_test
+
+This simple example currently doesn't do much when the container is launched. A script is available inside the docker container that, when executed, will repeatedly play back a rosbag file which makes the robot move its footsteps. 
+
+The docker image is built when launching the field computer. So if you have many packages to install or software that need to be built from source, please give it some time for the docker image to be ready before pressing the `START` button on the field computer instance to run the docker container. 
+
+Note that the `ROS_MASTER_URI` and `ROS_IP` environment variables are already be set for you so you should be able to see all the ROS topics.
