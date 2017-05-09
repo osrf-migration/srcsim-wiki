@@ -158,6 +158,7 @@ Note that the `ROS_MASTER_URI` and `ROS_IP` environment variables are already be
 ### Troubleshooting
 
 Here's the srcsim issue tracker that contains a list of know issues:
+
 https://bitbucket.org/osrf/srcsim/issues?status=new&status=open
 
-* There is an issue with timing that sometimes causes the real time factor to drop to 0.00 on the cloud simulation instance. Do a `gz stats` inside the simulator docker container and check the real time factor. If it drops to 0, then you'll need to relaunch the container through the browser UI by pressing `STOP` and then the `>1` button again`.
+There is an issue with timing that sometimes causes the real time factor to drop to 0.00 on the cloud simulation instance. Do a `gz stats` inside the simulator docker container and check the real time factor. If it drops to 0, then you'll need to relaunch the container through the browser UI by pressing `STOP` and then the `>1` button again`.
