@@ -1,7 +1,5 @@
 Here you'll find instructions on how to use [CloudSim](https://cloudsim.io) for practice and for the competition.
 
-**NOT YET RELEASED**
-
 # Constellation structure
 
 ![src_cloud.png](https://bitbucket.org/repo/xEbAAe/images/2411928160-src_cloud.png)
