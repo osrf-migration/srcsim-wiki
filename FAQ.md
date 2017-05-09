@@ -68,6 +68,10 @@ Construct Sim is not affiliated with the Space Robotics Challenge. The code rele
 
 ami-20133540
 
+**Q. Are nvidia-docker instructions available?**
+
+Instructions are available [here](https://bitbucket.org/osrf/srcsim_docker/src/d6e249928f2e456ec88ab84df882cef984bff427/docker/?at=default).
+
 # World Configuration and R5 Control
 
 **Q. The software is not ready for this Challenge. Additionally, current software release does not provide a stable grip for the robot.**
