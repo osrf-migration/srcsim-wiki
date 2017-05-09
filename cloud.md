@@ -157,7 +157,7 @@ Note that the `ROS_MASTER_URI` and `ROS_IP` environment variables are already be
 
 ### Troubleshooting
 
-Here's the srcsim issue tracker that contains a list of know issues:
+Here's the srcsim issue tracker that contains a list of known issues:
 
 https://bitbucket.org/osrf/srcsim/issues?status=new&status=open
 
