@@ -1,22 +1,22 @@
 ##Final Competition Process
 
-**Q. Teams have 24 hours to complete a run. Must those 24 hours be contiguous?
-**
+**Q. Teams have 24 hours to complete a run. Must those 24 hours be contiguous?**
+
 No.
 
-**Q. Can we complete competition runs at anytime time of day?
-**
+**Q. Can we complete competition runs at anytime time of day?**
+
 Yes
 
-**Q. Can multiple competition runs be completed simultaneously?
-**
+**Q. Can multiple competition runs be completed simultaneously?**
+
 Yes
 
-Q. Will the final competition be monitored?
+**Q. Will the final competition be monitored?**
 
 OSRF staff will be on hand during the final competition.
 
-Q. What do we do if we have a problem with the simulation?
+**Q. What do we do if we have a problem with the simulation? **
 
 Contact OSRF. Contact information will be provided prior to the competition.
 
