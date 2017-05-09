@@ -102,7 +102,7 @@ See the Field Computer Docker Example section for an example of what a Dockerfil
 
 Click on the `START` button to launch your software. 
 
-> During practice, you can ssh into the field computer instance to check if your docker image has been built successfully. In the terminal, typing `docker images` should show a `ros` image and a `fcomputer` image. If not, please be patient and wait a couple of minutes. Once ready, pressing the `START` button will run a container, called `team_container` , based on the `fccomputer` image.
+> During practice, you can ssh into the field computer instance to check if your docker image has been built successfully. In the terminal, typing `docker images` should show a `ros` image and a `fcomputer` image. If not, please be patient and wait a couple of minutes. Once ready, pressing the `START` button will run a container, called `team_container`, based on the `fccomputer` image.
 
 
 ### VPN Access
@@ -154,3 +154,10 @@ This simple example currently doesn't do much when the container is launched. A 
 The docker image is built when launching the field computer. So if you have many packages to install or software that need to be built from source, please give it some time for the docker image to be ready before pressing the `START` button on the field computer instance to run the docker container. 
 
 Note that the `ROS_MASTER_URI` and `ROS_IP` environment variables are already be set for you so you should be able to see all the ROS topics inside the container.
+
+### Troubleshooting
+
+Here's the srcsim issue tracker that contains a list of know issues:
+https://bitbucket.org/osrf/srcsim/issues?status=new&status=open
+
+* There is an issue with timing that sometimes causes the real time factor to drop to 0.00 on the cloud simulation instance. Do a `gz stats` inside the simulator docker container and check the real time factor. If it drops to 0, then you'll need to relaunch the container through the browser UI by pressing `STOP` and then the `>1` button again`.
