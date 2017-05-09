@@ -10,5 +10,8 @@ Specifications of the Space Robotics Challenge.
 ## [Tutorials](https://bitbucket.org/osrf/srcsim/wiki/tutorials)
 A set of tutorials to help you get started with the Space Robotics Challenge.
 
+## [FAQ](https://bitbucket.org/osrf/srcsim/wiki/FAQ)
+Frequently asked questions.
+
 ## Additional resources
 [Competition website](https://www.nasa.gov/directorates/spacetech/centennial_challenges/space_robotics/index.html).
