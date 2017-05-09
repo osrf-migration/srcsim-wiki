@@ -43,7 +43,15 @@ To use CloudSim, you'll need to:
 
 #### Repository structure
 
-TODO: Explain the required repository structure and offer an example repo
+Here's a github repo with an example Dockerfile that shows the necessary dependencies to communicate with the simulator.
+
+https://github.com/scpeters/src_field_computer_test
+
+This simple example currently doesn't do much when the container is launched. A script is available inside the docker container that, when executed, will repeatedly play back a rosbag file which makes the robot move its footsteps. 
+
+The docker image is built when launching the field computer. So if you have many packages to install or software that need to be built from source, please give it some time for the docker image to be ready before pressing the `START` button on the field computer instance to run the docker container. 
+
+Note that the `ROS_MASTER_URI` and `ROS_IP` environment variables are already be set for you so you should be able to see all the ROS topics inside the container.
 
 #### Deploy key
 
@@ -141,19 +149,6 @@ Each team will have a limited budget of hours that can be used on CloudSim for p
     i.e. Running a constellation up for 1 hour will deduct 2 hours from your budget.
 * Teams are able to launch as many constellations at the same time as they wish. But note that this is being taken from your budget.
 * There are no partial hours. So having one machine instance up for 5 minutes counts as 1 hour. Likewise, having the machine instance up for 65 minutes will count as 2 hours. Use your time wisely.
-
-
-### Field Computer Docker Example 
-
-Here's a github repo with an example Dockerfile that shows the necessary dependencies to communicate with the simulator.
-
-https://github.com/scpeters/src_field_computer_test
-
-This simple example currently doesn't do much when the container is launched. A script is available inside the docker container that, when executed, will repeatedly play back a rosbag file which makes the robot move its footsteps. 
-
-The docker image is built when launching the field computer. So if you have many packages to install or software that need to be built from source, please give it some time for the docker image to be ready before pressing the `START` button on the field computer instance to run the docker container. 
-
-Note that the `ROS_MASTER_URI` and `ROS_IP` environment variables are already be set for you so you should be able to see all the ROS topics inside the container.
 
 ### Troubleshooting
 
