@@ -102,7 +102,7 @@ See the Field Computer Docker Example section for an example of what a Dockerfil
 
 Click on the `START` button to launch your software. 
 
-> During practice, you can ssh into the field computer instance to check if your docker image has been built successfully. In the terminal, typing `docker images` should show a `team_container` docker image, and when the `START` button is pressed, a container based on that image should be running.
+> During practice, you can ssh into the field computer instance to check if your docker image has been built successfully. In the terminal, typing `docker images` should show a `ros` image and a `fcomputer` image. If not, please be patient and wait a couple of minutes. Once ready, pressing the `START` button will run a container, `team_container` , based on the `fccomputer` image.
 
 
 ### VPN Access
