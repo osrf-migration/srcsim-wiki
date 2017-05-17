@@ -1,7 +1,5 @@
 # Overview
 
-** Not released yet **
-
 Task 3 consists of the following checkpoints:
 
 * **Checkpoint 1**: Climb the stairs
