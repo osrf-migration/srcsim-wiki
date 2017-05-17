@@ -94,6 +94,8 @@ Topic name | Message / service | Description | Message definition
 
 There are no interfaces specific to task 2.
 
+For more detailed information, see the [task 2](https://bitbucket.org/osrf/srcsim/wiki/finals_task2) tutorials.
+
 #### Finals: Task 3
 
 These are interfaces specific to task 3.
@@ -102,4 +104,4 @@ For more detailed information, see the [task 3](https://bitbucket.org/osrf/srcsi
 
 Topic name | Message / service | Description | Message definition
 ---------- | ----------------- | ----------- | ----------------
-**TODO** | | |
+`/task3/checkpoint5/leak` | Message | Leak detector readings | [srcsim/Leak.msg](https://bitbucket.org/osrf/srcsim/raw/default/msg/Leak.msg)
