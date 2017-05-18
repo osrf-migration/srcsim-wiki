@@ -2,11 +2,11 @@
 
 ## Starting up the simulation
 
-The SRC ships with a ROS node that allows you to teleop the R5 from the keyboard.  This is called the keyboard_teleop node.  Let’s start up the SRC simulation, and start up the keyboard_teleop node:
+The SRC ships with a ROS node that allows you to teleop the R5 from the keyboard.  This is called the keyboard_teleop node.  Let’s start up the SRC simulation, and start up the keyboard_teleop node.
 
-In one terminal, fire up the simulation; note that this tutorial uses qual2.launch, but you can use any other launch file that you choose. (IMPORTANT NOTE: the launch file *must* have the grasping arg set to true!)
+In one terminal, fire up the simulation; note that this tutorial uses qual2.launch, but you can use any other launch file that you choose. Be sure to set both `init` and `grasping_init` to true.
 
-    $ roslaunch srcsim qual2.launch init:=true
+    $ roslaunch srcsim qual2.launch init:=true grasping_init:=true
 
 The simulation will launch and will slowly lower the R5 robot to the ground.  Once the harness has released, the robot is free to move.  The arm and hand position should look something like the picture below.
 
@@ -16,7 +16,7 @@ At this point, we want to make sure that the grasping controller is active.  In 
 
     $ rostopic list | grep hand_position_controller
 
-You should see the /left_hand_position_controller/command and the /right_hand_position_controller/command topics there.  If you do not, go back into your launch file and make sure that the grasping_init arg is set to true.
+You should see the `/left_hand_position_controller/command` and the `/right_hand_position_controller/command` topics there.  If you do not, make sure that you set the `grasping_init` argument to true when launching.
 
 ## Keyboard control
 
@@ -26,9 +26,9 @@ Now in another terminal fetch the keyboard_teleop node:
 
 Now launch the keyboard_teleop node:
 
-    $ ./keyboard_teleop.py
+    $ python keyboard_teleop.py
 
-When you first launch the keyboard_teleop.py node, you’ll get some information on how to control the robot using the keyboard, similar to what is below.
+When you first launch the `keyboard_teleop.py` node, you’ll get some information on how to control the robot using the keyboard, similar to what is below.
 
             Keyboard Teleop for Space Robotics Challenge 0.1.0
             Copyright (C) 2017 Open Source Robotics Foundation
@@ -71,21 +71,21 @@ When you first launch the keyboard_teleop.py node, you’ll get some information
 
 As can be seen above, there are controls for the left and right arms, left and right hands, the head, the neck, and for walking.  This tutorial will focus just on the arms.
 
-Let’s control the arms of the robot.  Make sure the terminal with the keyboard_teleop node is in focus, and then send the arms to their “home” position by pressing ‘t’ and then ‘y’.  With that done, the robot should look like below.
+Let’s control the arms of the robot.  Make sure the terminal with the keyboard_teleop node is in focus, and then send the arms to their “home” position by pressing `t` and then `y`.  With that done, the robot should look like below.
 
 ![src-armtut-02-arm-home-position.png](https://bitbucket.org/repo/xEbAAe/images/56993020-src-armtut-02-arm-home-position.png)
 
-Next, let’s rotate the arms around the shoulder joint 90 degrees.  Press the ‘u’ key approximately 15 times, then press the ‘q’ key approximately 15 times.  When you are done, the shoulder should have rotated 90 degrees, and look like below.
+Next, let’s rotate the arms around the shoulder joint 90 degrees.  Press the `u` key approximately 15 times, then press the `q` key approximately 15 times.  When you are done, the shoulder should have rotated 90 degrees, and look like below.
 
 ![src-armtut-03-shoulder-rotation.png](https://bitbucket.org/repo/xEbAAe/images/3541547728-src-armtut-03-shoulder-rotation.png)
 
-Now, let’s rotate the shoulders back to the original position by pressing ‘U’ about 15 times, and then pressing ‘Q’ about 15 times.  The robot should be approximately back at the “home” position.
+Now, let’s rotate the shoulders back to the original position by doing the opposite movement. That is achieved using the upper case keys `U` (`Shift`+`u`) and `Q` (`Shift`+`q`) about 15 times.  The robot should be approximately back at the “home” position.
 
-Similarly, we can control the elbow joint on the arms by using the ‘r’ and the ‘p’ keys.  Press the ‘r’ key about 15 times and the ‘p’ key about 15 times to make the elbows go to approximately 90 degrees.  The robot should look like below.
+Similarly, we can control the elbow joint on the arms by using the `r` and the `p` keys.  Press the `r` key about 15 times and the `p` key about 15 times to make the elbows go to approximately 90 degrees.  The robot should look like below.
 
 ![src-armtut-04-elbow-90-degrees.png](https://bitbucket.org/repo/xEbAAe/images/1554513140-src-armtut-04-elbow-90-degrees.png)
 
-Additionally, we can control the hands using the keyboard.  Hit 't' and 'y' to reset the arms to the home position.  Then control the index finger on the right hand by hitting the '8' key about 10 times.  The robot should look like below.
+Additionally, we can control the hands using the keyboard.  Hit `t` and `y` to reset the arms to the home position.  Then control the index finger on the right hand by hitting the `8` key about 10 times.  The robot should look like below.
 
 ![src-armtut-05-right-finger.png](https://bitbucket.org/repo/xEbAAe/images/3737807227-src-armtut-05-right-finger.png)
 
@@ -93,32 +93,58 @@ Other keys on the keyboard do similar things.  For reference, the keys are mappe
 
 Keys | Action
 ---- | ------
-q/Q  | Positive/negative rotation of the left arm joint around the shoulder
-W/w  | Positive/negative rotation of the left arm shoulder joint
-e/E  | Positive/negative rotation of the left upper arm
-R/r  | Positive/negative bend of the left elbow
-a/A  | Positive/negative rotation of the left lower arm
-S/s  | Positive/negative X offset of the left wrist
-D/d  | Positive/negative Y offset of the left wrist
+**left arm** |
+q/Q  | Positive/negative rotation of the left arm joint around the shoulder (`leftShoulderPitch`)
+W/w  | Positive/negative rotation of the left arm shoulder joint (`leftShoulderRoll`)
+e/E  | Positive/negative rotation of the left upper arm (`leftShoulderYaw`)
+R/r  | Positive/negative bend of the left elbow (`leftElbowPitch`)
+a/A  | Positive/negative rotation of the left lower arm (`leftForearmYaw`)
+S/s  | Positive/negative X offset of the left wrist (`leftWristRoll`)
+D/d  | Positive/negative Y offset of the left wrist (`leftWristPitch`)
 t/T  | Reset left arm to home position
-u/U  | Positive/negative rotation of the right arm joint around the shoulder
-i/I  | Positive/negative rotation of the right arm joint around the shoulder
-o/O  | Positive/negative rotation of the right arm upper arm
-p/P  | Positive/negative bend of the right elbow
-j/J  | Positive/negative rotation of the right lower arm
-k/K  | Positive/negative X offset of the right wrist
-l/L  | Positive/negative Y offset of the right wrist
+**right arm** |
+u/U  | Positive/negative rotation of the right arm joint around the shoulder (`rightShoulderPitch`)
+i/I  | Positive/negative rotation of the right arm joint around the shoulder (`rightShoulderRoll`)
+o/O  | Positive/negative rotation of the right arm upper arm (`rightShoulderYaw`)
+p/P  | Positive/negative bend of the right elbow (`rightElbowPitch`)
+j/J  | Positive/negative rotation of the right lower arm (`rightForearmYaw`)
+k/K  | Positive/negative X offset of the right wrist (`rightWristRoll`)
+l/L  | Positive/negative Y offset of the right wrist (`rightWristPitch`)
 y/Y  | Reset right arm to home position
+**left hand** |
+5/% | left thumb roll
+$/4 | left thumb pitch
+#/3 | left index finger
+@/2 | left middle finger
+!/1 | left ring finger
+`/~ | Reset left hand to home position
+**right hand** |
+6/^ | right thumb roll
+7/& | right thumb pitch
+8/* | right index finger
+9/( | right middle finger
+0/) | left ring finger
+-/_ | Reset right hand to home position
+**head angles** |
+x/X | roll
+c/C | pitch
+v/V | yaw
+g/G | Reset head to home position
+**neck joints** |
+b/B | lower neck pitch
+n/N | neck yaw
+m/M | upper neck pitch
+h/H | Reset neck to home position
 
 ## Watching the messages
 
 At this point, we have a basic idea on how to control the arm using the keyboard.  Let's go a little bit further and look at what exactly the keyboard_teleop node publishes when you hit a key.
 
-Assuming you followed the tutorial above, you should have the simulation running in a gazebo window, and another terminal in which keyboard_teleop is running.  To start with, make sure the keyboard_teleop terminal is active, then press 't' and 'y' to reset the arms to the home position.  Open up another terminal, and in that terminal run:
+Assuming you followed the tutorial above, you should have the simulation running in a gazebo window, and another terminal in which keyboard_teleop is running.  To start with, make sure the keyboard_teleop terminal is active, then press `t` and `y` to reset the arms to the home position.  Open up another terminal, and in that terminal run:
 
     $ rostopic echo /ihmc_ros/valkyrie/control/arm_trajectory
 
-This will print out all of the messages that are being printed on the `/ihmc_ros/valkyrie/control/arm_trajectory` topic.  Now that you have that, go back to the terminal window running keyboard_teleop, and press 'j' once.  Switching back to the terminal window containing the rostopic echo command, you should see this:
+This will print out all of the messages that are being printed on the `/ihmc_ros/valkyrie/control/arm_trajectory` topic.  Now that you have that, go back to the terminal window running keyboard_teleop, and press `j` once.  Switching back to the terminal window containing the rostopic echo command, you should see this:
 
     robot_side: 1
     joint_trajectory_messages: 
@@ -189,7 +215,7 @@ By using the command:
 
     $ rostopic type /ihmc_ros/valkyrie/control/arm_trajectory
 
-We can see that the /ihmc_ros/valkyrie/control/arm_trajectory topic is of type `ihmc_msgs/ArmTrajectoryRosMessage`.  By using the command:
+We can see that the `/ihmc_ros/valkyrie/control/arm_trajectory` topic is of type [`ihmc_msgs/ArmTrajectoryRosMessage`](https://github.com/ihmcrobotics/ihmc_ros_core/blob/develop/ihmc_msgs/msg/ArmTrajectoryRosMessage.msg).  By using the command:
 
     $ rosmsg show ihmc_msgs/ArmTrajectoryRosMessage
 
