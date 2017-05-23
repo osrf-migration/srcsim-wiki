@@ -86,7 +86,7 @@ For more details on deploying your code with docker, see the Docker Deployment s
 
     * the Github repository URI containing your code, for example (**Note the .git in the end**):
         * public repo: `https://github.com/username/reponame.git` (use https://)
-        * private repo: `git://github.com/username/reponame.git` (use git://)
+        * private repo: `git@github.com/username/reponame.git` (use git@)
     * the Github deploy private key for that repo (private repos only). See the "One-time setup" section above to learn how to set up the deploy key. 
 
 1. Click on continue to launch the machine instances on the cloud.
