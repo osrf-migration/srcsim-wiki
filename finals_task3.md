@@ -537,6 +537,23 @@ Some example readings:
 ---- | ----- | ----
 ![fru1.png](https://bitbucket.org/repo/xEbAAe/images/4206459929-fru1.png) | ![fru2.png](https://bitbucket.org/repo/xEbAAe/images/4064879223-fru2.png) | ![fru3.png](https://bitbucket.org/repo/xEbAAe/images/364842782-fru3.png)
 
+#### Leak patching
+
+To fix the leak, the tip of the patch tool must be physically pressed against the leak
+and maintain continuous contact with it for a given time. 
+
+If you turn on collision visualization for the tool, you can see the collision shape
+on the tool tip. (Right-click tool -> View -> Collisions)
+
+If you turn on contact visualization, you can see a blue sphere when there is contact.
+(On the top menu, choose View -> Contacts).
+
+The robot's camera can't see collisions or contacts.
+
+Collision visuals | Contact visual | Robot's camera view
+----------------- | -------------- | -------------------
+![patch2.png](https://bitbucket.org/repo/xEbAAe/images/4231633387-patch2.png) | ![patch1.png](https://bitbucket.org/repo/xEbAAe/images/2783548609-patch1.png) | ![patch3.png](https://bitbucket.org/repo/xEbAAe/images/390289498-patch3.png)
+
 
 
 ## Other resources
