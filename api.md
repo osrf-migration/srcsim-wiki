@@ -63,7 +63,7 @@ Topic / service name | Message type
 `/ihmc_ros/valkyrie/output/imu/upperNeckPitchLink_head_imu_sensor` | [sensor_msgs/Imu](http://docs.ros.org/api/sensor_msgs/html/msg/Imu.html)
 `/ihmc_ros/valkyrie/output/joint_states` | [sensor_msgs/JointState](http://docs.ros.org/api/sensor_msgs/html/msg/JointState.html)
 `/ihmc_ros/valkyrie/output/robot_motion_status` | [std_msgs/String](http://docs.ros.org/api/std_msgs/html/msg/String.html)
-`/ihmc_ros/valkyrie/output/robot_pose` | [nav_msgs/Odometry](http://docs.ros.org/api/nav_msgs/html/msg/Odometry.html)
+`/ihmc_ros/valkyrie/output/robot_pose` (becomes wrong after teleporting) | [nav_msgs/Odometry](http://docs.ros.org/api/nav_msgs/html/msg/Odometry.html)
 `/ihmc_ros/valkyrie/output/walking_status` | [ihmc_msgs/WalkingStatusRosMessage](https://github.com/ihmcrobotics/ihmc_ros_core/blob/develop/ihmc_msgs/msg/WalkingStatusRosMessage.msg)
 `/left_hand_position_controller/command` | [std_msgs/Float64MultiArray](http://docs.ros.org/api/std_msgs/html/msg/Float64MultiArray.html)
 `/right_hand_position_controller/command` | [std_msgs/Float64MultiArray](http://docs.ros.org/api/std_msgs/html/msg/Float64MultiArray.html)
