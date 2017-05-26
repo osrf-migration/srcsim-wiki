@@ -25,6 +25,10 @@ The tutorial below has been updated to reflect the updates.
 
 * There are 4 checkpoints instead of 3 (previous checkpoint 2 has been split into 2 and 3)
 
+##### New on SRCSim 0.6.0
+
+* The `init` parameter is no longer needed, Val is always de-harnessed.
+
 ## Practice run
 
 We provide an example world file which only contains task 1 for convenience
@@ -43,7 +47,7 @@ An example step-by-step of how to run task 1:
 1. On a terminal, run a world which only contains task 1:
 
     ```
-    roslaunch srcsim unique_task1.launch init:="true"
+    roslaunch srcsim unique_task1.launch
     ```
 
 1. Wait to see the `Init: Done` message on the terminal before beginning.

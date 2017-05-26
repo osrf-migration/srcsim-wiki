@@ -13,6 +13,14 @@ All checkpoints must be completed within 1 hour.
 
 ![t2_a.png](https://bitbucket.org/repo/xEbAAe/images/191484822-t2_a.png)
 
+### Updates
+
+The tutorial below has been updated to reflect the updates.
+
+##### New on SRCSim 0.6.0
+
+* The `init` parameter is no longer needed, Val is always de-harnessed.
+
 ## Practice run
 
 We provide an example world file which only contains task 2 for convenience
@@ -31,7 +39,7 @@ An example step-by-step of how to run task 2:
 1. On a terminal, run a world which only contains task 2:
 
     ```
-    roslaunch srcsim unique_task2.launch init:="true"
+    roslaunch srcsim unique_task2.launch
     ```
 
 1. Wait to see the `Init: Done` message on the terminal before beginning.

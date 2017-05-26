@@ -15,6 +15,14 @@ All checkpoints must be completed within 2 hours.
 
 ![task3_opt.gif](https://bitbucket.org/repo/xEbAAe/images/1336454180-task3_opt.gif)
 
+### Updates
+
+The tutorial below has been updated to reflect the updates.
+
+##### New on SRCSim 0.6.0
+
+* The `init` parameter is no longer needed, Val is always de-harnessed.
+
 ## Practice run
 
 We provide an example world file which only contains task 3 for convenience
@@ -33,7 +41,7 @@ An example step-by-step of how to run task 3:
 1. On a terminal, run a world which only contains task 3:
 
     ```
-    roslaunch srcsim unique_task3.launch init:="true"
+    roslaunch srcsim unique_task3.launch
     ```
 
 1. Wait to see the `Init: Done` message on the terminal before beginning.
@@ -126,7 +134,7 @@ We're now performing checkpoint 2: *Open the door*.
 The friction of the door and valve hinges will fall within the following ranges for each world:
 
 Joint | Min friction | Max friction | Min damping | Max damping
------ | ------------ | ------------ | ----------- | ----------- 
+----- | ------------ | ------------ | ----------- | -----------
 Valve | 1.0 | 1.6 | 0.01 | 0.05
 Door hinge | 10.0 | 20.0 | 1.0 | 4.0
 
@@ -485,8 +493,8 @@ and must find it using the leak detector. However, the region where the leak
 can be located is known, so the robot should only need to search that area.
 
 It is known that the leak is located on the wall to the left of the entrance.
-For each world, the leak is randomly placed somewhere between 0.835 m and 
-1.713 m from the ground. 
+For each world, the leak is randomly placed somewhere between 0.835 m and
+1.713 m from the ground.
 
 The blue rectangle below marks the region where the leak can be (the rectangle
 is not present in the worlds):
@@ -507,9 +515,9 @@ Teams will not be able to visualize the leak during the finals.
 
 #### Leak detection
 
-The leak can be detected using the Air Leak Detector tool. The detector 
+The leak can be detected using the Air Leak Detector tool. The detector
 publishes messages on ROS topic `/task3/checkpoint5/leak` with the value it is
-currently reading. 
+currently reading.
 
 The value ranges from 0 to 1, where the higher the number is, the closer the leak
 is to the detector's antenna.
@@ -540,7 +548,7 @@ Some example readings:
 #### Leak patching
 
 To fix the leak, the tip of the patch tool must be physically pressed against the leak
-and maintain continuous contact with it for a given time. 
+and maintain continuous contact with it for a given time.
 
 If you turn on collision visualization for the tool, you can see the collision shape
 on the tool tip. (Right-click tool -> View -> Collisions)
