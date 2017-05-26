@@ -139,7 +139,7 @@ satellite until the a correct angle is achieved.
 The friction on the valve joints will be randomized for each world. The ranges are as follows:
 
 Joint | Min friction | Max friction | Min damping | Max damping
------ | ------------ | ------------ | ----------- | ----------- 
+----- | ------------ | ------------ | ----------- | -----------
 Wheel valves | 2.0 | 3.0 | 0.0 | 0.0
 
 1. Conveniently, the satellite reports its current and target angles through a
@@ -215,7 +215,7 @@ correct pitch and yaw angles_.
 1. Manipulate the handle corresponding to the incomplete checkpoint so until that
 checkpoint is also completed for 5 seconds.
 
-    > Make sure not to dislocate the previously completed valve by mistake, because 
+    > Make sure not to dislocate the previously completed valve by mistake, because
       you'll need both to be correct for this checkpoint to be completed.
 
 1. When both `pitch_completed` and `yaw_completed` are true for the same time

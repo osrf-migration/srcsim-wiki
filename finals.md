@@ -6,8 +6,9 @@ checkpoints:
 ### [Task 1](https://bitbucket.org/osrf/srcsim/wiki/finals_task1)
 
 * **Checkpoint 1**: Move within 1 meter from the communication dish
-* **Checkpoint 2**: Move the communication dish to the correct pitch and yaw angles (consists of 2 checkpoints for scoring purposes)
-* **Checkpoint 3**: Walk into Task 1's finish box
+* **Checkpoint 2**: Move the communication dish **either** to the correct pitch or the correct yaw angle
+* **Checkpoint 3**: Move the communication dish to **both** correct pitch and yaw angles
+* **Checkpoint 4**: Walk into Task 1's finish box
 
 ### [Task 2](https://bitbucket.org/osrf/srcsim/wiki/finals_task2)
 
@@ -56,8 +57,7 @@ checkpoints:
 
     * Teams may choose to skip checkpoints (and lose points). At any time, you may
     skip to a checkpoint of a specific task using the service above. It's not
-    possible to restart the current checkpoint or to go back to an earlier
-    checkpoint.
+    possible to go back to an earlier checkpoint.
 
 1. Listen to task updates:
 
