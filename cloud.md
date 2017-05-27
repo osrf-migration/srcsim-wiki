@@ -110,7 +110,7 @@ For more details on deploying your code with docker, see the Docker Deployment s
 
     * You can also execute an interactive bash shell on the running docker container by doing `docker exec -it gazebo_run bash`
 
-    * You can optionally monitor the docker state from the host (outside the container), running `tail -f cloudsim-docker.log`
+    * You can optionally monitor the docker state from the host (outside the container), running `tail -f ~/code/cloudsim-docker.log`
 
 ## Launch your software on field computer
 
