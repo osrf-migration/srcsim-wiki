@@ -102,7 +102,15 @@ For more details on deploying your code with docker, see the Docker Deployment s
 
 1. In the Simulator instance, there is a `Run` widget that allows you to run 5 different SRC worlds. Click on the `>1` button to launch the first world inside the Simulator instance. **Note: Currenlty only >1 is active for practice. We'll add the 4 other different SRC worlds soon**
 
-    > During practice, you can ssh into the sim instance to monitor the simulation process. The `>1` button launches a docker container with srcsim. So inside the sim machine instance, you can type `docker ps` to make sure the process has been started. You can also execute an interactive bash shell on the running docker container by doing `docker exec -it gazebo_run bash`
+    During practice, you can ssh into the sim instance to monitor the simulation process. Some important tips:
+
+    * The `>1` button launches a docker container with srcsim. 
+
+    * So inside the sim machine instance, you can type `docker ps` to make sure the process has been started. 
+
+    * You can also execute an interactive bash shell on the running docker container by doing `docker exec -it gazebo_run bash`
+
+    * You can optionally monitor the docker state from the host (outside the container), running `tail -f cloudsim-docker.log`
 
 ## Launch your software on field computer
 
