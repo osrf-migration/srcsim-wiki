@@ -35,7 +35,7 @@ checkpoints:
 1. Run a world which contains all tasks:
 
         source /opt/nasa/indigo/setup.bash
-        roslaunch srcsim unique.launch init:="true"
+        roslaunch srcsim unique.launch
 
 
 1. Start the first checkpoint of the first task:
@@ -58,6 +58,9 @@ checkpoints:
     * Teams may choose to skip checkpoints (and lose points). At any time, you may
     skip to a checkpoint of a specific task using the service above. It's not
     possible to go back to an earlier checkpoint.
+
+    * It's possible to restart the current checkpoint by calling this service with
+    its number.
 
 1. Listen to task updates:
 
