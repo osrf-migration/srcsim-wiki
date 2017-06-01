@@ -21,6 +21,7 @@ The tutorial below has been updated to reflect the updates.
 
 ##### New on SRCSim 0.6.0
 
+* The table is 0.2 m higher
 * The `init` parameter is no longer needed, Val is always de-harnessed.
 * New [Task](https://bitbucket.org/osrf/srcsim/raw/default/msg/Task.msg) message structure
 * New [Score](https://bitbucket.org/osrf/srcsim/raw/default/msg/Score.msg) message
