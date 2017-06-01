@@ -78,6 +78,8 @@ Topic name | Message / service | Description | Message definition
 ---------- | ----------------- | ----------- | ----------------
 `/srcsim/finals/start_task` | Service | Start a specific task at a specific checkpoint. | [srcsim/StartTask.srv](https://bitbucket.org/osrf/srcsim/raw/default/srv/StartTask.srv)
 `/srcsim/finals/task` | Message | Task status updates | [srcsim/Task.msg](https://bitbucket.org/osrf/srcsim/raw/default/msg/Task.msg)
+`/srcsim/finals/score` | Message | Score updates | [srcsim/Score.msg](https://bitbucket.org/osrf/srcsim/raw/default/msg/Score.msg)
+`/srcsim/finals/harness` | Message | Harness updates | [srcsim/Harness.msg](https://bitbucket.org/osrf/srcsim/raw/default/msg/Harness.msg)
 
 #### Finals: Task 1
 
