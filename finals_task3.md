@@ -22,6 +22,9 @@ The tutorial below has been updated to reflect the updates.
 ##### New on SRCSim 0.6.0
 
 * The `init` parameter is no longer needed, Val is always de-harnessed.
+* New [Task](https://bitbucket.org/osrf/srcsim/raw/default/msg/Task.msg) message structure
+* New [Score](https://bitbucket.org/osrf/srcsim/raw/default/msg/Score.msg) message
+* It's possible to restart a checkpoint
 
 ## Practice run
 
@@ -44,12 +47,22 @@ An example step-by-step of how to run task 3:
     roslaunch srcsim unique_task3.launch
     ```
 
-1. Wait to see the `Init: Done` message on the terminal before beginning.
+1. Wait until the robot is detached from the harness before beginning. You'll
+   know when you're ready when you see the `[Msg] [Harness] Detached` message
+   on the terminal.
 
 1. On a new terminal, listen to task updates:
 
     ```
     rostopic echo /srcsim/finals/task
+    ```
+
+    You shouldn't see anything yet, because the task has not started.
+
+1. On another new terminal, listen to score updates:
+
+    ```
+    rostopic echo /srcsim/finals/score
     ```
 
     You shouldn't see anything yet, because the task has not started.
@@ -75,12 +88,41 @@ leave the start walkway.
         [Msg] Task [3] - Started: time will start counting as you leave the box.
         [Msg] Started box contains plugin [task3/start]
 
+1. The task message will start being published. You'll see it says the current
+   checkpoint is zero (i.e. no checkpoint) and the start time is zero.
+
+        task: 3
+        current_checkpoint: 0
+        checkpoint_durations: []
+        checkpoint_penalties: []
+        start_time:
+          secs: 0
+          nsecs:  0
+        elapsed_time:
+          secs: 0
+          nsecs: 0
+        timed_out: False
+        finished: False
+
+1. You'll also see that the score message says zero score:
+
+        checkpoint_durations: []
+        checkpoint_penalties: []
+        score: 0
+        total_completion_time:
+          secs: 0
+          nsecs: 0
+
 1. The moment you step out of the start box, you'll see messages on the
    previous terminal, such as:
 
         task: 3
         current_checkpoint: 1
-        checkpoints_completion: []
+        checkpoint_durations: []
+        checkpoint_penalties:
+          -
+            secs: 0
+            nsecs: 0
         start_time:
           secs: 35
           nsecs: 236000000
@@ -89,6 +131,14 @@ leave the start walkway.
           nsecs:   1000000
         timed_out: False
         finished: False
+
+    You can see that you're now attempting checkpoint 1, you have a start and
+    elapsed time, and the first penalty says zero. The time penalty for the
+    checkpoint will be increased for each time you restart it, and if you skip it.
+
+    There will always be one more penalty than duration, because durations are added
+    for each completed / skipped checkpoint, and penalties also includes the current
+    checkpoint.
 
     You should also see messages like this on the console:
 
@@ -107,10 +157,17 @@ We'll start on checkpoint 1: *Climb the stairs*.
 
         task: 3
         current_checkpoint: 2
-        checkpoints_completion:
+        checkpoint_durations:
           -
-            secs: 40
-            nsecs: 332000000
+            secs: 5
+            nsecs: 096000000
+        checkpoint_penalties:
+          -
+            secs: 0
+            nsecs: 0
+          -
+            secs: 0
+            nsecs: 0
         start_time:
           secs: 35
           nsecs: 236000000
@@ -157,13 +214,23 @@ pose).
 
         task: 3
         current_checkpoint: 3
-        checkpoints_completion:
+        checkpoint_durations:
           -
-            secs: 40
-            nsecs: 332000000
+            secs: 5
+            nsecs: 096000000
           -
-            secs: 40
-            nsecs: 756000000
+            secs: 0
+            nsecs: 424000000
+        checkpoint_penalties:
+          -
+            secs: 0
+            nsecs: 0
+          -
+            secs: 0
+            nsecs: 0
+          -
+            secs: 0
+            nsecs: 0
         start_time:
           secs: 35
           nsecs: 236000000
@@ -194,16 +261,29 @@ You'll then see:
 
         task: 3
         current_checkpoint: 4
-        checkpoints_completion:
+        checkpoint_durations:
           -
-            secs: 40
-            nsecs: 332000000
+            secs: 5
+            nsecs: 096000000
           -
-            secs: 40
-            nsecs: 756000000
+            secs: 0
+            nsecs: 424000000
           -
-            secs: 42
-            nsecs: 942000000
+            secs: 2
+            nsecs: 186000000
+        checkpoint_penalties:
+          -
+            secs: 0
+            nsecs: 0
+          -
+            secs: 0
+            nsecs: 0
+          -
+            secs: 0
+            nsecs: 0
+          -
+            secs: 0
+            nsecs: 0
         start_time:
           secs: 35
           nsecs: 236000000
@@ -235,19 +315,35 @@ updated to show checkpoint 4 has been completed:
 
         task: 2
         current_checkpoint: 5
-        checkpoints_completion:
+        checkpoint_durations:
           -
-            secs: 40
-            nsecs: 332000000
+            secs: 5
+            nsecs: 096000000
           -
-            secs: 40
-            nsecs: 756000000
+            secs: 0
+            nsecs: 424000000
           -
-            secs: 42
-            nsecs: 942000000
+            secs: 2
+            nsecs: 186000000
           -
-            secs: 44
-            nsecs: 165000000
+            secs: 1
+            nsecs: 223000000
+        checkpoint_penalties:
+          -
+            secs: 0
+            nsecs: 0
+          -
+            secs: 0
+            nsecs: 0
+          -
+            secs: 0
+            nsecs: 0
+          -
+            secs: 0
+            nsecs: 0
+          -
+            secs: 0
+            nsecs: 0
         start_time:
           secs: 35
           nsecs: 236000000
@@ -290,22 +386,41 @@ Once the leak is within the frustum, this checkpoint is complete:
 
         task: 3
         current_checkpoint: 6
-        checkpoints_completion:
+        checkpoint_durations:
           -
-            secs: 40
-            nsecs: 332000000
+            secs: 5
+            nsecs: 096000000
           -
-            secs: 40
-            nsecs: 756000000
+            secs: 0
+            nsecs: 424000000
           -
-            secs: 42
-            nsecs: 942000000
+            secs: 2
+            nsecs: 186000000
           -
-            secs: 44
-            nsecs: 165000000
+            secs: 1
+            nsecs: 223000000
           -
-            secs: 59
-            nsecs: 483000000
+            secs: 15
+            nsecs: 318000000
+        checkpoint_penalties:
+          -
+            secs: 0
+            nsecs: 0
+          -
+            secs: 0
+            nsecs: 0
+          -
+            secs: 0
+            nsecs: 0
+          -
+            secs: 0
+            nsecs: 0
+          -
+            secs: 0
+            nsecs: 0
+          -
+            secs: 0
+            nsecs: 0
         start_time:
           secs: 35
           nsecs: 236000000
@@ -337,25 +452,47 @@ you'll see:
 
         task: 3
         current_checkpoint: 7
-        checkpoints_completion:
+        checkpoint_durations:
           -
-            secs: 40
-            nsecs: 332000000
+            secs: 5
+            nsecs: 096000000
           -
-            secs: 40
-            nsecs: 756000000
+            secs: 0
+            nsecs: 424000000
           -
-            secs: 42
-            nsecs: 942000000
+            secs: 2
+            nsecs: 186000000
           -
-            secs: 44
-            nsecs: 165000000
+            secs: 1
+            nsecs: 223000000
           -
-            secs: 59
-            nsecs: 483000000
+            secs: 15
+            nsecs: 318000000
           -
-            secs: 67
-            nsecs: 366000000
+            secs: 7
+            nsecs: 883000000
+        checkpoint_penalties:
+          -
+            secs: 0
+            nsecs: 0
+          -
+            secs: 0
+            nsecs: 0
+          -
+            secs: 0
+            nsecs: 0
+          -
+            secs: 0
+            nsecs: 0
+          -
+            secs: 0
+            nsecs: 0
+          -
+            secs: 0
+            nsecs: 0
+          -
+            secs: 0
+            nsecs: 0
         start_time:
           secs: 35
           nsecs: 236000000
@@ -387,28 +524,53 @@ the checkpoint will be complete!
 
         task: 3
         current_checkpoint: 8
-        checkpoints_completion:
+        checkpoint_durations:
           -
-            secs: 40
-            nsecs: 332000000
+            secs: 5
+            nsecs: 096000000
           -
-            secs: 40
-            nsecs: 756000000
+            secs: 0
+            nsecs: 424000000
           -
-            secs: 42
-            nsecs: 942000000
+            secs: 2
+            nsecs: 186000000
           -
-            secs: 44
-            nsecs: 165000000
+            secs: 1
+            nsecs: 223000000
           -
-            secs: 59
-            nsecs: 483000000
+            secs: 15
+            nsecs: 318000000
           -
-            secs: 67
-            nsecs: 366000000
+            secs: 7
+            nsecs: 883000000
           -
-            secs: 77
-            nsecs: 938000000
+            secs: 10
+            nsecs: 572000000
+        checkpoint_penalties:
+          -
+            secs: 0
+            nsecs: 0
+          -
+            secs: 0
+            nsecs: 0
+          -
+            secs: 0
+            nsecs: 0
+          -
+            secs: 0
+            nsecs: 0
+          -
+            secs: 0
+            nsecs: 0
+          -
+            secs: 0
+            nsecs: 0
+          -
+            secs: 0
+            nsecs: 0
+          -
+            secs: 0
+            nsecs: 0
         start_time:
           secs: 35
           nsecs: 236000000
@@ -435,33 +597,58 @@ You're now performing checkpoint 8: *Go to the finish box*.
 
 1. Task 3 should be completed! The task message is updated:
 
-        task: 0
-        current_checkpoint: 0
-        checkpoints_completion:
+        task: 3
+        current_checkpoint: 9
+        checkpoint_durations:
           -
-            secs: 40
-            nsecs: 332000000
+            secs: 5
+            nsecs: 096000000
           -
-            secs: 40
-            nsecs: 756000000
+            secs: 0
+            nsecs: 424000000
           -
-            secs: 42
-            nsecs: 942000000
+            secs: 2
+            nsecs: 186000000
           -
-            secs: 44
-            nsecs: 165000000
+            secs: 1
+            nsecs: 223000000
           -
-            secs: 59
-            nsecs: 483000000
+            secs: 15
+            nsecs: 318000000
           -
-            secs: 67
-            nsecs: 366000000
+            secs: 7
+            nsecs: 883000000
           -
-            secs: 77
-            nsecs: 938000000
+            secs: 10
+            nsecs: 572000000
           -
-            secs: 83
-            nsecs: 710000000
+            secs: 5
+            nsecs: 772000000
+        checkpoint_penalties:
+          -
+            secs: 0
+            nsecs: 0
+          -
+            secs: 0
+            nsecs: 0
+          -
+            secs: 0
+            nsecs: 0
+          -
+            secs: 0
+            nsecs: 0
+          -
+            secs: 0
+            nsecs: 0
+          -
+            secs: 0
+            nsecs: 0
+          -
+            secs: 0
+            nsecs: 0
+          -
+            secs: 0
+            nsecs: 0
         start_time:
           secs: 35
           nsecs: 236000000
@@ -470,6 +657,72 @@ You're now performing checkpoint 8: *Go to the finish box*.
           nsecs: 221000000
         timed_out: False
         finished: True
+
+    It says "checkpoint 9", which is the total number of checkpoints + 1, which
+    means the task is over. Note also how `finished` is true.
+
+1. If you completed all checkpoints without any restarts or skips, your score
+   message should say you have 36 points (1+2+3+4+5+6+7+8), and the total completion
+   time is the sum of all checkpoints:
+
+        checkpoint_durations:
+          -
+            secs: 5
+            nsecs: 096000000
+          -
+            secs: 0
+            nsecs: 424000000
+          -
+            secs: 2
+            nsecs: 186000000
+          -
+            secs: 1
+            nsecs: 223000000
+          -
+            secs: 15
+            nsecs: 318000000
+          -
+            secs: 7
+            nsecs: 883000000
+          -
+            secs: 10
+            nsecs: 572000000
+          -
+            secs: 5
+            nsecs: 772000000
+        checkpoint_penalties:
+          -
+            secs: 0
+            nsecs: 0
+          -
+            secs: 0
+            nsecs: 0
+          -
+            secs: 0
+            nsecs: 0
+          -
+            secs: 0
+            nsecs: 0
+          -
+            secs: 0
+            nsecs: 0
+          -
+            secs: 0
+            nsecs: 0
+          -
+            secs: 0
+            nsecs: 0
+          -
+            secs: 0
+            nsecs: 0
+        score: 36
+        total_completion_time:
+          secs: 48
+          nsecs: 474000000
+
+    Note that during the competition you'll be performing task 3 immediately
+    after tasks 1 and 2, so by the time you finish it, you might have an even higher
+    score.
 
     And you'll see a message like this:
 
