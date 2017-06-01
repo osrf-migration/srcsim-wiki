@@ -4,8 +4,10 @@ It's possible to skip checkpoints at any time during practice or during the
 final competition.
 
 Beware that failing to complete a checkpoint will cost you points. Also note
-that it is not possible to restart a checkpoint or to go back to an earlier
-checkpoint.
+that it is not possible to go back to an earlier checkpoint.
+
+You can restart a checkpoint as many times as you wish, but beware that you'll
+receive an increasing time penalty each time you do so.
 
 ### How to skip
 
@@ -26,6 +28,13 @@ The result will be:
 * Task 2, checkpoint 2 is skipped
 * Task 2, checkpoint 3 is **not** skipped - this is the checkpoint you're currently
   trying to complete.
+
+### Harness (from srcsim_0.6.0)
+
+When the robot is teleported, it is placed on a harness which will carefully lower
+the robot to the ground. You can subscribe to the [Harness](https://bitbucket.org/osrf/srcsim/raw/default/msg/Harness.msg) message to be notified of when the robot has been fully detached:
+
+    rostopic echo /srcsim/finals/harness
 
 ### Must skip
 
@@ -51,6 +60,17 @@ Your options are:
 
 1. Complete checkpoint 1 (pick up solar panel), and then skip checkpoint 2 with
 the call above. You'll receive points for checkpoint 1.
+
+### Restarting the current checkpoint
+
+At any moment, you can restart the current checkpoint by calling the start task
+service with that checkpoint's number. When you do so:
+
+* The robot will be re-harnessed back to the beginning of the checkpoint
+* Other objects might be rearranged according to the checkpoint
+* You'll receive a time penalty
+
+Make sure you wait for the harness to be detached as explained above.
 
 ### Summary
 
