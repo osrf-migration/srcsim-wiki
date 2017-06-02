@@ -39,10 +39,10 @@ the robot to the ground. You can subscribe to the [Harness](https://bitbucket.or
 ### Must skip
 
 You must explicitly skip checkpoints which you don't wish to complete. For
-example, if you wish to walk directly to the finish box on task 1 (checkpoint 3)
+example, if you wish to walk directly to the finish box on task 1 (checkpoint 4)
 and won't move the satellite handles, you must call:
 
-    rosservice call /srcsim/finals/start_task 1 3
+    rosservice call /srcsim/finals/start_task 1 4
 
 Just walking directly to the box without skipping to that checkpoint will **not
 register the checkpoint as complete**.
