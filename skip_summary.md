@@ -95,7 +95,7 @@ Task | Checkpoint | Goal | Skip
 3 | 2 | Open door | Robot is teleported to be in front of the door, door opens
 3 | 3 | Pass through door | Robot is teleported to be after the door
 3 | 4 | Lift detector | This checkpoint can't be skipped by itself
-3 | 5 | Find the leak | Robot is teleported to be after the door
+3 | 5 | Find the leak | Robot is teleported to be after the door, leak position expressed in the robot pelvis frame is published at `/task3/checkpoint5/leak_pose` at 1 Hz
 3 | 6 | Lift repair tool | This checkpoint can't be skipped by itself
 3 | 7 | Repair leak | Robot is teleported to be after the door
 3 | 8 | Go to 3rd finish box | Program ends
