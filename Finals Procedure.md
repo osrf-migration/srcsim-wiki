@@ -1,9 +1,9 @@
 # Final's Schedule
 
-Start: June 13, 7am PDT
-End: June 16, 11:59 PDT
-Goal: Complete all competition rounds
-Help line: ```src-support@osrfoundation.org```
+* Start: June 13, 7am PDT
+* End: June 16, 11:59 PDT
+* Goal: Complete all competition rounds
+* Help line: ```src-support@osrfoundation.org```
 
 OSRF will have personnel manning the support email 24/7 during the finals.
 
