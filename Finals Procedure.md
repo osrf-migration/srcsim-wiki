@@ -1,7 +1,7 @@
 # Final's Schedule
 
 * Start: June 13, 7am PDT
-* End: June 16, 11:59 PDT
+* End: June 16, 11:59pm PDT
 * Goal: Complete all competition rounds
 * Help line: ```src-support@osrfoundation.org```
 
