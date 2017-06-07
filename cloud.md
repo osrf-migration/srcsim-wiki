@@ -132,7 +132,7 @@ tar xvzf client_vpn.tar.gz
 sudo openvpn --config openvpn.conf
 ~~~
 
-You should now have a `tap0` network interface with the ip address `192.168.2.150`. The field computer is located at `192.168.2.10`.
+You should now have a `tap0` network interface with the ip address `192.168.2.150`. The field computer host machine is located at `192.168.2.8`, and the field computer docker container is at 192.168.2.10.
 
 ## SSH Access
 
