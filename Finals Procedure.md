@@ -9,6 +9,8 @@ OSRF will have personnel monitoring the support email 24/7 during the finals.
 
 # How to complete competition rounds
 
+1. Log into [CloudSim](https://cloudsim.io).
+
 1. Request a constellation by sending an email to `src-support@osrfoundation.org`. The email must include your team name and the rounds you want to complete. Additionally, the email must come from the team lead. Here is an example email:
 
         Constellation request
@@ -33,6 +35,7 @@ OSRF will have personnel monitoring the support email 24/7 during the finals.
 1. You can request multiple constellations if you want to run different rounds in parallel.
 1. You must start using a constellation within an hour of requesting the constellation, otherwise it will be terminated
 1. You can only complete each round once.
+1. Logs are generated for each of your runs. These logs are available on S3 using the AWS keys that have been provided to you.
 
 # How to get help and request a reset
 
