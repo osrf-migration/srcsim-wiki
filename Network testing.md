@@ -1,4 +1,4 @@
-This page describes how to use `tc`, a tool that can control latency, and `iperf` to test `tc`.
+This page describes how to use `tc`, a tool that can control latency and bandwidth, and `iperf` to test `tc`.
 
 We will start with a simple example of `tc` and build to a full example that incorporates `cloudsim`.
 
