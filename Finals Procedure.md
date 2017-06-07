@@ -32,7 +32,7 @@ OSRF will have personnel manning the support email 24/7 during the finals.
 
 1. You can request multiple constellations if you want to run different rounds in parallel.
 1. You must start using a constellation within an hour of requesting the constellation, otherwise it will be terminated
-1. You can only complete each round one.
+1. You can only complete each round once.
 
 # How to get help and request a reset
 
