@@ -40,3 +40,53 @@ Let's start by trying to limit the bandwidth on our local machine's ethernet por
     ```
 
 1. Test the latency by running `ping google.com`. You should see a `time` that is roughly equivalent to 500 ms.
+
+1. Make sure to clear your `tc` settings.
+
+    ```
+    sudo tc qdisc del dev eth0 root
+    ```
+
+# Step 2: Latency between local host and docker
+
+1. Run your favorite docker container. There are many helpful docker tutorials online.
+
+1. Inside docker, run `iperf` server
+
+    ```
+    iperf -s
+    ```
+
+1. On your host system, run `iperf` client. We will assume that the docker container has an IP of 10.0.0.2 and your host has and IP 10.0.0.1. You can use `ifconfig` to determine your IP settings.
+
+    ```
+    iperf -c 10.0.0.2
+    ```
+
+1. You should see output on the server (docker) side similar to:
+
+
+        ------------------------------------------------------------
+        Server listening on TCP port 5001
+        TCP window size: 85.3 KByte (default)
+        ------------------------------------------------------------
+        [  4] local 10.0.0.2 port 5001 connected with 10.0.0.1 port 58432
+        [ ID] Interval       Transfer     Bandwidth
+        [  4]  0.0-10.0 sec  52.4 GBytes  45.0 Gbits/sec
+
+1. Now setup `tc` latency on your host system. Use `ifconfig` to determine the device name that maps to your docker network. In our case, the network device name is `br-f70d936ac68f`
+
+    ```
+    sudo tc qdisc del dev br-f70d936ac68f root netem delay 500ms
+    ```
+
+1. Re-run iperf to test this setting
+
+    ```
+    iperf -c 10.0.0.2
+    ```
+
+1. You should now see a reduction in bandwidth due to the increased latency
+
+        [  5] local 10.0.0.2 port 5001 connected with 10.0.0.1 port 58550
+        [  5]  0.0-17.5 sec  7.75 MBytes  3.71 Mbits/sec
