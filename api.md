@@ -107,3 +107,4 @@ For more detailed information, see the [task 3](https://bitbucket.org/osrf/srcsi
 Topic name | Message / service | Description | Message definition
 ---------- | ----------------- | ----------- | ----------------
 `/task3/checkpoint5/leak` | Message | Leak detector readings | [srcsim/Leak.msg](https://bitbucket.org/osrf/srcsim/raw/default/msg/Leak.msg)
+`/task3/checkpoint5/leak_pose` | Message | Leak position expressed in the robot pelvis frame, only published if checkpoint is skipped | [geometry_msgs/Point](http://docs.ros.org/api/geometry_msgs/html/msg/Point.html)
