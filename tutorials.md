@@ -20,6 +20,7 @@ These tutorials provide information about how to install and use the SRCSim soft
     * [Practice versus competition](https://bitbucket.org/osrf/srcsim/wiki/practice_vs_competition)
     * [Random world generator](https://bitbucket.org/osrf/srcsim/wiki/world_generator)
     * [Using CloudSim](https://bitbucket.org/osrf/srcsim/wiki/cloud)
+    * [Network testing](https://bitbucket.org/osrf/srcsim/wiki/Network%20testing)
 
 1. Other resources
 
