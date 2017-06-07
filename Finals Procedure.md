@@ -28,3 +28,5 @@
 # How to get help and request a reset
 
 Send an email to ```src-support@osrfoundation.org``` with as much detail pertaining to your problem. If requesting a reset, please include your team name, round number, and a brief description of the problem that occurred.
+
+OSRF will have personnel manning the support email 24/7 during the finals.
