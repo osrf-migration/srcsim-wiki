@@ -21,6 +21,7 @@ These tutorials provide information about how to install and use the SRCSim soft
     * [Random world generator](https://bitbucket.org/osrf/srcsim/wiki/world_generator)
     * [Using CloudSim](https://bitbucket.org/osrf/srcsim/wiki/cloud)
     * [Network testing](https://bitbucket.org/osrf/srcsim/wiki/Network%20testing)
+    * [Finals procedure](https://bitbucket.org/osrf/srcsim/wiki/Finals%20Procedure)
 
 1. Other resources
 
