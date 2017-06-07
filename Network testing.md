@@ -47,7 +47,7 @@ Let's start by trying to limit the bandwidth on our local machine's ethernet por
     sudo tc qdisc del dev eth0 root
     ```
 
-# Step 2: Latency between local host and docker
+# Step 2: Latency between local host and a local docker container
 
 1. Run your favorite docker container. There are many helpful docker tutorials online.
 
@@ -77,7 +77,7 @@ Let's start by trying to limit the bandwidth on our local machine's ethernet por
 1. Now setup `tc` latency on your host system. Use `ifconfig` to determine the device name that maps to your docker network. In our case, the network device name is `br-f70d936ac68f`
 
     ```
-    sudo tc qdisc del dev br-f70d936ac68f root netem delay 500ms
+    sudo tc qdisc add dev br-f70d936ac68f root netem delay 500ms
     ```
 
 1. Re-run iperf to test this setting
@@ -90,3 +90,36 @@ Let's start by trying to limit the bandwidth on our local machine's ethernet por
 
         [  5] local 10.0.0.2 port 5001 connected with 10.0.0.1 port 58550
         [  5]  0.0-17.5 sec  7.75 MBytes  3.71 Mbits/sec
+
+# Step 3: Latency between local host and remote docker on CloudSim
+
+1. Log into CloudSim and start a constellation.
+
+1. Download the SSH keys to the Field Computer, and log into the field computer
+
+    ```
+    ssh -i cloudsim.pem ubuntu@FIELD_COMPUTER_IP_ADDRESS
+    ```
+
+1. Download the VPN keys, and establish your VPN connection to the field computer.
+
+    ```
+    sudo openvpn --config openvpn.config
+    ````
+
+1. Run add latency on the Field Computer using `tc`. We will apply latency control to the vpn device called `tap0`.
+
+    ```
+    sudo tc qdisc add dev tap0 root netem delay 500ms
+    ```
+
+1. Test using ping on your local computer
+
+    ```
+    ping 192.168.2.8
+    ```
+
+1. You can also test with `iperf`
+
+    1. On the field computer: ```iperf -s```
+    1. On your local computer: ```iperf -c 192.168.2.8```
