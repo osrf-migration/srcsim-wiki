@@ -9,7 +9,7 @@ OSRF will have personnel monitoring the support email 24/7 during the finals.
 
 # How to complete competition rounds
 
-1. Request a constellation by sending an email to `src-support@osrfoundation.org`. The email must include your team name and the rounds you want to complete. Here is an example email:
+1. Request a constellation by sending an email to `src-support@osrfoundation.org`. The email must include your team name and the rounds you want to complete. Additionally, the email must come from the team lead. Here is an example email:
 
         Constellation request
 
