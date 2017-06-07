@@ -5,7 +5,7 @@
 * Goal: Complete all competition rounds
 * Help line: ```src-support@osrfoundation.org```
 
-OSRF will have personnel manning the support email 24/7 during the finals.
+OSRF will have personnel monitoring the support email 24/7 during the finals.
 
 # How to complete competition rounds
 
