@@ -24,7 +24,7 @@ OSRF will have personnel manning the support email 24/7 during the finals.
 
 1. Complete the active round.
 
-1. Click the Stop button in Cloudsim..
+1. Click the Stop button in Cloudsim.
 
 1. Repeat for the other rounds in the constellation.
 
