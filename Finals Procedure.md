@@ -17,6 +17,8 @@ OSRF will have personnel monitoring the support email 24/7 during the finals.
 
         Team: Foo
         Rounds: 1, 2, 3
+        Github URL: ...
+        Github keys (for private repos): ...
 
 1. Wait for the constellation to spin up in CloudSim.
 
@@ -35,7 +37,7 @@ OSRF will have personnel monitoring the support email 24/7 during the finals.
 1. You can request multiple constellations if you want to run different rounds in parallel.
 1. You must start using a constellation within an hour of requesting the constellation, otherwise it will be terminated
 1. You can only complete each round once.
-1. Logs are generated for each of your runs. These logs are available on S3 using the AWS keys that have been provided to you.
+1. Logs are generated for each of your runs. These logs are available on S3 buckets using the AWS keys that have been provided to you.
 
 # How to get help and request a reset
 
