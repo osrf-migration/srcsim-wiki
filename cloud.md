@@ -238,6 +238,33 @@ Each team will have a limited budget of hours that can be used on CloudSim for p
 * Teams are able to launch as many constellations at the same time as they wish. But note that this is being taken from your budget.
 * There are no partial hours. So having one machine instance up for 5 minutes counts as 1 hour. Likewise, having the machine instance up for 65 minutes will count as 2 hours. Use your time wisely.
 
+# Downloading Dry-Run / Finals Logs
+
+During the dry-run and finals, the logs from the simulator instance are uploaded to AWS s3 bucket. You can access them using the `aws-cli` command line tool.
+
+    sudo apt-get install awscli
+
+You will need your AWS access key, and AWS secret key. To find these keys, click on your email address on top right corner of the page on CloudSim to access the profile page and scroll to the S3 keys widget. 
+
+Set up `aws-cli` with your keys:
+
+    $ aws configure
+    AWS Access Key ID [None]: enter access key
+    AWS Secret Access Key [None]: enter secret key
+    Default region name [None]: us-west-1
+    Default output format [None]:
+
+Once that's done, you can start using the tool to download your files. Your s3 bucket has the following naming convention: `s3://src-your_team_name`, where `your_team_name` has to be all **lowercase** of the team code stored on CloudSim. Go to the profile page on CloudSim to find out the team code used for your team. 
+
+List files in your bucket:
+
+    aws s3 ls s3://src-your_team_name
+
+To download a folder from s3 to your local filesystem:
+
+    aws s3 cp --recursive s3://src-debug/world_3_2017-06-08T18-47-42-707Z/ my_local_path
+
+
 # Troubleshooting
 
 Here's the srcsim issue tracker that contains a list of known issues:
