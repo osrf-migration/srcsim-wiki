@@ -260,7 +260,7 @@ List files in your bucket:
 
     aws s3 ls s3://src-your_team_name
 
-To download a folder from s3 to your local filesystem:
+Example: download a folder from s3 to your local filesystem (team "src-debug"):
 
     aws s3 cp --recursive s3://src-debug/world_3_2017-06-08T18-47-42-707Z/ my_local_path
 
