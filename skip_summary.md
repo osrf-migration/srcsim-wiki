@@ -7,7 +7,8 @@ Beware that failing to complete a checkpoint will cost you points. Also note
 that it is not possible to go back to an earlier checkpoint.
 
 You can restart a checkpoint as many times as you wish, but beware that you'll
-receive an increasing time penalty each time you do so.
+receive an increasing time penalty each time you do so, and the cumulative score
+is reset.
 
 ### How to skip
 
@@ -69,6 +70,7 @@ service with that checkpoint's number. When you do so:
 * The robot will be re-harnessed back to the beginning of the checkpoint
 * Other objects might be rearranged according to the checkpoint
 * You'll receive a time penalty
+* The cumulative score is reset
 
 Make sure you wait for the harness to be detached as explained above.
 
