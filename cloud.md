@@ -262,7 +262,7 @@ List files in your bucket:
 
 Example: download a folder from s3 to your local filesystem (team "src-debug"):
 
-    aws s3 cp --recursive s3://src-debug/world_3_2017-06-08T18-47-42-707Z/ my_local_path
+    aws s3 cp --recursive s3://src-your_team_name/world_3_2017-06-08T18-47-42-707Z/ my_local_path
 
 
 # Troubleshooting
